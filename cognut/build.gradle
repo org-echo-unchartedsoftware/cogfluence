@@ -1,0 +1,18 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+dependencies {
+    implementation project(':ensemble-clustering')
+    implementation 'org.apache.commons:commons-math3:3.6.1'
+    implementation 'org.slf4j:slf4j-api:1.7.30'
+    
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:3.12.4'
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Cognut Clustering Strategies',
+                   'Implementation-Version': project.version
+    }
+}
