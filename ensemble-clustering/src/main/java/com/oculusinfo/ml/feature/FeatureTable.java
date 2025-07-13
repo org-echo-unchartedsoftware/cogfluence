@@ -20,13 +20,13 @@
  */
 package com.oculusinfo.ml.feature;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class FeatureTable implements Serializable {
   private static final long serialVersionUID = -5842770909462107078L;

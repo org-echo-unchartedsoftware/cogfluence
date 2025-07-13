@@ -20,6 +20,7 @@
  */
 package com.oculusinfo.ml.unsupervised.cluster;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.oculusinfo.ml.Instance;
 import com.oculusinfo.ml.centroid.Centroid;
 import com.oculusinfo.ml.feature.Feature;
@@ -29,7 +30,6 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /***
  * A class that represents a cluster.

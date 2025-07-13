@@ -223,9 +223,7 @@ public abstract class SolrBaseSearchIterator implements Iterator<FL_SearchResult
       String[] sortFields = new String[0];
       if (_query.getSorts() != null) {
         sortFields =
-            _query.getSorts().stream()
-                .map(SolrQuery.SortClause::getItem)
-                .toArray(String[]::new);
+            _query.getSorts().stream().map(SolrQuery.SortClause::getItem).toArray(String[]::new);
       }
 
       // Test to see if the property is set hidden, or if it's hidden by Level of Detail
@@ -366,20 +364,14 @@ public abstract class SolrBaseSearchIterator implements Iterator<FL_SearchResult
           // email bodies end with an integer that represents the line number from the the file used
           // to import the data
           // this can be removed
-          val = ((String) val).replaceAll("[\s]+[\d]+$", "");
+          val = ((String) val).replaceAll("\\s+\\d+$", "");
 
           // Remove leading and trailing new lines with only one new line
-          val = ((String) val).replaceAll("^[
-|
-|]+|[
-|
-|]$", "");
+          val = ((String) val).replaceAll("^[\r\n\f]+|[\r\n\f]+$", "");
           val = "<br>" + ((String) val);
         }
 
-        val = ((String) val).replaceAll("[
-|
-|]", "<br>");
+        val = ((String) val).replaceAll("[\r\n\f]", "<br>");
       }
 
       switch (dataType) {

@@ -20,12 +20,12 @@
  */
 package com.oculusinfo.ml.feature.bagofwords;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.oculusinfo.ml.feature.Feature;
 import com.oculusinfo.ml.feature.string.StringFeature;
 import com.oculusinfo.ml.stats.FeatureFrequency;
 import com.oculusinfo.ml.stats.FeatureFrequencyTable;
 import java.util.Collection;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /***
  * A BagOfWordsFeature represents a Set of Words each of which is associated with a frequency count.

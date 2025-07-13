@@ -20,13 +20,13 @@
  */
 package com.oculusinfo.ml;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.oculusinfo.ml.feature.Feature;
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.UUID;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /***
  * Instance represents one "row" or "group" of data describing one entity in a data set.

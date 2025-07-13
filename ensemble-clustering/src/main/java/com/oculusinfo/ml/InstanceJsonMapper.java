@@ -20,14 +20,14 @@
  */
 package com.oculusinfo.ml;
 
-import java.io.IOException;
-import java.io.StringWriter;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.IOException;
+import java.io.StringWriter;
 
 /***
  * Serializer for Instance object to/from JSON
@@ -43,7 +43,8 @@ public class InstanceJsonMapper {
   public static Instance fromJson(String jsonAsString)
       throws JsonMappingException, JsonParseException, IOException {
 
-    mapper.activateDefaultTyping(mapper.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL);
+    mapper.activateDefaultTyping(
+        mapper.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL);
     Instance inst = mapper.readValue(jsonAsString, Instance.class);
 
     return inst;
@@ -59,7 +60,8 @@ public class InstanceJsonMapper {
       generator.useDefaultPrettyPrinter();
     }
 
-    mapper.activateDefaultTyping(mapper.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL);
+    mapper.activateDefaultTyping(
+        mapper.getPolymorphicTypeValidator(), ObjectMapper.DefaultTyping.NON_FINAL);
     mapper.writeValue(generator, inst);
     return writer.toString();
   }
