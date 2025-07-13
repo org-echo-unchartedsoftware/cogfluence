@@ -25,7 +25,7 @@ import com.oculusinfo.ml.feature.string.StringFeature;
 import com.oculusinfo.ml.stats.FeatureFrequency;
 import com.oculusinfo.ml.stats.FeatureFrequencyTable;
 import java.util.Collection;
-import org.codehaus.jackson.annotate.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /***
  * A BagOfWordsFeature represents a Set of Words each of which is associated with a frequency count.
