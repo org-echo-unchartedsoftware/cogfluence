@@ -22,8 +22,8 @@ package influent.selenium.tests;
 import static org.junit.Assert.assertEquals;
 
 import influent.selenium.util.SeleniumUtils;
-import java.util.List;
 import java.time.Duration;
+import java.util.List;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
