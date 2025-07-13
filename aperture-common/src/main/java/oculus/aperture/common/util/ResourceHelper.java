@@ -20,8 +20,8 @@
  */
 package oculus.aperture.common.util;
 
-import com.google.common.io.Files;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import org.slf4j.Logger;
@@ -68,7 +68,7 @@ public class ResourceHelper {
       try {
         File file = new File(path);
         logger.info("Loading file from: " + file.getAbsolutePath());
-        inp = Files.newInputStreamSupplier(file).getInput();
+        inp = new FileInputStream(file);
       } catch (IOException e) {
         if (defaultPath != null) {
           logger.info("Error loading file from: " + path);

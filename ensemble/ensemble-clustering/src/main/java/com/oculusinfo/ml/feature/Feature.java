@@ -26,7 +26,7 @@ package com.oculusinfo.ml.feature;
 
 import java.io.Serializable;
 
-import org.codehaus.jackson.annotate.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /***
  * Feature represents one data type of an instance in a data set.

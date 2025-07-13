@@ -31,7 +31,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Set;
 
-import org.codehaus.jackson.annotate.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import com.oculusinfo.ml.Instance;
 import com.oculusinfo.ml.centroid.Centroid;

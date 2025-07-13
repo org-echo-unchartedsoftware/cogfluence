@@ -26,7 +26,7 @@ package com.oculusinfo.ml.feature.bagofwords;
 
 import java.util.Collection;
 
-import org.codehaus.jackson.annotate.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import com.oculusinfo.ml.feature.Feature;
 import com.oculusinfo.ml.feature.string.StringFeature;

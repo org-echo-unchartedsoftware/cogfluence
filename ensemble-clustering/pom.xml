@@ -13,17 +13,15 @@
   </parent>
   
   <dependencies>
-    <!-- Jackson dependencies for JSON processing - Note: Using legacy version with exclusions -->
-    <!-- These dependencies have known vulnerabilities but are needed for legacy compatibility -->
-    <!-- See dependency-check-suppressions.xml for security risk assessment -->
+    <!-- Jackson dependencies for JSON processing - Updated to secure versions -->
     <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-core-asl</artifactId>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
     </dependency>
     
     <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-mapper-asl</artifactId>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
     </dependency>
     
     <!-- SLF4J logging dependencies -->
