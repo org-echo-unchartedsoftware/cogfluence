@@ -103,15 +103,35 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.14.0</version>
 				<configuration>
-					<source>17</source>
-					<target>17</target>
+					<release>17</release>
 					<encoding>UTF-8</encoding>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-						</manifest>
-					</archive>
 				</configuration>
+			</plugin>
+			
+			<!-- Maven Enforcer Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<version>3.5.0</version>
+				<executions>
+					<execution>
+						<id>enforce-maven</id>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>[3.8.8,)</version>
+								</requireMavenVersion>
+								<requireJavaVersion>
+									<version>[17,18)</version>
+								</requireJavaVersion>
+								<dependencyConvergence />
+							</rules>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			
 			<!-- Spotless Maven plugin for code formatting -->
@@ -189,6 +209,66 @@
 		<!-- Plugin Management for child modules -->
 		<pluginManagement>
 			<plugins>
+				<!-- Core Maven plugins -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-clean-plugin</artifactId>
+					<version>3.4.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.3.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.14.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>3.5.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-failsafe-plugin</artifactId>
+					<version>3.5.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jar-plugin</artifactId>
+					<version>3.4.2</version>
+					<configuration>
+						<archive>
+							<addMavenDescriptor>false</addMavenDescriptor>
+							<manifest>
+								<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+								<addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+							</manifest>
+						</archive>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.4.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-install-plugin</artifactId>
+					<version>3.1.3</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>3.1.3</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-site-plugin</artifactId>
+					<version>4.0.0-M16</version>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
@@ -196,13 +276,29 @@
 					<configuration>
 						<doclint>none</doclint>
 						<failOnError>false</failOnError>
-						<source>17</source>
-						<target>17</target>
+						<release>17</release>
 						<additionalJOptions>
 							<additionalJOption>-Xdoclint:none</additionalJOption>
 							<additionalJOption>-quiet</additionalJOption>
 						</additionalJOptions>
 					</configuration>
+				</plugin>
+				
+				<!-- Additional commonly used plugins -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-dependency-plugin</artifactId>
+					<version>3.8.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>buildnumber-maven-plugin</artifactId>
+					<version>3.2.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-jarsigner-plugin</artifactId>
+					<version>3.1.0</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -220,17 +316,25 @@
 		<module>aperture-cms</module>
 		<module>aperture-parchment</module>
 		<module>aperture-layout</module>
+		<module>aperture-layout-yworks</module>
+		<module>aperture-graph</module>
+		<module>aperture-server</module>
+		<module>aperture-examples</module>
 		<module>ensemble-clustering</module>
 		
 		<!-- Influent modules -->
 		<module>influent-spi</module>
 		<module>influent-server</module>
 		<module>influent-client</module>
+		<module>influent-clustering-job</module>
 		<module>influent-app</module>
 		<module>kiva</module>
 		<module>bitcoin</module>
 		<module>walker</module>
 		<module>influent-selenium-test</module>
+		
+		<!-- Distribution (should be last) -->
+		<module>aperture-distribution</module>
 	</modules>
 	
 	<!-- Distribution Management for deployment -->
@@ -301,6 +405,12 @@
 			</dependency>
 			
 			<dependency>
+				<groupId>com.google.inject.extensions</groupId>
+				<artifactId>guice-servlet</artifactId>
+				<version>4.2.3</version>
+			</dependency>
+			
+			<dependency>
 				<groupId>org.restlet</groupId>
 				<artifactId>org.restlet</artifactId>
 				<version>2.6.0</version>
@@ -345,7 +455,14 @@
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
-				<version>23.0</version>
+				<version>33.3.1-jre</version>
+			</dependency>
+			
+			<!-- Error Prone annotations - enforce consistent version -->
+			<dependency>
+				<groupId>com.google.errorprone</groupId>
+				<artifactId>error_prone_annotations</artifactId>
+				<version>2.18.0</version>
 			</dependency>
 			
 			<!-- Jackson dependencies for JSON processing -->
@@ -393,6 +510,20 @@
 				<groupId>javax.servlet</groupId>
 				<artifactId>javax.servlet-api</artifactId>
 				<version>4.0.1</version>
+			</dependency>
+			
+			<!-- Jakarta Activation API - enforce consistent version -->
+			<dependency>
+				<groupId>jakarta.activation</groupId>
+				<artifactId>jakarta.activation-api</artifactId>
+				<version>2.1.3</version>
+			</dependency>
+			
+			<!-- Woodstox XML processor - enforce consistent version -->
+			<dependency>
+				<groupId>com.fasterxml.woodstox</groupId>
+				<artifactId>woodstox-core</artifactId>
+				<version>7.1.1</version>
 			</dependency>
 			
 			<!-- Log4j 1.2.x - Legacy dependency with known vulnerabilities (see suppressions) -->
