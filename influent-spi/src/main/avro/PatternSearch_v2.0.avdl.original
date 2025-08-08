@@ -37,7 +37,7 @@ protocol FL_PatternSearch {
 		double matchScore = 0;
 
 		/** UID of the matched FL_EntityMatchDescriptor in the matched pattern */
-		union{null, string} uid = null;
+		string uid = null;
 
 		/** role name of the matched FL_EntityMatchDescriptor in the matched pattern */
 		union{null, string} role = null;
@@ -56,7 +56,7 @@ protocol FL_PatternSearch {
 		double matchScore = 0;
 
 		/** UID of the matched FL_LinkMatchDescriptor in the matched pattern */
-		union{null, string} uid = null;
+		string uid = null;
 
 		/** role name of the matched FL_LinkMatchDescriptor in the matched pattern */
 		union{null, string} role = null;
