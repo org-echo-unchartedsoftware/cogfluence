@@ -1,0 +1,85 @@
+name: Test Path Resolution and Step Autonomy
+
+on:
+  workflow_dispatch:  # Manual trigger for testing
+  
+jobs:
+  test-path-resolution:
+    name: Test Path Resolution with $GITHUB_WORKSPACE
+    continue-on-error: true
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Test GITHUB_WORKSPACE environment variable
+      run: |
+        echo "GITHUB_WORKSPACE is set to: $GITHUB_WORKSPACE"
+        echo "Current working directory: $(pwd)"
+        echo "Contents of GITHUB_WORKSPACE:"
+        ls -la "$GITHUB_WORKSPACE" | head -10
+    
+    - name: Test directory navigation with error guards (existing directory)
+      run: |
+        if [ ! -d "$GITHUB_WORKSPACE/aperture-spi" ]; then
+          echo "::warning ::Directory not found, skipping."
+          exit 0
+        fi
+        cd "$GITHUB_WORKSPACE/aperture-spi"
+        echo "Successfully navigated to: $(pwd)"
+        ls -la | head -5
+    
+    - name: Test directory navigation with error guards (non-existing directory)
+      run: |
+        if [ ! -d "$GITHUB_WORKSPACE/non-existent-directory" ]; then
+          echo "::warning ::Directory not found, skipping."
+          exit 0
+        fi
+        cd "$GITHUB_WORKSPACE/non-existent-directory"
+        echo "This should not be printed due to error guard"
+    
+    - name: Test path resolution from different starting points
+      run: |
+        # Test from root
+        cd "$GITHUB_WORKSPACE"
+        echo "From root: $(pwd)"
+        
+        # Test from subdirectory if it exists
+        if [ -d "$GITHUB_WORKSPACE/docs" ]; then
+          cd "$GITHUB_WORKSPACE/docs"
+          echo "From docs: $(pwd)"
+          
+          # Navigate back using GITHUB_WORKSPACE anchor
+          cd "$GITHUB_WORKSPACE"
+          echo "Back to root: $(pwd)"
+        fi
+    
+    - name: Demonstrate step autonomy (this should run even if previous steps had warnings)
+      run: |
+        echo "This step runs independently, demonstrating step autonomy"
+        echo "Job has continue-on-error: true, so warnings don't stop execution"
+        echo "Each step uses deterministic paths anchored to GITHUB_WORKSPACE"
+    
+    - name: Test complex path navigation scenario
+      run: |
+        # Test multiple subdirectory levels
+        if [ ! -d "$GITHUB_WORKSPACE/influent-client" ]; then
+          echo "::warning ::Influent client directory not found, skipping Maven test."
+          exit 0
+        fi
+        
+        echo "Testing navigation to nested directory..."
+        cd "$GITHUB_WORKSPACE/influent-client"
+        echo "Successfully navigated to: $(pwd)"
+        
+        # Check if pom.xml exists (would be needed for Maven commands)
+        if [ -f "pom.xml" ]; then
+          echo "✅ pom.xml found - Maven commands would work here"
+        else
+          echo "⚠️  No pom.xml found - Maven commands would be skipped"
+        fi
+        
+        # Always return to workspace root using deterministic path
+        cd "$GITHUB_WORKSPACE"
+        echo "Returned to workspace root: $(pwd)"
