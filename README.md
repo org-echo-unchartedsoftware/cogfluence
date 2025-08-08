@@ -8,6 +8,51 @@ Influent is a web-based application for visually and interactively following tra
 
 Service Provider Interfaces (SPIs) provide a plugin style framework for developers to provide runtime-injected modules for search, data access, clustering and other services. [Avro](http://avro.apache.org/) is used to define the SPI protocols in cross-language form in [influent-spi](influent-spi/src/main/avro). In process Java service implementations are injected via [Guice](https://code.google.com/p/google-guice/), which may optionally delegate to out of process providers using web services standards such as REST, for which Avro provides convenient serialization.
 
+## Building ##
+
+### Prerequisites
+
+- **Java**: Version 17 (OpenJDK or Oracle JDK)
+- **Maven**: Version 3.8.8 or later  
+- **Memory**: At least 2GB RAM for building (4GB recommended)
+
+### Build Commands
+
+To build the core Influent modules:
+
+```bash
+# Build core modules (stable)
+mvn -B -ntp clean compile -pl aperture-spi,aperture-common,aperture-client
+
+# Run tests 
+mvn -B -ntp test -pl aperture-spi,aperture-common,aperture-client
+```
+
+### Build Configuration
+
+The project uses:
+- **Maven Enforcer Plugin** to verify Java 17 and Maven 3.8.8+ requirements
+- **Pinned plugin versions** for reproducible builds
+- **Centralized dependency management** via parent POM
+- **Java 17 release flag** for forward compatibility
+
+### Known Build Issues
+
+Some modules are currently disabled due to dependency or API compatibility issues:
+- `aperture-server-core`, `aperture-server` (servlet API conflicts)
+- `aperture-capture-phantom` (Guava API compatibility with Java 17)
+- `aperture-layout-yworks` (missing commercial yWorks dependency)
+- `aperture-graph` (unavailable javaml dependency)
+- `influent-spi` (Avro IDL parsing issues)
+
+### Troubleshooting
+
+**Memory Issues**: Increase Maven memory with `MAVEN_OPTS="-Xmx2048m -Xms1024m"`
+
+**Plugin Warnings**: Some modules may show warnings about unknown plugin parameters - these are non-critical
+
+**Dependency Resolution**: If builds fail, try `mvn clean` to clear cached artifacts
+
 ## Getting Started ##
 
 Documentation on installing, configuring and using Influent is available in the [docs folder](https://github.com/unchartedsoftware/influent/tree/master/docs/src/) in the source code.
