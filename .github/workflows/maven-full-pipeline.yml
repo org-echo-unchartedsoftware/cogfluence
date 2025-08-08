@@ -26,11 +26,11 @@ jobs:
         cache: maven
 
     - name: Run Spotless format check
-      run: mvn spotless:check
+      run: mvn -q spotless:check
 
     - name: Apply Spotless formatting
       if: failure()
-      run: mvn spotless:apply
+      run: mvn -q spotless:apply
 
     - name: Check for formatting changes
       id: verify-changed-files
@@ -76,10 +76,10 @@ jobs:
 
     # Maven lifecycle - install will run all phases in correct dependency order
     - name: Maven Install
-      run: mvn install
+      run: mvn -q install
 
     - name: Maven Unpack Dependencies
-      run: mvn dependency:unpack-dependencies
+      run: mvn -q dependency:unpack-dependencies
 
     # Run OWASP Dependency Check with NVD API Key
     - name: Run OWASP Dependency Check
@@ -105,7 +105,7 @@ jobs:
         retention-days: 30
 
     - name: Maven Site Generation
-      run: mvn site
+      run: mvn -q site
       continue-on-error: true  # Site generation might fail due to missing plugins but shouldn't fail the build
 
     # Upload build artifacts
