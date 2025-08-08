@@ -22,23 +22,22 @@ package influent.entity.clustering;
 import java.io.Serializable;
 
 public class SchemaField implements Serializable {
-	private static final long serialVersionUID = -4354199207447271790L;
-	
-	public final String fieldName;
-	public final FieldType fieldType;
+  private static final long serialVersionUID = -4354199207447271790L;
 
-	public enum FieldType {
-		CATEGORY,
-		CC,
-		GEO,
-		ID,
-		LABEL,
-		NUMBER,
-	}
-	
-	public SchemaField(String fieldName, FieldType type) {
-		this.fieldName = fieldName;
-		this.fieldType = type;
-	}
+  public final String fieldName;
+  public final FieldType fieldType;
+
+  public enum FieldType {
+    CATEGORY,
+    CC,
+    GEO,
+    ID,
+    LABEL,
+    NUMBER,
+  }
+
+  public SchemaField(String fieldName, FieldType type) {
+    this.fieldName = fieldName;
+    this.fieldType = type;
+  }
 }
-

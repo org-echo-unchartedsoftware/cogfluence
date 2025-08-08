@@ -18,14 +18,12 @@
  */
 package org.skife.csv;
 
-/**
- * Receives callbacks as an input file is traversed
- */
-public interface ReaderCallback
-{
-    /**
-     * Called for each row of the CSV
-     * @param fields fields in the row
-     */
-    void onRow(String[] fields);
+/** Receives callbacks as an input file is traversed */
+public interface ReaderCallback {
+  /**
+   * Called for each row of the CSV
+   *
+   * @param fields fields in the row
+   */
+  void onRow(String[] fields);
 }
