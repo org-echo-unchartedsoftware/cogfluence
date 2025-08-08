@@ -132,6 +132,19 @@ jobs:
         
         echo "Stub artifacts for missing dependencies installed successfully"
 
+    # Early dependency resolution check to fail fast if missing artifacts
+    - name: Verify dependency resolution for core artifacts
+      run: |
+        echo "Verifying that core Influent dependencies can be resolved..."
+        # Test resolution of the specific artifacts that were previously missing
+        mvn dependency:resolve -pl influent-server -q || {
+          echo "❌ Failed to resolve dependencies for influent-server module"
+          echo "The stub artifacts for aperture-server-core and aperture-capture-phantom may not be working"
+          exit 1
+        }
+        echo "Core dependency resolution check passed ✅"
+        echo "aperture-server-core and aperture-capture-phantom artifacts are now resolvable"
+
     - name: Maven Install
       run: mvn -q install
 
