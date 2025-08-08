@@ -309,11 +309,10 @@
 		<module>aperture-common</module>
 		<module>aperture-client</module>
 		<module>aperture-spi</module>
-		<!-- TEMP: Skip modules with API compatibility/dependency issues -->
-		<!-- <module>aperture-server-core</module> --> 
+		<module>aperture-server-core</module>
 		<module>aperture-geo</module>
 		<module>aperture-icons</module>
-		<!-- <module>aperture-capture-phantom</module> --> <!-- Guava API issues -->
+		<module>aperture-capture-phantom</module>
 		<module>aperture-cms</module>
 		<module>aperture-parchment</module>
 		<module>aperture-layout</module>
