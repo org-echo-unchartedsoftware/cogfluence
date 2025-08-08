@@ -25,42 +25,29 @@ import java.io.IOException;
  *
  * @see SimpleWriter
  */
-public interface CSVWriter
-{
-    /**
-     * Write a row to the CSV file
-     */
-    void append(Object[] fields) throws IOException;
+public interface CSVWriter {
+  /** Write a row to the CSV file */
+  void append(Object[] fields) throws IOException;
 
-    /**
-     * Specify the character to use to seperate fields, defaults to a comma
-     */
-    void setSeperator(char seperator);
+  /** Specify the character to use to seperate fields, defaults to a comma */
+  void setSeperator(char seperator);
 
-    /**
-     * Flush after each line? Default is false
-     */
-    void setAutoFlush(boolean autoFlush);
+  /** Flush after each line? Default is false */
+  void setAutoFlush(boolean autoFlush);
 
-    /**
-     * Defaults to the system dependent newline
-     */
-    void setNewLine(char c);
+  /** Defaults to the system dependent newline */
+  void setNewLine(char c);
 
-    /**
-     * Defaults to the system dependent newline
-     */
-    void setNewLine(char[] c);
+  /** Defaults to the system dependent newline */
+  void setNewLine(char[] c);
 
-    /**
-     * Defaults to the system dependent newline
-     */
-    void setNewLine(String newline);
+  /** Defaults to the system dependent newline */
+  void setNewLine(String newline);
 
-    /**
-     * Append a string as a raw line, without any processing
-     * <p>
-     * Useful for comments, etc
-     */
-    void rawLine(String line) throws IOException;
+  /**
+   * Append a string as a raw line, without any processing
+   *
+   * <p>Useful for comments, etc
+   */
+  void rawLine(String line) throws IOException;
 }

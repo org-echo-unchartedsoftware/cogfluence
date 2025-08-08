@@ -19,15 +19,14 @@
 package org.skife.csv;
 
 /**
- * Used with {@link SimpleWriter#write(java.io.File, WriterCallback)}
- * or {@link SimpleWriter#append(Object[])} to allow the library to
- * handle resource cleanup.
+ * Used with {@link SimpleWriter#write(java.io.File, WriterCallback)} or {@link
+ * SimpleWriter#append(Object[])} to allow the library to handle resource cleanup.
  */
-public interface WriterCallback
-{
-    /**
-     * Will be passed an open CSVWriter
-     * @throws Exception which will be wrapped in an RuntimeException
-     */
-    void withWriter(SimpleWriter writer) throws Exception;
+public interface WriterCallback {
+  /**
+   * Will be passed an open CSVWriter
+   *
+   * @throws Exception which will be wrapped in an RuntimeException
+   */
+  void withWriter(SimpleWriter writer) throws Exception;
 }

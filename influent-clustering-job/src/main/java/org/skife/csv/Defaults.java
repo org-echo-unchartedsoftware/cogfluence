@@ -18,10 +18,9 @@
  */
 package org.skife.csv;
 
-interface Defaults
-{
-    char[] QUOTES = new char[] { CSVReader.SINGLE_QUOTE, CSVReader.DOUBLE_QUOTE };
-    char[] LINE_SEPERATOR = System.getProperty("line.separator").toCharArray();
-    char SEPERATOR =   CSVReader.COMMA;
-    char ESCAPE_CHARACTER = CSVReader.BACKSLASH;
+interface Defaults {
+  char[] QUOTES = new char[] {CSVReader.SINGLE_QUOTE, CSVReader.DOUBLE_QUOTE};
+  char[] LINE_SEPERATOR = System.getProperty("line.separator").toCharArray();
+  char SEPERATOR = CSVReader.COMMA;
+  char ESCAPE_CHARACTER = CSVReader.BACKSLASH;
 }
