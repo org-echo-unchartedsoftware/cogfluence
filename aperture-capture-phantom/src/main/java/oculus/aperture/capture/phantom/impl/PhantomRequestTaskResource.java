@@ -21,13 +21,10 @@
 package oculus.aperture.capture.phantom.impl;
 
 import com.google.common.collect.ImmutableList;
-import com.google.common.io.CharStreams;
-import com.google.common.io.InputSupplier;
 import com.google.common.io.Resources;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.URL;
-import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import oculus.aperture.common.rest.ApertureServerResource;
 import org.restlet.data.CacheDirective;
 import org.restlet.data.MediaType;
@@ -45,11 +42,9 @@ public class PhantomRequestTaskResource extends ApertureServerResource {
 
   static {
     URL path = PhantomRequestTaskResource.class.getResource("requestTask.html");
-    InputSupplier<InputStreamReader> inp =
-        Resources.newReaderSupplier(path, Charset.forName("UTF-8"));
 
     try {
-      requestHTML = CharStreams.toString(inp);
+      requestHTML = Resources.toString(path, StandardCharsets.UTF_8);
     } catch (IOException e) {
       System.err.println("Failed to load requestTask.html");
     }
