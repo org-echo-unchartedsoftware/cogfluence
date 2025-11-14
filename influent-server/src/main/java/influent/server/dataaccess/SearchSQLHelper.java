@@ -473,7 +473,7 @@ public class SearchSQLHelper {
       List<FL_OrderBy> orderBy,
       FL_LevelOfDetail levelOfDetail,
       boolean limitResults)
-      throws AvroRemoteException {
+      throws RuntimeException {
 
     List<Object> results = new ArrayList<Object>();
 
@@ -636,7 +636,7 @@ public class SearchSQLHelper {
       List<String> colMap,
       String type,
       String fieldName)
-      throws AvroRemoteException {
+      throws RuntimeException {
     // Get values for fields in composite properties
 
     PropertyField pf = _applicationConfiguration.getField(pd.getKey(), fieldName);
@@ -661,7 +661,7 @@ public class SearchSQLHelper {
   }
 
   protected List<Object> getPropertyValuesFromColumn(Object column, FL_PropertyDescriptor pd)
-      throws AvroRemoteException {
+      throws RuntimeException {
     // Get values for a property from the results set
 
     if (column == null) {
@@ -689,7 +689,7 @@ public class SearchSQLHelper {
         column = sb.toString();
       }
     } catch (Exception e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     }
 
     if (isMultiValue) {

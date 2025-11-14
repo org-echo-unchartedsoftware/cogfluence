@@ -22,14 +22,10 @@ package influent.server.auth;
 import com.google.inject.Key;
 import com.google.inject.Provides;
 import com.google.inject.name.Names;
+import influent.server.auth.adapter.ServletApiAdapter;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
-import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import javax.ws.rs.core.HttpHeaders;
 import org.apache.shiro.authc.credential.CredentialsMatcher;
@@ -46,7 +42,8 @@ import org.apache.shiro.web.servlet.AbstractFilter;
 public class SimpleShiroAuthModule extends ShiroWebModule {
 
   public SimpleShiroAuthModule(ServletContext sc) {
-    super(sc);
+    // Convert jakarta ServletContext to javax ServletContext for Shiro
+    super(ServletApiAdapter.createJavaxServletContext(sc));
   }
 
   @SuppressWarnings("unchecked")
@@ -95,9 +92,13 @@ public class SimpleShiroAuthModule extends ShiroWebModule {
   public static class NoCacheFilter extends AbstractFilter {
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-        throws IOException, ServletException {
-      HttpServletResponse httpResponse = (HttpServletResponse) response;
+    public void doFilter(
+        javax.servlet.ServletRequest request,
+        javax.servlet.ServletResponse response,
+        javax.servlet.FilterChain chain)
+        throws IOException, javax.servlet.ServletException {
+      javax.servlet.http.HttpServletResponse httpResponse =
+          (javax.servlet.http.HttpServletResponse) response;
       httpResponse.setHeader(
           HttpHeaders.CACHE_CONTROL, "no-cache, no-store, must-revalidate"); // HTTP 1.1.
       httpResponse.setDateHeader(HttpHeaders.EXPIRES, 0); // Proxies.

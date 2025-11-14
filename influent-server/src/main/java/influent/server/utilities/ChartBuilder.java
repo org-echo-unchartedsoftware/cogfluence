@@ -65,7 +65,7 @@ public class ChartBuilder {
       String sessionId,
       Integer bucketNo,
       ChartHash hash)
-      throws AvroRemoteException {
+      throws RuntimeException {
     Double startingBalance = 0.0;
 
     String units = null;

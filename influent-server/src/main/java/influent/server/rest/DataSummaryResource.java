@@ -56,10 +56,8 @@ public class DataSummaryResource extends ApertureServerResource {
       }
 
       return new StringRepresentation(dataAccess.getDataSummary().toString());
-    } catch (AvroRemoteException are) {
+    } catch (Exception are) {
       throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "Data access error.", are);
-    } catch (JSONException je) {
-      throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "JSON parse error.", je);
     }
   }
 }

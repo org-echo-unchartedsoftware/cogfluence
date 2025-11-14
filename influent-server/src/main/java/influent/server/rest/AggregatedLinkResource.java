@@ -143,7 +143,7 @@ public class AggregatedLinkResource extends ApertureServerResource {
 
     } catch (JSONException e) {
       throw new ResourceException(Status.SERVER_ERROR_INTERNAL, e.getMessage());
-    } catch (AvroRemoteException e) {
+    } catch (Exception e) {
       throw new ResourceException(Status.SERVER_ERROR_INTERNAL, e.getMessage());
     }
   }

@@ -194,10 +194,10 @@ public class QuBEClient extends RestClient implements FL_PatternSearch {
         } catch (Exception e) {
         }
 
-        throw new AvroRemoteException(response.getClientResponseStatus().getReasonPhrase() + extra);
+        throw new RuntimeException(response.getClientResponseStatus().getReasonPhrase() + extra);
       }
     } catch (IOException ioe) {
-      throw new AvroRemoteException(ioe);
+      throw new RuntimeException(ioe);
     }
   }
 

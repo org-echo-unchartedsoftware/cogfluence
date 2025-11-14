@@ -163,7 +163,7 @@ public class LeafEntityLookupResource extends ApertureServerResource {
           Status.CLIENT_ERROR_BAD_REQUEST,
           "Unable to create JSON object from supplied options string",
           e);
-    } catch (AvroRemoteException e) {
+    } catch (Exception e) {
       throw new ResourceException(Status.SERVER_ERROR_INTERNAL, "Unable to retrieve entities", e);
     }
   }

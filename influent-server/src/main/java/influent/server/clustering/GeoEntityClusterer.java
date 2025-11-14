@@ -106,7 +106,7 @@ public class GeoEntityClusterer extends BaseEntityClusterer {
         default:
           break;
       }
-    } catch (AvroRemoteException e) {
+    } catch (Exception e) {
       log.error("Cluster geo field is not a valid FL_GeoData object! Ignoring.");
     }
     return key;
@@ -189,7 +189,7 @@ public class GeoEntityClusterer extends BaseEntityClusterer {
               geo = country.getCountry();
             }
           }
-        } catch (AvroRemoteException e) {
+        } catch (Exception e) {
           /* ignore */
         }
       }

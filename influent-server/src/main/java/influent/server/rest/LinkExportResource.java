@@ -249,7 +249,7 @@ public class LinkExportResource extends ApertureServerResource {
     return terms;
   }
 
-  private PropertyMatchBuilder processSearchTerms(String query) throws AvroRemoteException {
+  private PropertyMatchBuilder processSearchTerms(String query) throws RuntimeException {
     final PropertyMatchBuilder terms =
         new PropertyMatchBuilder(
             query,

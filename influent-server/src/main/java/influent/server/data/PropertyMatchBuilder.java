@@ -356,7 +356,7 @@ public class PropertyMatchBuilder {
               values.add(id);
             }
           }
-        } catch (AvroRemoteException e) {
+        } catch (Exception e) {
           e.printStackTrace();
         }
       }

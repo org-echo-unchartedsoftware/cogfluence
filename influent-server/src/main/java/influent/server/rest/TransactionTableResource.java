@@ -185,7 +185,7 @@ public class TransactionTableResource extends ApertureServerResource {
 
     } catch (JSONException je) {
       throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "JSON parse error.", je);
-    } catch (AvroRemoteException dae) {
+    } catch (RuntimeException dae) {
       throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "Data access error.", dae);
     }
   }

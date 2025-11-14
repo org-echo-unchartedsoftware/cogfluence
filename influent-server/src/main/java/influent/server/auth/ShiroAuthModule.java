@@ -20,7 +20,7 @@
 package influent.server.auth;
 
 import com.google.inject.servlet.ServletModule;
-import org.apache.shiro.guice.web.GuiceShiroFilter;
+import influent.server.auth.adapter.JakartaShiroFilterWrapper;
 import org.apache.shiro.guice.web.ShiroWebModule;
 
 /**
@@ -37,6 +37,7 @@ public class ShiroAuthModule extends ServletModule {
   @Override
   protected void configureServlets() {
     // Ensure Shiro gets a chance to act on all requests
-    filter("/*").through(GuiceShiroFilter.class);
+    // Use a wrapper to bridge jakarta.servlet.Filter to javax.servlet.Filter
+    filter("/*").through(JakartaShiroFilterWrapper.class);
   }
 }

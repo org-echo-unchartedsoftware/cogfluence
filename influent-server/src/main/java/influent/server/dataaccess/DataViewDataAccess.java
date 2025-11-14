@@ -424,9 +424,9 @@ public class DataViewDataAccess implements FL_DataAccess {
 
       connection.close();
     } catch (ClassNotFoundException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } catch (SQLException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       try {
         connection.close();
@@ -714,9 +714,9 @@ public class DataViewDataAccess implements FL_DataAccess {
       }
       connection.close();
     } catch (ClassNotFoundException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } catch (SQLException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       try {
         if (connection != null) {
@@ -923,9 +923,9 @@ public class DataViewDataAccess implements FL_DataAccess {
 
       connection.close();
     } catch (ClassNotFoundException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } catch (SQLException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       try {
         connection.close();
@@ -1011,9 +1011,9 @@ public class DataViewDataAccess implements FL_DataAccess {
 
       connection.close();
     } catch (ClassNotFoundException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } catch (SQLException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       try {
         connection.close();

@@ -105,7 +105,7 @@ public class LinkDetailsResource extends ApertureServerResource {
       } else {
         return null;
       }
-    } catch (AvroRemoteException e) {
+    } catch (Exception e) {
       s_logger.info(
           String.format(
               "AvroRemoteException occurred Getting transaction details for transaction id: %s; %s",

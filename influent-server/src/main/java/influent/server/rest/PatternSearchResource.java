@@ -199,7 +199,7 @@ public class PatternSearchResource extends ApertureServerResource {
           response =
               patternSearcher.searchByExample(
                   example, "QuBE", (long) startIndex, (long) resultLimit, dateRange, useAptima);
-        } catch (AvroRemoteException are) {
+        } catch (RuntimeException are) {
           // FIXME: Temporarily suppressing QuBE errors until version is updated (#7758)
           // throw new RuntimeException("Error reported by Query by Example. ", are);
         }
@@ -455,7 +455,7 @@ public class PatternSearchResource extends ApertureServerResource {
           Status.CLIENT_ERROR_BAD_REQUEST,
           "Unable to create JSON object from supplied options string",
           e);
-    } catch (AvroRemoteException e) {
+    } catch (RuntimeException e) {
       throw new ResourceException(
           Status.CLIENT_ERROR_BAD_REQUEST, "Exception during AVRO processing", e);
     } catch (Exception e) {

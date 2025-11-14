@@ -106,7 +106,7 @@ public class ChartResource extends ApertureServerResource {
 
       getResponse().setCacheDirectives(ImmutableList.of(CacheDirective.maxAge(maxCacheAge)));
       return new ImageRepresentation(image);
-    } catch (AvroRemoteException e) {
+    } catch (Exception e) {
       throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "Data access error.", e);
     }
   }
@@ -263,10 +263,10 @@ public class ChartResource extends ApertureServerResource {
 
       return infoList;
 
-    } catch (AvroRemoteException e) {
-      throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "Data access error.", e);
     } catch (JSONException je) {
       throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "JSON parse error.", je);
+    } catch (Exception e) {
+      throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "Data access error.", e);
     }
   }
 

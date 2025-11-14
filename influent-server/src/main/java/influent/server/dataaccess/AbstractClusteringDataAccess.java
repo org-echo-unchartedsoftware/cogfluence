@@ -338,7 +338,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
       return summaryClusters;
 
     } catch (Exception e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       try {
         connection.close();
@@ -427,7 +427,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
       return memberIds;
 
     } catch (Exception e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       try {
         connection.close();
@@ -488,7 +488,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
           FL_GeoData.newBuilder().setText(null).setLat(null).setLon(null).setCc(value).build();
       try {
         _geoCoder.geocode(Collections.singletonList(geo));
-      } catch (AvroRemoteException e) {
+      } catch (Exception e) {
         /* ignore - we do our best to geo code */
       }
 
@@ -539,7 +539,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
           FL_GeoData.newBuilder().setText(null).setLat(null).setLon(null).setCc(value).build();
       try {
         _geoCoder.geocode(Collections.singletonList(geo));
-      } catch (AvroRemoteException e) {
+      } catch (Exception e) {
         /* ignore - we do our best to geo code */
       }
 

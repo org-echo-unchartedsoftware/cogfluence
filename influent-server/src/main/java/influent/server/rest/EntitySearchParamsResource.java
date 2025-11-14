@@ -48,10 +48,8 @@ public class EntitySearchParamsResource extends ApertureServerResource {
       JSONObject jo = UISerializationHelper.toUIJson(filterSearchable(searcher.getDescriptors()));
 
       return new StringRepresentation(jo.toString(), MediaType.APPLICATION_JSON);
-    } catch (AvroRemoteException ae) {
+    } catch (Exception ae) {
       throw new ResourceException(ae);
-    } catch (JSONException e) {
-      throw new ResourceException(e);
     }
   }
 

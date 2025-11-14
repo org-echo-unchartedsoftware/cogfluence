@@ -256,7 +256,7 @@ public class EntityClusterFactory {
                   .build();
           try {
             geocoder.geocode(Collections.singletonList(geo));
-          } catch (AvroRemoteException e) {
+          } catch (Exception e) {
             /* ignore */
           }
           range = geo;
