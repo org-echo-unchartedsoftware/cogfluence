@@ -64,7 +64,7 @@ public class DatabasePersistenceAccess implements FL_Persistence {
   }
 
   @Override
-  public FL_PersistenceState persistData(String sessionId, String data) throws AvroRemoteException {
+  public FL_PersistenceState persistData(String sessionId, String data) {
 
     FL_PersistenceState state = null;
     Connection connection = null;
@@ -150,7 +150,7 @@ public class DatabasePersistenceAccess implements FL_Persistence {
   }
 
   @Override
-  public String getData(String sessionId) throws AvroRemoteException {
+  public String getData(String sessionId) {
 
     String data = null;
     Connection connection = null;
