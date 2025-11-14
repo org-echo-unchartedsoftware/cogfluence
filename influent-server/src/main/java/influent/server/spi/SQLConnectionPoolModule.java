@@ -25,12 +25,12 @@ import com.google.inject.name.Named;
 import com.google.inject.name.Names;
 import influent.server.utilities.BoneCPConnectionPool;
 import influent.server.utilities.SQLConnectionPool;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Enumeration;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

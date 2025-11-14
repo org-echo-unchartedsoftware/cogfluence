@@ -23,6 +23,9 @@ package oculus.aperture.rest;
 import com.google.common.io.Files;
 import com.google.inject.Provides;
 import com.google.inject.servlet.ServletModule;
+import jakarta.servlet.ServletContext;
+import jakarta.servlet.ServletContextEvent;
+import jakarta.servlet.ServletContextListener;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -31,9 +34,6 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Map.Entry;
 import javax.servlet.FilterChain;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import net.sf.ehcache.CacheManager;
@@ -43,7 +43,6 @@ import net.sf.ehcache.constructs.web.AlreadyGzippedException;
 import net.sf.ehcache.constructs.web.GenericResponseWrapper;
 import net.sf.ehcache.constructs.web.Header;
 import net.sf.ehcache.constructs.web.PageInfo;
-import net.sf.ehcache.constructs.web.ShutdownListener;
 import net.sf.ehcache.constructs.web.filter.FilterNonReentrantException;
 import net.sf.ehcache.constructs.web.filter.SimplePageCachingFilter;
 import oculus.aperture.common.rest.ResourceDefinition;
@@ -255,7 +254,10 @@ public class RestModule extends ServletModule implements ServletContextListener 
     filter = new CustomPageCachingFilter();
 
     // Filter all REST calls
-    filter(REST_BASE + "/*").through(filter);
+    // NOTE: Temporarily disabled due to incompatibility between ehcache-web (javax.servlet)
+    // and Guice 7.0.0 (jakarta.servlet). TODO: Update or replace ehcache-web with
+    // Jakarta-compatible version.
+    // filter(REST_BASE + "/*").through(filter);
   }
 
   /**
@@ -303,7 +305,12 @@ public class RestModule extends ServletModule implements ServletContextListener 
 
   @Override
   public void contextDestroyed(ServletContextEvent sce) {
-    final ShutdownListener listener = new ShutdownListener();
-    listener.contextDestroyed(sce);
+    // Shutdown ehcache manager directly instead of using ShutdownListener
+    // which is incompatible with Jakarta servlet API
+    try {
+      CacheManager.getInstance().shutdown();
+    } catch (Exception e) {
+      logger.warn("Failed to shutdown CacheManager", e);
+    }
   }
 }
