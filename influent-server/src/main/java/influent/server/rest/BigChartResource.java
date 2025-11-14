@@ -188,7 +188,7 @@ public class BigChartResource extends ApertureServerResource {
                 endDate,
                 focusIds,
                 focusMaxDebitCredit,
-                dateRange.getNumBins().intValue(),
+                (int) dateRange.getNumBins(),
                 width,
                 height,
                 entityContextId,
@@ -204,7 +204,7 @@ public class BigChartResource extends ApertureServerResource {
                 entityContextId,
                 focusContextId,
                 sessionId,
-                dateRange.getNumBins().intValue(),
+                (int) dateRange.getNumBins(),
                 hash);
 
         infoList.put(

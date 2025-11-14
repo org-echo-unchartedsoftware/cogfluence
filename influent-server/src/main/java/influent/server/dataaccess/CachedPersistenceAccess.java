@@ -63,7 +63,7 @@ public class CachedPersistenceAccess implements FL_Persistence {
   }
 
   @Override
-  public String getData(String sessionId) throws AvroRemoteException {
+  public String getData(String sessionId) {
 
     String data = null;
 

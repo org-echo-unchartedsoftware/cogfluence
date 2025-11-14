@@ -121,8 +121,7 @@ public class DataViewDataAccess implements FL_DataAccess {
   }
 
   @Override
-  public List<FL_Entity> getEntities(List<String> entities, FL_LevelOfDetail levelOfDetail)
-      throws AvroRemoteException {
+  public List<FL_Entity> getEntities(List<String> entities, FL_LevelOfDetail levelOfDetail) {
 
     List<FL_Entity> results = new LinkedList<FL_Entity>();
 
@@ -219,8 +218,7 @@ public class DataViewDataAccess implements FL_DataAccess {
       List<String> focusEntities,
       FL_DirectionFilter direction,
       FL_LinkEntityTypeFilter entityTypeFilter,
-      FL_DateRange date)
-      throws AvroRemoteException {
+      FL_DateRange date) {
 
     Map<String, List<FL_Link>> results = new HashMap<String, List<FL_Link>>();
 
@@ -460,8 +458,7 @@ public class DataViewDataAccess implements FL_DataAccess {
 
   @Override
   public Map<String, List<FL_Link>> getTimeSeriesAggregation(
-      List<String> entities, List<String> focusEntities, FL_DateRange date)
-      throws AvroRemoteException {
+      List<String> entities, List<String> focusEntities, FL_DateRange date) {
 
     Map<String, List<FL_Link>> results = new HashMap<String, List<FL_Link>>();
 
@@ -888,8 +885,7 @@ public class DataViewDataAccess implements FL_DataAccess {
   }
 
   @Override
-  public Map<String, List<FL_Entity>> getAccounts(List<String> entities)
-      throws AvroRemoteException {
+  public Map<String, List<FL_Entity>> getAccounts(List<String> entities) {
     Map<String, List<FL_Entity>> map = new HashMap<String, List<FL_Entity>>();
     for (FL_Entity entity : getEntities(entities, FL_LevelOfDetail.SUMMARY)) {
       map.put(entity.getUid(), Collections.singletonList(entity));
@@ -897,7 +893,7 @@ public class DataViewDataAccess implements FL_DataAccess {
     return map;
   }
 
-  public String getClientState(String sessionId) throws AvroRemoteException {
+  public String getClientState(String sessionId) {
     String data = null;
     Connection connection = null;
     try {
@@ -941,7 +937,7 @@ public class DataViewDataAccess implements FL_DataAccess {
     return data;
   }
 
-  public void setClientState(String sessionId, String state) throws AvroRemoteException {
+  public void setClientState(String sessionId, String state) {
     Connection connection = null;
     try {
       connection = _connectionPool.getConnection();

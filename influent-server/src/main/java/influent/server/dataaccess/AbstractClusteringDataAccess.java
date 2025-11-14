@@ -81,12 +81,12 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
     return _namespaceHandler;
   }
 
-  protected FL_PropertyDescriptors getDescriptors() throws AvroRemoteException {
+  protected FL_PropertyDescriptors getDescriptors() {
     return _applicationConfiguration.getEntityDescriptors();
   }
 
   @Override
-  public List<FL_Cluster> getAccountOwners(List<String> ownerIds) throws AvroRemoteException {
+  public List<FL_Cluster> getAccountOwners(List<String> ownerIds) {
     List<FL_Cluster> ownerClusters = new LinkedList<FL_Cluster>();
 
     List<FL_Entity> ownerEntities = _entityAccess.getEntities(ownerIds, FL_LevelOfDetail.SUMMARY);
@@ -123,7 +123,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
     return ownerClusters;
   }
 
-  private void addOwnerProperties(FL_Cluster ownerCluster) throws AvroRemoteException {
+  private void addOwnerProperties(FL_Cluster ownerCluster) {
     PropertyHelper prop =
         ClusterHelper.getFirstPropertyByTag(ownerCluster, FL_PropertyTag.ACCOUNT_OWNER);
     if (prop != null) {
@@ -151,7 +151,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
   }
 
   @Override
-  public List<FL_Cluster> getClusterSummary(List<String> clusterIds) throws AvroRemoteException {
+  public List<FL_Cluster> getClusterSummary(List<String> clusterIds) {
     List<FL_Cluster> summaryClusters = new LinkedList<FL_Cluster>();
 
     if (clusterIds == null || clusterIds.isEmpty()) return summaryClusters;
@@ -348,8 +348,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
     }
   }
 
-  protected Map<String, Set<String>> getClusterSummaryMembers(List<String> clusterSummaryIds)
-      throws AvroRemoteException {
+  protected Map<String, Set<String>> getClusterSummaryMembers(List<String> clusterSummaryIds) {
     Map<String, Set<String>> memberIds = new HashMap<String, Set<String>>();
 
     FL_PropertyDescriptors descriptors = getDescriptors();
@@ -558,8 +557,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
 
   @SuppressWarnings("unchecked")
   protected List<FL_Cluster> createSummaryClusters(
-      Map<String, Map<String, PropertyHelper>> entityPropMap, String entityType)
-      throws AvroRemoteException {
+      Map<String, Map<String, PropertyHelper>> entityPropMap, String entityType) {
     List<FL_Cluster> summaries = new ArrayList<FL_Cluster>(entityPropMap.size());
 
     for (String id : entityPropMap.keySet()) {
