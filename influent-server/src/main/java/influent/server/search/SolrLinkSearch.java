@@ -71,8 +71,7 @@ public class SolrLinkSearch extends DataViewLinkSearch implements FL_LinkSearch 
       List<FL_OrderBy> orderBy,
       long start,
       long max,
-      FL_LevelOfDetail levelOfDetail)
-      throws AvroRemoteException {
+      FL_LevelOfDetail levelOfDetail) {
     ArrayList<FL_SearchResult> results = new ArrayList<FL_SearchResult>();
     SolrLinkSearchIterator ssr;
 

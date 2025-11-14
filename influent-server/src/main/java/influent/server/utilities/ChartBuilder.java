@@ -126,7 +126,7 @@ public class ChartBuilder {
                         DateTimeParser.fromFL(date),
                         DateTimeParser.fromFL(dateRange.getStartDate()),
                         dateRange.getDurationPerBin().getInterval(),
-                        dateRange.getDurationPerBin().getNumIntervals().intValue());
+                        (int) dateRange.getDurationPerBin().getNumIntervals());
                 if (bucket >= bucketNo) skip = true;
                 if (bucket < 0) skip = true;
               }

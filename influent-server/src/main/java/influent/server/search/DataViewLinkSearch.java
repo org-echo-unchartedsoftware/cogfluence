@@ -77,8 +77,7 @@ public class DataViewLinkSearch implements FL_LinkSearch {
       List<FL_OrderBy> orderBy,
       long start,
       long max,
-      FL_LevelOfDetail levelOfDetail)
-      throws AvroRemoteException {
+      FL_LevelOfDetail levelOfDetail) {
 
     ArrayList<FL_SearchResult> matches = new ArrayList<FL_SearchResult>();
 
@@ -98,7 +97,7 @@ public class DataViewLinkSearch implements FL_LinkSearch {
   }
 
   @Override
-  public FL_PropertyDescriptors getDescriptors() throws AvroRemoteException {
+  public FL_PropertyDescriptors getDescriptors() {
     if (_descriptors == null) {
       _descriptors = _applicationConfiguration.getLinkDescriptors();
     }
@@ -121,7 +120,7 @@ public class DataViewLinkSearch implements FL_LinkSearch {
    */
   @Override
   public FL_PropertyDescriptors getKeyDescriptors(
-      FL_SearchResults results, List<FL_OrderBy> resultOrder) throws AvroRemoteException {
+      FL_SearchResults results, List<FL_OrderBy> resultOrder) {
     final FL_PropertyDescriptors all = _applicationConfiguration.getLinkDescriptors();
     final List<FL_PropertyDescriptor> props = all.getProperties();
     final List<FL_PropertyDescriptor> keyFields = new ArrayList<FL_PropertyDescriptor>();

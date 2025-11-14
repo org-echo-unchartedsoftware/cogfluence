@@ -44,43 +44,41 @@ public class QuBEClient extends RestClient implements FL_PatternSearch {
   }
 
   @Override
-  public Void setTimeout(FL_Future future, long timeout) throws AvroRemoteException {
+  public void setTimeout(FL_Future future, long timeout) {
     // TODO Auto-generated method stub
-    return null;
   }
 
   @Override
-  public boolean getCompleted(FL_Future future) throws AvroRemoteException {
+  public boolean getCompleted(FL_Future future) {
     // TODO Auto-generated method stub
     return false;
   }
 
   @Override
-  public String getError(FL_Future future) throws AvroRemoteException {
+  public String getError(FL_Future future) {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public double getProgress(FL_Future future) throws AvroRemoteException {
+  public double getProgress(FL_Future future) {
     // TODO Auto-generated method stub
     return 0;
   }
 
   @Override
-  public long getExpectedDuration(FL_Future future) throws AvroRemoteException {
+  public long getExpectedDuration(FL_Future future) {
     // TODO Auto-generated method stub
     return 0;
   }
 
   @Override
-  public Void stop(FL_Future future) throws AvroRemoteException {
+  public void stop(FL_Future future) {
     // TODO Auto-generated method stub
-    return null;
   }
 
   @Override
-  public List<FL_Future> getFutures() throws AvroRemoteException {
+  public List<FL_Future> getFutures() {
     // TODO Auto-generated method stub
     return null;
   }
@@ -92,8 +90,7 @@ public class QuBEClient extends RestClient implements FL_PatternSearch {
       long start,
       long max,
       FL_BoundedRange dateRange,
-      boolean useAptima)
-      throws AvroRemoteException {
+      boolean useAptima) {
     try {
       // init
       Form form = new Form();
@@ -206,26 +203,25 @@ public class QuBEClient extends RestClient implements FL_PatternSearch {
 
   @Override
   public Object searchByTemplate(
-      String template, String service, long start, long max, FL_BoundedRange dateRange)
-      throws AvroRemoteException {
+      String template, String service, long start, long max, FL_BoundedRange dateRange) {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public FL_PatternSearchResults getResults(FL_Future future) throws AvroRemoteException {
+  public FL_PatternSearchResults getResults(FL_Future future) {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public List<FL_PatternDescriptor> getPatternTemplates() throws AvroRemoteException {
+  public List<FL_PatternDescriptor> getPatternTemplates() {
     // TODO Auto-generated method stub
     return null;
   }
 
   @Override
-  public List<FL_Service> getServices() throws AvroRemoteException {
+  public List<FL_Service> getServices() {
     // TODO Auto-generated method stub
     return null;
   }
