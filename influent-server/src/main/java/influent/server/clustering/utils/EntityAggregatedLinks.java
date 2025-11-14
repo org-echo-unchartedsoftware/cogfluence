@@ -55,7 +55,7 @@ public class EntityAggregatedLinks {
    * @param cache - the cluster context cache
    * @return a map of src entities and their aggregated related links
    * @throws DataAccessException
-   * @throws AvroRemoteException
+   * @throws RuntimeException
    */
   public static Map<String, List<FL_Link>> getRelatedAggregatedLinks(
       String entityId,
@@ -68,7 +68,7 @@ public class EntityAggregatedLinks {
       ContextRead srcContext,
       ContextReadWrite dstContext,
       ClusterContextCache cache)
-      throws DataAccessException, AvroRemoteException {
+      throws DataAccessException, RuntimeException {
     return getRelatedAggregatedLinks(
         Collections.singletonList(entityId),
         direction,
@@ -97,7 +97,7 @@ public class EntityAggregatedLinks {
    * @param cache - the cluster context cache
    * @return a map of src entities and their aggregated related links
    * @throws DataAccessException
-   * @throws AvroRemoteException
+   * @throws RuntimeException
    */
   public static Map<String, List<FL_Link>> getRelatedAggregatedLinks(
       List<String> entityIds,
@@ -110,7 +110,7 @@ public class EntityAggregatedLinks {
       ContextRead srcContext,
       ContextReadWrite dstContext,
       ClusterContextCache cache)
-      throws DataAccessException, AvroRemoteException {
+      throws DataAccessException, RuntimeException {
 
     try {
       s_logger.info("Started getRelatedAggregateLinks for " + entityIds.size() + " entities");
@@ -412,7 +412,7 @@ public class EntityAggregatedLinks {
    * @param dstContext - the dest entities context
    * @return a map of src entities and their aggregated related links to dst entities
    * @throws DataAccessException
-   * @throws AvroRemoteException
+   * @throws RuntimeException
    */
   public static Map<String, List<FL_Link>> getAggregatedLinks(
       List<String> srcEntityIds,
@@ -576,7 +576,7 @@ public class EntityAggregatedLinks {
       Collection<? extends Object> things,
       Map<String, String> entityAncestorIndex,
       ContextRead context)
-      throws AvroRemoteException {
+      throws RuntimeException {
     List<String> entityIds = new LinkedList<String>();
 
     for (Object entity : things) {
@@ -602,7 +602,7 @@ public class EntityAggregatedLinks {
   }
 
   public static List<String> fetchLeaves(FL_Cluster cluster, ContextRead context)
-      throws AvroRemoteException {
+      throws RuntimeException {
     List<String> eids = new ArrayList<String>();
     Deque<FL_Cluster> toProcess = new LinkedList<FL_Cluster>();
     toProcess.addLast(cluster);
@@ -630,12 +630,12 @@ public class EntityAggregatedLinks {
   }
 
   public static List<String> fetchLeaves(String clusterId, ContextRead context)
-      throws AvroRemoteException {
+      throws RuntimeException {
     return fetchLeaves(context.getCluster(clusterId), context);
   }
 
   public static List<String> fetchLeaves(List<String> clusterIds, ContextRead context)
-      throws AvroRemoteException {
+      throws RuntimeException {
     List<String> eids = new ArrayList<String>();
 
     for (String clusterId : clusterIds) {

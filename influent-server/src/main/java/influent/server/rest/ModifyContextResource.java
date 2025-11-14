@@ -207,7 +207,7 @@ public class ModifyContextResource extends ApertureServerResource {
     } catch (JSONException je) {
       throw new ResourceException(
           Status.CLIENT_ERROR_BAD_REQUEST, "Failed to parse modify context request", je);
-    } catch (AvroRemoteException are) {
+    } catch (RuntimeException are) {
       throw new ResourceException(
           Status.SERVER_ERROR_INTERNAL, "Error serializing context modifications.", are);
     } catch (IllegalArgumentException iae) {

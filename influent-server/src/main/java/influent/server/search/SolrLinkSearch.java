@@ -165,7 +165,7 @@ public class SolrLinkSearch extends DataViewLinkSearch implements FL_LinkSearch 
       }
 
     } catch (Exception e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     }
 
     return FL_SearchResults.newBuilder()

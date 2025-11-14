@@ -134,10 +134,10 @@ public class DatabasePersistenceAccess implements FL_Persistence {
       connection.close();
     } catch (ClassNotFoundException e) {
       state = FL_PersistenceState.ERROR;
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } catch (SQLException e) {
       state = FL_PersistenceState.ERROR;
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       try {
         connection.close();
@@ -199,9 +199,9 @@ public class DatabasePersistenceAccess implements FL_Persistence {
       stmt.close();
       connection.close();
     } catch (ClassNotFoundException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } catch (SQLException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       try {
         connection.close();

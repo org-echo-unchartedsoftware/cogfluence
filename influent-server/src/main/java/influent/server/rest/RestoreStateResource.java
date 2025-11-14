@@ -98,7 +98,7 @@ public class RestoreStateResource extends ApertureServerResource {
     } catch (JSONException e) {
       throw new ResourceException(
           Status.SERVER_ERROR_INTERNAL, "Unable to create JSON object from persistence data", e);
-    } catch (AvroRemoteException e) {
+    } catch (Exception e) {
       throw new ResourceException(
           Status.SERVER_ERROR_INTERNAL,
           "Exception during AVRO persistence state deserialization",

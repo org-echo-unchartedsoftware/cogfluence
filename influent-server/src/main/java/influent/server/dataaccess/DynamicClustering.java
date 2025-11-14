@@ -384,7 +384,7 @@ public class DynamicClustering extends AbstractClusteringDataAccess implements F
         return relatedLinks;
       }
     } catch (DataAccessException e) {
-      throw new AvroRemoteException(e);
+      throw new RuntimeException(e);
     } finally {
       permits.revoke();
     }
