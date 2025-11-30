@@ -32,7 +32,6 @@ import influent.server.utilities.SQLConnectionPool;
 import java.sql.SQLException;
 import java.util.*;
 import oculus.aperture.spi.common.Properties;
-import org.apache.avro.AvroRemoteException;
 
 /**
  * Dynamic clustering impl.
@@ -534,7 +533,8 @@ public class DynamicClustering extends AbstractClusteringDataAccess implements F
   }
 
   @Override
-  public List<String> getLeafIds(List<String> ids, String context, boolean searchImmutableClusters) {
+  public List<String> getLeafIds(
+      List<String> ids, String context, boolean searchImmutableClusters) {
     if (ids == null || ids.isEmpty()) return Collections.emptyList();
 
     Set<String> lids = new HashSet<String>();

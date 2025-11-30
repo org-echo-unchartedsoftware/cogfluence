@@ -26,7 +26,6 @@ import influent.server.utilities.RestClient;
 import java.io.IOException;
 import java.util.List;
 import javax.ws.rs.core.Response.Status.Family;
-import org.apache.avro.AvroRemoteException;
 import org.apache.avro.Schema;
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -27,8 +27,6 @@ import influent.server.dataaccess.DataAccessHelper;
 import influent.server.spi.EntityPropertiesViewService;
 import java.util.List;
 import oculus.aperture.common.rest.ApertureServerResource;
-import org.apache.avro.AvroRemoteException;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.restlet.data.MediaType;
 import org.restlet.data.Status;

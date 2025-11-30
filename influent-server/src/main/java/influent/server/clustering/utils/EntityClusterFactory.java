@@ -49,7 +49,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import oculus.aperture.spi.common.Properties;
-import org.apache.avro.AvroRemoteException;
 
 public class EntityClusterFactory {
 

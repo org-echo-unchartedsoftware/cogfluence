@@ -23,8 +23,6 @@ import influent.idl.FL_DataAccess;
 import influent.server.utilities.GuidValidator;
 import oculus.aperture.common.JSONProperties;
 import oculus.aperture.common.rest.ApertureServerResource;
-import org.apache.avro.AvroRemoteException;
-import org.json.JSONException;
 import org.restlet.data.Status;
 import org.restlet.representation.StringRepresentation;
 import org.restlet.resource.Post;

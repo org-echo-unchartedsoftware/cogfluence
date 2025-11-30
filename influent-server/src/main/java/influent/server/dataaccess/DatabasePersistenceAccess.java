@@ -25,7 +25,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import org.apache.avro.AvroRemoteException;
 import org.joda.time.DateTime;
 import org.json.JSONException;
 import org.json.JSONObject;

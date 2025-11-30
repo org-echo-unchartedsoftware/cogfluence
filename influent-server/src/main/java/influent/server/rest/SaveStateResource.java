@@ -27,7 +27,6 @@ import influent.server.clustering.utils.ClusterContextCache;
 import influent.server.utilities.GuidValidator;
 import oculus.aperture.common.JSONProperties;
 import oculus.aperture.common.rest.ApertureServerResource;
-import org.apache.avro.AvroRemoteException;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.restlet.data.MediaType;

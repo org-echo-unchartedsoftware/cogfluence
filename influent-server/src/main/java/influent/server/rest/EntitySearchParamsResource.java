@@ -24,8 +24,6 @@ import influent.server.utilities.UISerializationHelper;
 import java.util.ArrayList;
 import java.util.List;
 import oculus.aperture.common.rest.ApertureServerResource;
-import org.apache.avro.AvroRemoteException;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.restlet.data.MediaType;
 import org.restlet.representation.StringRepresentation;

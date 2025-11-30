@@ -144,7 +144,7 @@
 							<artifactId>influent-client</artifactId>
 							<groupId>${project.groupId}</groupId>
 							<type>zip</type>
-							<classifier>${influent.client.optimization}</classifier>
+							<classifier>min</classifier>
 							<targetPath>.</targetPath>
 						</overlay>
 					</overlays>

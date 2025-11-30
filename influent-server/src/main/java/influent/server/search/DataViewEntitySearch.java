@@ -29,7 +29,6 @@ import influent.server.sql.SQLBuilder;
 import influent.server.utilities.*;
 import java.util.*;
 import oculus.aperture.spi.common.Properties;
-import org.apache.avro.AvroRemoteException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

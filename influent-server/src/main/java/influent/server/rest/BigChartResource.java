@@ -35,7 +35,6 @@ import java.util.Map;
 import oculus.aperture.common.JSONProperties;
 import oculus.aperture.common.rest.ApertureServerResource;
 import oculus.aperture.spi.common.Properties;
-import org.apache.avro.AvroRemoteException;
 import org.joda.time.DateTime;
 import org.joda.time.MutableDateTime;
 import org.json.JSONException;

@@ -19,16 +19,14 @@
 
 package influent.server.auth.adapter;
 
+import jakarta.inject.Inject;
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.FilterConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.ServletRequest;
 import jakarta.servlet.ServletResponse;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import jakarta.inject.Inject;
 import org.apache.shiro.guice.web.GuiceShiroFilter;
 
 /**

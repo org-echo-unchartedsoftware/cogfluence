@@ -28,7 +28,6 @@ import influent.server.clustering.utils.ClusterContextCache.PermitSet;
 import influent.server.dataaccess.DataAccessException;
 import influent.server.utilities.InfluentId;
 import java.util.*;
-import org.apache.avro.AvroRemoteException;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 import org.slf4j.Logger;

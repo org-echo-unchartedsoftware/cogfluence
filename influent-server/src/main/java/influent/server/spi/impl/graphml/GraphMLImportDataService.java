@@ -35,7 +35,6 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import oculus.aperture.spi.store.ConflictException;
-import org.apache.avro.AvroRemoteException;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.JSONArray;
 import org.json.JSONException;

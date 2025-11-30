@@ -29,7 +29,6 @@ import influent.server.utilities.*;
 import java.util.*;
 import oculus.aperture.common.JSONProperties;
 import oculus.aperture.common.rest.ApertureServerResource;
-import org.apache.avro.AvroRemoteException;
 import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONException;

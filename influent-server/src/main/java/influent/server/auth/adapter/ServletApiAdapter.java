@@ -104,9 +104,7 @@ public class ServletApiAdapter {
     // Otherwise, we need to wrap it the other direction
     return (jakarta.servlet.ServletRequest)
         createProxy(
-            javaxRequest,
-            jakarta.servlet.ServletRequest.class,
-            javax.servlet.ServletRequest.class);
+            javaxRequest, jakarta.servlet.ServletRequest.class, javax.servlet.ServletRequest.class);
   }
 
   /**
@@ -150,7 +148,8 @@ public class ServletApiAdapter {
    * Generic method to create a proxy that adapts between javax and jakarta APIs. The proxy
    * implements the targetInterface and delegates calls to the source object using reflection.
    */
-  private static Object createProxy(Object source, Class<?> targetInterface, Class<?> sourceInterface) {
+  private static Object createProxy(
+      Object source, Class<?> targetInterface, Class<?> sourceInterface) {
     if (source == null) {
       return null;
     }
