@@ -261,9 +261,9 @@ public class RelatedLinkResource extends ApertureServerResource {
 
       return new StringRepresentation(result.toString(), MediaType.APPLICATION_JSON);
 
-    } catch (Exception e) {
-      throw new ResourceException(Status.SERVER_ERROR_INTERNAL, e.getMessage());
     } catch (JSONException e) {
+      throw new ResourceException(Status.SERVER_ERROR_INTERNAL, e.getMessage());
+    } catch (Exception e) {
       throw new ResourceException(Status.SERVER_ERROR_INTERNAL, e.getMessage());
     }
   }

@@ -105,6 +105,12 @@ public class LinkDetailsResource extends ApertureServerResource {
       } else {
         return null;
       }
+    } catch (JSONException je) {
+      s_logger.info(
+          String.format(
+              "JSONException occurred Getting transaction details for transaction id: %s; %s",
+              transactionId, je.getMessage()));
+      throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "JSON parse error.", je);
     } catch (Exception e) {
       s_logger.info(
           String.format(
@@ -114,12 +120,6 @@ public class LinkDetailsResource extends ApertureServerResource {
           Status.CLIENT_ERROR_BAD_REQUEST,
           "Unable to create JSON object from supplied options string",
           e);
-    } catch (JSONException je) {
-      s_logger.info(
-          String.format(
-              "JSONException occurred Getting transaction details for transaction id: %s; %s",
-              transactionId, je.getMessage()));
-      throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "JSON parse error.", je);
     }
   }
 }

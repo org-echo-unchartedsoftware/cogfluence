@@ -22,10 +22,13 @@
         </snapshots>
     </repository>
 	
+	<!-- Spray.cc repository is no longer accessible -->
+	<!--
 	<repository>
       <id>Spray.cc repository</id>
       <url>https://repo.spray.cc</url>
     </repository>
+    -->
     
     <repository>
       <id>Akka repository</id>
