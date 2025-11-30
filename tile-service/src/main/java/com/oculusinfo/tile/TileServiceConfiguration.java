@@ -33,13 +33,13 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.ServletContextEvent;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.LinkedList;
 
 import java.lang.reflect.Constructor;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextListener;
 
 import com.google.common.base.Splitter;
-import com.google.common.collect.Lists;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
@@ -80,7 +80,7 @@ public class TileServiceConfiguration extends GuiceServletContextListener {
 		 * Extract modules class names to add from web.xml
 		 */
 		String moduleNames = context.getInitParameter( MODULES_ATTRIBUTE );
-		_modules = Lists.newLinkedList();
+		_modules = new LinkedList<>();
 
 		// these are standard and in our core.
 		LOGGER.info( "Adding Core Aperture Guice Modules: "

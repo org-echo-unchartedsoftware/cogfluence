@@ -20,9 +20,9 @@
  */
 package oculus.aperture.capture.phantom;
 
-import com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import oculus.aperture.capture.phantom.data.ProcessedTaskInfo;
 import oculus.aperture.spi.store.ContentService.DocumentDescriptor;
@@ -70,7 +70,7 @@ public class PhantomStoredImageResource extends PhantomCaptureResource {
       return null;
     }
 
-    Map<String, Object> response = Maps.newHashMap();
+    Map<String, Object> response = new HashMap<>();
 
     // process result.
     if (taskInfo != ProcessedTaskInfo.NONE) {

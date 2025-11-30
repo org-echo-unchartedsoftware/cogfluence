@@ -20,8 +20,8 @@
  */
 package oculus.aperture.icons;
 
-import com.google.common.collect.Maps;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Map;
 import oculus.aperture.geo.BasicCountryLevelGeocodingService;
 import oculus.aperture.icons.attr.BasicPlaceTypeHandler;
@@ -44,7 +44,7 @@ class SocioCulturalIconIndex {
   private static final String NOTFOUND_PATH = "/oculus/aperture/icons/hscb/notfound.svg";
 
   /** Resource paths to types */
-  private final Map<String, TypeHandler> typePaths = Maps.newHashMap();
+  private final Map<String, TypeHandler> typePaths = new HashMap<>();
 
   /**
    * On construction, generate shortform aliases for types at class loading time.

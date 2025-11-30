@@ -18,7 +18,6 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import influent.idl.FL_ClusteringDataAccess;
@@ -41,6 +40,7 @@ import jakarta.xml.bind.JAXBException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import oculus.aperture.capture.phantom.data.ProcessedTaskInfo;
@@ -205,7 +205,7 @@ public class LinkExportResource extends ApertureServerResource {
     // Store and let the content service pick the id
     DocumentDescriptor descriptor = _service.storeDocument(doc, DEFAULT_STORE, null, null);
 
-    Map<String, Object> response = Maps.newHashMap();
+    Map<String, Object> response = new HashMap<>();
 
     // process result.
     if (descriptor != ProcessedTaskInfo.NONE) {

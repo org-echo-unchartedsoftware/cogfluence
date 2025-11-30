@@ -21,7 +21,6 @@
 package oculus.aperture.cms.couchdb;
 
 import com.google.common.collect.Maps;
-import com.google.common.io.ByteStreams;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.google.inject.name.Named;
@@ -213,7 +212,7 @@ class CouchDbCmsService implements ContentService {
 
       in = connection.getInputStream();
 
-      byte[] data = ByteStreams.toByteArray(in);
+      byte[] data = in.readAllBytes();
 
       return new DocumentImpl(id, rev, store, encoding, mime, data);
 

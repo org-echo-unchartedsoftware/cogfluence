@@ -18,7 +18,6 @@
  */
 package influent.server.spi.impl;
 
-import com.google.common.io.CharStreams;
 import com.google.common.io.Closeables;
 import com.google.inject.Singleton;
 import influent.idl.FL_ContinentCode;
@@ -28,7 +27,6 @@ import influent.idl.FL_Geocoding;
 import influent.idlconst.ImmutableCountry;
 import influent.idlconst.ImmutableGeoData;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
@@ -66,9 +64,9 @@ public class BasicCountryLevelGeocoding implements FL_Geocoding {
 
     if (inp != null) {
       try {
-        final String json =
-            CharStreams.toString(
-                new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8"))));
+        BufferedReader reader =
+            new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8")));
+        final String json = reader.lines().reduce("", (a, b) -> a + b + "\n");
 
         final JSONArray array = new JSONArray(json);
 
@@ -118,8 +116,6 @@ public class BasicCountryLevelGeocoding implements FL_Geocoding {
               }
             });
 
-      } catch (IOException e) {
-        s_logger.error("Failed to loan countries.json", e);
       } catch (JSONException e) {
         s_logger.error("Failed to parse countries.json", e);
       } finally {

@@ -18,13 +18,13 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import influent.server.Version;
 import influent.server.spi.ExportDataService;
 import jakarta.xml.bind.JAXBException;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 import oculus.aperture.capture.phantom.data.ProcessedTaskInfo;
 import oculus.aperture.common.rest.ApertureServerResource;
@@ -87,7 +87,7 @@ public class ExportGraphResource extends ApertureServerResource {
     // execute
     DocumentDescriptor taskInfo = service.exportToXMLDoc(data, Version.VERSION);
 
-    Map<String, Object> response = Maps.newHashMap();
+    Map<String, Object> response = new HashMap<>();
 
     // process result.
     if (taskInfo != ProcessedTaskInfo.NONE) {

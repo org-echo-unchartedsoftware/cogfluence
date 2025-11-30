@@ -18,10 +18,10 @@
  */
 package influent.server.sql.basesql;
 
-import com.google.common.collect.Lists;
 import influent.server.sql.SQLBuilderException;
 import influent.server.sql.SQLJoin;
 import influent.server.sql.SQLSelect;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,7 +51,7 @@ public class BaseSQLJoin implements SQLJoin {
 
   // --------------------------------------------------------
 
-  private List<JoinOnData> joinOns = Lists.newArrayList();
+  private List<JoinOnData> joinOns = new ArrayList<>();
 
   // --------------------------------------------------------
 

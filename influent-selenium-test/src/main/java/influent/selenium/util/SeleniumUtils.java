@@ -19,7 +19,7 @@
 
 package influent.selenium.util;
 
-import com.google.common.collect.Lists;
+import java.util.Arrays;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -61,7 +61,7 @@ public class SeleniumUtils {
   public static boolean hasClass(WebElement el, String className) {
     String classes = el.getAttribute("class");
     if (classes != null) {
-      return Lists.newArrayList(classes.split(" ")).contains(className);
+      return Arrays.asList(classes.split(" ")).contains(className);
     }
     return false;
   }

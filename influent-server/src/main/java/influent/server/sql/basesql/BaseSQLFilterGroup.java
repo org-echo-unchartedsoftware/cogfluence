@@ -18,9 +18,9 @@
  */
 package influent.server.sql.basesql;
 
-import com.google.common.collect.Lists;
 import influent.server.sql.SQLFilter;
 import influent.server.sql.SQLFilterGroup;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -37,7 +37,7 @@ public class BaseSQLFilterGroup implements SQLFilterGroup {
   // --------------------------------------------------------
 
   private final FilterGroupType filterGroupType;
-  private List<SQLFilter> filters = Lists.newArrayList();
+  private List<SQLFilter> filters = new ArrayList<>();
   private boolean negated = false;
 
   // --------------------------------------------------------

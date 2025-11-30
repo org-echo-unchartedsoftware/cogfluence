@@ -21,7 +21,6 @@
 package oculus.aperture.config;
 
 import com.google.common.collect.ImmutableMap;
-import com.google.common.io.CharStreams;
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
 import jakarta.servlet.ServletContext;
@@ -164,9 +163,9 @@ public class DefaultServerConfigModule extends AbstractModule {
 
       if (inp != null) {
         try {
-          json =
-              CharStreams.toString(
-                  new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8"))));
+          BufferedReader reader =
+              new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8")));
+          json = reader.lines().reduce("", (a, b) -> a + b + "\n");
         } finally {
           try {
             inp.close();

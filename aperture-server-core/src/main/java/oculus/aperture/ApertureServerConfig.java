@@ -21,7 +21,6 @@
 package oculus.aperture;
 
 import com.google.common.base.Splitter;
-import com.google.common.collect.Lists;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
@@ -30,6 +29,7 @@ import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import java.lang.reflect.Constructor;
+import java.util.LinkedList;
 import java.util.List;
 import oculus.aperture.config.DefaultServerConfigModule;
 import oculus.aperture.rest.RestModule;
@@ -59,7 +59,7 @@ public class ApertureServerConfig extends GuiceServletContextListener {
      * Extract modules class names to add from web.xml
      */
     String moduleNames = context.getInitParameter(MODULES_ATTRIBUTE);
-    modules = Lists.newLinkedList();
+    modules = new LinkedList<>();
 
     // these are standard and in our core.
     logger.info(

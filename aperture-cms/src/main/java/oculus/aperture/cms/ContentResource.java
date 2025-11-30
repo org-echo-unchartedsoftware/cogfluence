@@ -20,10 +20,9 @@
  */
 package oculus.aperture.cms;
 
-import com.google.common.collect.Maps;
-import com.google.common.io.ByteStreams;
 import com.google.inject.Inject;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -133,7 +132,7 @@ public class ContentResource extends ApertureServerResource {
 
     // Set the content
     try {
-      doc.setDocument(ByteStreams.toByteArray(entity.getStream()));
+      doc.setDocument(entity.getStream().readAllBytes());
     } catch (IOException e) {
       throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "Error reading posted data.", e);
     }
@@ -175,7 +174,7 @@ public class ContentResource extends ApertureServerResource {
       resourceUri += "?rev=" + Reference.encode(descriptor.getRevision());
 
       // Return a response containing a JSON block with the id/rev
-      Map<Object, Object> response = Maps.newHashMap();
+      Map<Object, Object> response = new HashMap<>();
       response.put("ok", true);
       response.put("id", descriptor.getId());
       response.put("rev", descriptor.getRevision());

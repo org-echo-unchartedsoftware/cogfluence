@@ -20,7 +20,6 @@
  */
 package oculus.aperture.capture.phantom.impl;
 
-import com.google.common.io.ByteStreams;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -266,7 +265,7 @@ public class PhantomRenderer implements CaptureService {
           File file = new File(strValue(task.get("filename")));
           byte[] data = null;
           ins = new FileInputStream(file);
-          data = ByteStreams.toByteArray(ins);
+          data = ins.readAllBytes();
           final String cType = strValue(task.get("mimeType"));
 
           // close file input stream.

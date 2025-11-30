@@ -20,7 +20,6 @@
  */
 package oculus.aperture.geo;
 
-import com.google.common.io.CharStreams;
 import com.google.inject.Singleton;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -68,9 +67,9 @@ public class BasicCountryLevelGeocodingService implements GeocodingService {
 
     if (inp != null) {
       try {
-        final String json =
-            CharStreams.toString(
-                new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8"))));
+        BufferedReader reader =
+            new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8")));
+        final String json = reader.lines().reduce("", (a, b) -> a + b + "\n");
 
         final JSONArray array = new JSONArray(json);
 
@@ -120,8 +119,6 @@ public class BasicCountryLevelGeocodingService implements GeocodingService {
               }
             });
 
-      } catch (IOException e) {
-        s_logger.error("Failed to loan countries.json", e);
       } catch (JSONException e) {
         s_logger.error("Failed to parse countries.json", e);
       } finally {

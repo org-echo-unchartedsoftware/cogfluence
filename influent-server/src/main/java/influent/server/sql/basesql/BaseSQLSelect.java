@@ -18,8 +18,6 @@
  */
 package influent.server.sql.basesql;
 
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import influent.server.sql.SQLBuilder;
 import influent.server.sql.SQLBuilder.Helpers.LazyNamedParam;
 import influent.server.sql.SQLBuilderException;
@@ -30,7 +28,9 @@ import influent.server.sql.SQLJoin;
 import influent.server.sql.SQLSelect;
 import influent.server.sql.basesql.BaseSQLFilterGroup.FilterGroupType;
 import influent.server.sql.basesql.BaseSQLJoin.JoinOnData;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -76,7 +76,7 @@ public class BaseSQLSelect implements SQLSelect {
 
     void addResult(BuildResult o) {
       if (o != null && o.indices != null && o.indices.size() > 0) {
-        if (indices == null) indices = Maps.newHashMap();
+        if (indices == null) indices = new HashMap<>();
 
         // need to add the new indices to our indices, but we need to displace the values first
         int numOldIndices = indices.size();
@@ -91,7 +91,7 @@ public class BaseSQLSelect implements SQLSelect {
     }
 
     void pushParamName(String name) {
-      if (indices == null) indices = Maps.newHashMap();
+      if (indices == null) indices = new HashMap<>();
       indices.put(name, indices.size());
     }
   }
@@ -102,12 +102,12 @@ public class BaseSQLSelect implements SQLSelect {
 
   private boolean distinctVals = false;
   private Number topCount = null;
-  private List<ColumnData> columns = Lists.newArrayList();
+  private List<ColumnData> columns = new ArrayList<>();
 
   private BaseSQLFrom fromClause;
   private BaseSQLJoin joinClause;
-  private List<String> groupByColumns = Lists.newArrayList();
-  private List<OrderByData> orderByColumns = Lists.newArrayList();
+  private List<String> groupByColumns = new ArrayList<>();
+  private List<OrderByData> orderByColumns = new ArrayList<>();
   private SQLFilter whereFilter;
   private SQLFilter havingFilter;
 
@@ -613,7 +613,7 @@ public class BaseSQLSelect implements SQLSelect {
 
     // go through the sub-filters and build them first to see if we actually have a substring to
     // concat
-    List<StringBuilder> subfilterBuilders = Lists.newArrayList();
+    List<StringBuilder> subfilterBuilders = new ArrayList<>();
     for (int i = 0; i < numFilters; ++i) {
       StringBuilder subfilterBuilder = new StringBuilder();
 

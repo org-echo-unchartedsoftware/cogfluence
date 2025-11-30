@@ -20,7 +20,7 @@
  */
 package oculus.aperture.common.rest;
 
-import com.google.common.collect.Maps;
+import java.util.HashMap;
 import java.util.Map;
 import org.restlet.resource.ServerResource;
 import org.restlet.routing.Variable;
@@ -32,7 +32,7 @@ import org.restlet.routing.Variable;
  */
 public class ResourceDefinition {
 
-  private final Map<String, Variable> variables = Maps.newHashMap();
+  private final Map<String, Variable> variables = new HashMap<>();
   private final Class<? extends ServerResource> resource;
 
   /**

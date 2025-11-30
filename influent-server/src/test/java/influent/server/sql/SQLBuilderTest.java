@@ -19,9 +19,9 @@
 package influent.server.sql;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import influent.server.sql.mssql.MSSQLBuilder;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
@@ -342,7 +342,7 @@ public class SQLBuilderTest {
     MSSQLBuilder builder = new MSSQLBuilder();
     SQLSelect sql = null;
 
-    Map<String, Object> replacements = Maps.newHashMap();
+    Map<String, Object> replacements = new HashMap<>();
     replacements.put("lazy1Value", "7");
     replacements.put("lazy2Value", 10);
     replacements.put("lazy3Value", "'blah%'");

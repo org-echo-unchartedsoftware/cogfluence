@@ -20,12 +20,12 @@
  */
 package oculus.aperture.capture.phantom;
 
-import com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
 import oculus.aperture.common.EmptyProperties;
 import oculus.aperture.common.rest.ApertureServerResource;
@@ -189,7 +189,7 @@ public abstract class PhantomCaptureResource extends ApertureServerResource {
     }
 
     // Create JSON object to that packages up information needed by phantomJS
-    Map<String, Object> params = Maps.newHashMap();
+    Map<String, Object> params = new HashMap<>();
     params.put("source", url);
     params.put("reload", reload);
     params.put("width", captureWidth);

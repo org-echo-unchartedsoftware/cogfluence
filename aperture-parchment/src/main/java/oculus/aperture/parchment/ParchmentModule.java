@@ -41,13 +41,11 @@ package oculus.aperture.parchment;
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 import com.google.common.collect.ImmutableMap;
-import com.google.common.io.CharStreams;
 import com.google.common.io.Closeables;
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.MapBinder;
 import com.google.inject.name.Names;
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
@@ -88,15 +86,10 @@ public class ParchmentModule extends AbstractModule {
     InputStream inp = ParchmentModule.class.getResourceAsStream("parchment.css");
     String css = null;
 
-    try {
-      css =
-          CharStreams.toString(
-              new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8"))));
-    } catch (IOException e) {
-      logger.error("Failure Loading Parchment Module", e);
-    } finally {
-      Closeables.closeQuietly(inp);
-    }
+    BufferedReader reader =
+        new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8")));
+    css = reader.lines().reduce("", (a, b) -> a + b + "\n");
+    Closeables.closeQuietly(inp);
 
     // bind result in guice.
     Names.bindProperties(

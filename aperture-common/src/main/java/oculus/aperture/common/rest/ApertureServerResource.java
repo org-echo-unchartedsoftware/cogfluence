@@ -20,7 +20,7 @@
  */
 package oculus.aperture.common.rest;
 
-import com.google.common.collect.Maps;
+import java.util.HashMap;
 import java.util.Map;
 import org.restlet.data.Status;
 import org.restlet.ext.json.JsonRepresentation;
@@ -85,7 +85,7 @@ public class ApertureServerResource extends ServerResource {
    * @return a JSONRepresentation object
    */
   private Map<String, Object> getErrorObject(Throwable e) {
-    Map<String, Object> content = Maps.newHashMap();
+    Map<String, Object> content = new HashMap<>();
     content.put("ok", false);
     content.put("message", e.toString());
 
