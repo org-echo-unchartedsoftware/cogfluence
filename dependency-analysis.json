@@ -1,0 +1,1733 @@
+{
+  "total_pom_files": 33,
+  "total_dependencies": 249,
+  "unique_dependencies": 103,
+  "dependencies": {
+    "${project.groupId}:aperture-geo": {
+      "key": "${project.groupId}:aperture-geo",
+      "groupId": "${project.groupId}",
+      "artifactId": "aperture-geo",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "${project.groupId}:aperture-layout": {
+      "key": "${project.groupId}:aperture-layout",
+      "groupId": "${project.groupId}",
+      "artifactId": "aperture-layout",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-layout-yworks/pom.xml"
+      ]
+    },
+    "${project.groupId}:influent-client": {
+      "key": "${project.groupId}:influent-client",
+      "groupId": "${project.groupId}",
+      "artifactId": "influent-client",
+      "versions": [
+        "${project.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 4,
+      "used_in": [
+        "./influent-app/pom.xml",
+        "./walker/pom.xml",
+        "./bitcoin/pom.xml",
+        "./kiva/pom.xml"
+      ]
+    },
+    "${project.groupId}:influent-server": {
+      "key": "${project.groupId}:influent-server",
+      "groupId": "${project.groupId}",
+      "artifactId": "influent-server",
+      "versions": [
+        "${project.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 4,
+      "used_in": [
+        "./influent-app/pom.xml",
+        "./walker/pom.xml",
+        "./bitcoin/pom.xml",
+        "./kiva/pom.xml"
+      ]
+    },
+    "${project.parent.groupId}:aperture-client": {
+      "key": "${project.parent.groupId}:aperture-client",
+      "groupId": "${project.parent.groupId}",
+      "artifactId": "aperture-client",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./aperture-distribution/pom.xml"
+      ]
+    },
+    "${project.parent.groupId}:aperture-common": {
+      "key": "${project.parent.groupId}:aperture-common",
+      "groupId": "${project.parent.groupId}",
+      "artifactId": "aperture-common",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 9,
+      "used_in": [
+        "./aperture-layout/pom.xml",
+        "./aperture-cms/pom.xml",
+        "./aperture-graph/pom.xml",
+        "./aperture-parchment/pom.xml",
+        "./aperture-server-core/pom.xml",
+        "./aperture-distribution/pom.xml",
+        "./aperture-geo/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "${project.parent.groupId}:aperture-examples": {
+      "key": "${project.parent.groupId}:aperture-examples",
+      "groupId": "${project.parent.groupId}",
+      "artifactId": "aperture-examples",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./aperture-distribution/pom.xml"
+      ]
+    },
+    "${project.parent.groupId}:aperture-server-core": {
+      "key": "${project.parent.groupId}:aperture-server-core",
+      "groupId": "${project.parent.groupId}",
+      "artifactId": "aperture-server-core",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./aperture-distribution/pom.xml"
+      ]
+    },
+    "${project.parent.groupId}:aperture-spi": {
+      "key": "${project.parent.groupId}:aperture-spi",
+      "groupId": "${project.parent.groupId}",
+      "artifactId": "aperture-spi",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 11,
+      "used_in": [
+        "./aperture-cms/pom.xml",
+        "./aperture-server/pom.xml",
+        "./aperture-graph/pom.xml",
+        "./aperture-parchment/pom.xml",
+        "./aperture-server-core/pom.xml",
+        "./aperture-distribution/pom.xml",
+        "./aperture-common/pom.xml",
+        "./aperture-geo/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "${project.parent.groupId}:influent-spi": {
+      "key": "${project.parent.groupId}:influent-spi",
+      "groupId": "${project.parent.groupId}",
+      "artifactId": "influent-spi",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "com.diffplug.spotless:spotless-lib": {
+      "key": "com.diffplug.spotless:spotless-lib",
+      "groupId": "com.diffplug.spotless",
+      "artifactId": "spotless-lib",
+      "versions": [
+        "4.1.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./spotless-maven-plugin/pom.xml"
+      ]
+    },
+    "com.diffplug.spotless:spotless-lib-extra": {
+      "key": "com.diffplug.spotless:spotless-lib-extra",
+      "groupId": "com.diffplug.spotless",
+      "artifactId": "spotless-lib-extra",
+      "versions": [
+        "4.1.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./spotless-maven-plugin/pom.xml"
+      ]
+    },
+    "com.fasterxml.jackson.core:jackson-annotations": {
+      "key": "com.fasterxml.jackson.core:jackson-annotations",
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-annotations",
+      "versions": [
+        "2.20"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "com.fasterxml.jackson.core:jackson-core": {
+      "key": "com.fasterxml.jackson.core:jackson-core",
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-core",
+      "versions": [
+        "managed",
+        "2.20.1"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./pom.xml",
+        "./ensemble-clustering/pom.xml"
+      ]
+    },
+    "com.fasterxml.jackson.core:jackson-databind": {
+      "key": "com.fasterxml.jackson.core:jackson-databind",
+      "groupId": "com.fasterxml.jackson.core",
+      "artifactId": "jackson-databind",
+      "versions": [
+        "managed",
+        "2.18.1",
+        "2.20.1"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./pom.xml",
+        "./ensemble-clustering/pom.xml",
+        "./ensemble/pom.xml"
+      ]
+    },
+    "com.fasterxml.woodstox:woodstox-core": {
+      "key": "com.fasterxml.woodstox:woodstox-core",
+      "groupId": "com.fasterxml.woodstox",
+      "artifactId": "woodstox-core",
+      "versions": [
+        "7.1.1"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "com.google.guava:guava": {
+      "key": "com.google.guava:guava",
+      "groupId": "com.google.guava",
+      "artifactId": "guava",
+      "versions": [
+        "managed",
+        "23.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 4,
+      "used_in": [
+        "./pom.xml",
+        "./aperture-common/pom.xml",
+        "./aperture-icons/pom.xml",
+        "./aperture-parchment/pom.xml"
+      ]
+    },
+    "com.google.inject.extensions:guice-assistedinject": {
+      "key": "com.google.inject.extensions:guice-assistedinject",
+      "groupId": "com.google.inject.extensions",
+      "artifactId": "guice-assistedinject",
+      "versions": [
+        "7.0.0",
+        "managed"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "com.google.inject.extensions:guice-multibindings": {
+      "key": "com.google.inject.extensions:guice-multibindings",
+      "groupId": "com.google.inject.extensions",
+      "artifactId": "guice-multibindings",
+      "versions": [
+        "managed",
+        "4.2.3"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 6,
+      "used_in": [
+        "./aperture-server-core/pom.xml",
+        "./pom.xml",
+        "./aperture-parchment/pom.xml",
+        "./aperture-common/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "com.google.inject.extensions:guice-servlet": {
+      "key": "com.google.inject.extensions:guice-servlet",
+      "groupId": "com.google.inject.extensions",
+      "artifactId": "guice-servlet",
+      "versions": [
+        "7.0.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./pom.xml",
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "com.google.inject:guice": {
+      "key": "com.google.inject:guice",
+      "groupId": "com.google.inject",
+      "artifactId": "guice",
+      "versions": [
+        "7.0.0",
+        "managed"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 8,
+      "used_in": [
+        "./aperture-layout/pom.xml",
+        "./aperture-cms/pom.xml",
+        "./aperture-server-core/pom.xml",
+        "./pom.xml",
+        "./aperture-parchment/pom.xml",
+        "./aperture-geo/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "com.jolbox:bonecp": {
+      "key": "com.jolbox:bonecp",
+      "groupId": "com.jolbox",
+      "artifactId": "bonecp",
+      "versions": [
+        "0.8.0.RELEASE"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "com.mysql:mysql-connector-j": {
+      "key": "com.mysql:mysql-connector-j",
+      "groupId": "com.mysql",
+      "artifactId": "mysql-connector-j",
+      "versions": [
+        "9.1.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./influent-app/pom.xml",
+        "./walker/pom.xml"
+      ]
+    },
+    "com.oculusinfo.ml:ml": {
+      "key": "com.oculusinfo.ml:ml",
+      "groupId": "com.oculusinfo.ml",
+      "artifactId": "ml",
+      "versions": [
+        "0.0.14-SNAPSHOT"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-clustering-job/pom.xml"
+      ]
+    },
+    "com.oculusinfo:ensemble-clustering": {
+      "key": "com.oculusinfo:ensemble-clustering",
+      "groupId": "com.oculusinfo",
+      "artifactId": "ensemble-clustering",
+      "versions": [
+        "0.1.0-SNAPSHOT"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./ensemble-clustering-spark/pom.xml",
+        "./ensemble/ensemble-clustering-spark/pom.xml"
+      ]
+    },
+    "com.sun.jersey.contribs:jersey-apache-client": {
+      "key": "com.sun.jersey.contribs:jersey-apache-client",
+      "groupId": "com.sun.jersey.contribs",
+      "artifactId": "jersey-apache-client",
+      "versions": [
+        "1.19.4"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "com.sun.xml.ws:jaxws-rt": {
+      "key": "com.sun.xml.ws:jaxws-rt",
+      "groupId": "com.sun.xml.ws",
+      "artifactId": "jaxws-rt",
+      "versions": [
+        "4.0.3"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "com.yworks:yfiles": {
+      "key": "com.yworks:yfiles",
+      "groupId": "com.yworks",
+      "artifactId": "yfiles",
+      "versions": [
+        "2.4.0.3"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-layout-yworks/pom.xml"
+      ]
+    },
+    "commons-io:commons-io": {
+      "key": "commons-io:commons-io",
+      "groupId": "commons-io",
+      "artifactId": "commons-io",
+      "versions": [
+        "2.21.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "commons-lang:commons-lang": {
+      "key": "commons-lang:commons-lang",
+      "groupId": "commons-lang",
+      "artifactId": "commons-lang",
+      "versions": [
+        "2.6"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./kiva/pom.xml"
+      ]
+    },
+    "commons-logging:commons-logging": {
+      "key": "commons-logging:commons-logging",
+      "groupId": "commons-logging",
+      "artifactId": "commons-logging",
+      "versions": [
+        "1.3.5"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-cms/pom.xml"
+      ]
+    },
+    "jakarta.activation:jakarta.activation-api": {
+      "key": "jakarta.activation:jakarta.activation-api",
+      "groupId": "jakarta.activation",
+      "artifactId": "jakarta.activation-api",
+      "versions": [
+        "2.1.4"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "jakarta.servlet:jakarta.servlet-api": {
+      "key": "jakarta.servlet:jakarta.servlet-api",
+      "groupId": "jakarta.servlet",
+      "artifactId": "jakarta.servlet-api",
+      "versions": [
+        "managed",
+        "6.1.0"
+      ],
+      "scopes": [
+        "provided",
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./pom.xml",
+        "./influent-server/pom.xml",
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "jakarta.ws.rs:jakarta.ws.rs-api": {
+      "key": "jakarta.ws.rs:jakarta.ws.rs-api",
+      "groupId": "jakarta.ws.rs",
+      "artifactId": "jakarta.ws.rs-api",
+      "versions": [
+        "4.0.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "jakarta.xml.bind:jakarta.xml.bind-api": {
+      "key": "jakarta.xml.bind:jakarta.xml.bind-api",
+      "groupId": "jakarta.xml.bind",
+      "artifactId": "jakarta.xml.bind-api",
+      "versions": [
+        "4.0.4"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "jakarta.xml.ws:jakarta.xml.ws-api": {
+      "key": "jakarta.xml.ws:jakarta.xml.ws-api",
+      "groupId": "jakarta.xml.ws",
+      "artifactId": "jakarta.xml.ws-api",
+      "versions": [
+        "4.0.2"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "javax.servlet:javax.servlet-api": {
+      "key": "javax.servlet:javax.servlet-api",
+      "groupId": "javax.servlet",
+      "artifactId": "javax.servlet-api",
+      "versions": [
+        "4.0.1",
+        "managed"
+      ],
+      "scopes": [
+        "provided",
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./pom.xml",
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "javax.servlet:servlet-api": {
+      "key": "javax.servlet:servlet-api",
+      "groupId": "javax.servlet",
+      "artifactId": "servlet-api",
+      "versions": [
+        "2.5"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-capture-phantom/pom.xml"
+      ]
+    },
+    "joda-time:joda-time": {
+      "key": "joda-time:joda-time",
+      "groupId": "joda-time",
+      "artifactId": "joda-time",
+      "versions": [
+        "2.14.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./influent-spi/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "junit:junit": {
+      "key": "junit:junit",
+      "groupId": "junit",
+      "artifactId": "junit",
+      "versions": [
+        "4.0",
+        "4.13.2",
+        "managed"
+      ],
+      "scopes": [
+        "test",
+        "compile"
+      ],
+      "usage_count": 13,
+      "used_in": [
+        "./influent-selenium-test/pom.xml",
+        "./aperture-cms/pom.xml",
+        "./server/pom.xml",
+        "./influent-server/pom.xml",
+        "./pom.xml",
+        "./ensemble/pom.xml",
+        "./ensemble-clustering/pom.xml",
+        "./influent-spi/pom.xml",
+        "./aperture-geo/pom.xml",
+        "./spotless-maven-plugin/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-layout/pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml"
+      ]
+    },
+    "log4j:log4j": {
+      "key": "log4j:log4j",
+      "groupId": "log4j",
+      "artifactId": "log4j",
+      "versions": [
+        "1.2.17"
+      ],
+      "scopes": [
+        "provided"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "net.sf.ehcache:ehcache-core": {
+      "key": "net.sf.ehcache:ehcache-core",
+      "groupId": "net.sf.ehcache",
+      "artifactId": "ehcache-core",
+      "versions": [
+        "2.6.5",
+        "managed",
+        "2.6.11"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 5,
+      "used_in": [
+        "./aperture-cms/pom.xml",
+        "./server/pom.xml",
+        "./aperture-server-core/pom.xml",
+        "./pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml"
+      ]
+    },
+    "net.sf.ehcache:ehcache-web": {
+      "key": "net.sf.ehcache:ehcache-web",
+      "groupId": "net.sf.ehcache",
+      "artifactId": "ehcache-web",
+      "versions": [
+        "2.0.4",
+        "managed"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 4,
+      "used_in": [
+        "./pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml",
+        "./server/pom.xml",
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "net.sf.jgrapht:jgrapht": {
+      "key": "net.sf.jgrapht:jgrapht",
+      "groupId": "net.sf.jgrapht",
+      "artifactId": "jgrapht",
+      "versions": [
+        "0.8.3"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-graph/pom.xml"
+      ]
+    },
+    "net.sourceforge.jtds:jtds": {
+      "key": "net.sourceforge.jtds:jtds",
+      "groupId": "net.sourceforge.jtds",
+      "artifactId": "jtds",
+      "versions": [
+        "1.3.1"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./influent-clustering-job/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "net.sourceforge:javaml": {
+      "key": "net.sourceforge:javaml",
+      "groupId": "net.sourceforge",
+      "artifactId": "javaml",
+      "versions": [
+        "0.1.7"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-graph/pom.xml"
+      ]
+    },
+    "oculus.aperture:aperture-client": {
+      "key": "oculus.aperture:aperture-client",
+      "groupId": "oculus.aperture",
+      "artifactId": "aperture-client",
+      "versions": [
+        "${aperture.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./server/pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml"
+      ]
+    },
+    "oculus.aperture:aperture-server-core": {
+      "key": "oculus.aperture:aperture-server-core",
+      "groupId": "oculus.aperture",
+      "artifactId": "aperture-server-core",
+      "versions": [
+        "${aperture.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./server/pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml"
+      ]
+    },
+    "oculus.aperture:aperture-spi": {
+      "key": "oculus.aperture:aperture-spi",
+      "groupId": "oculus.aperture",
+      "artifactId": "aperture-spi",
+      "versions": [
+        "${aperture.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./server/pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml"
+      ]
+    },
+    "org.apache.avro:avro": {
+      "key": "org.apache.avro:avro",
+      "groupId": "org.apache.avro",
+      "artifactId": "avro",
+      "versions": [
+        "1.11.4"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-spi/pom.xml"
+      ]
+    },
+    "org.apache.avro:avro-ipc": {
+      "key": "org.apache.avro:avro-ipc",
+      "groupId": "org.apache.avro",
+      "artifactId": "avro-ipc",
+      "versions": [
+        "1.11.4"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-spi/pom.xml"
+      ]
+    },
+    "org.apache.commons:commons-lang3": {
+      "key": "org.apache.commons:commons-lang3",
+      "groupId": "org.apache.commons",
+      "artifactId": "commons-lang3",
+      "versions": [
+        "3.20.0",
+        "3.18.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./aperture-graph/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "org.apache.hadoop:hadoop-client": {
+      "key": "org.apache.hadoop:hadoop-client",
+      "groupId": "org.apache.hadoop",
+      "artifactId": "hadoop-client",
+      "versions": [
+        "2.7.0",
+        "3.4.2"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./ensemble-clustering-spark/pom.xml",
+        "./ensemble/ensemble-clustering-spark/pom.xml",
+        "./influent-clustering-job/pom.xml"
+      ]
+    },
+    "org.apache.hadoop:hadoop-core": {
+      "key": "org.apache.hadoop:hadoop-core",
+      "groupId": "org.apache.hadoop",
+      "artifactId": "hadoop-core",
+      "versions": [
+        "2.6.0-mr1-cdh5.16.99"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-clustering-job/pom.xml"
+      ]
+    },
+    "org.apache.logging.log4j:log4j-1.2-api": {
+      "key": "org.apache.logging.log4j:log4j-1.2-api",
+      "groupId": "org.apache.logging.log4j",
+      "artifactId": "log4j-1.2-api",
+      "versions": [
+        "2.25.2"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "org.apache.logging.log4j:log4j-api": {
+      "key": "org.apache.logging.log4j:log4j-api",
+      "groupId": "org.apache.logging.log4j",
+      "artifactId": "log4j-api",
+      "versions": [
+        "2.25.2"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "org.apache.logging.log4j:log4j-core": {
+      "key": "org.apache.logging.log4j:log4j-core",
+      "groupId": "org.apache.logging.log4j",
+      "artifactId": "log4j-core",
+      "versions": [
+        "2.25.2",
+        "2.23.1",
+        "managed"
+      ],
+      "scopes": [
+        "test",
+        "compile"
+      ],
+      "usage_count": 9,
+      "used_in": [
+        "./aperture-cms/pom.xml",
+        "./aperture-server/pom.xml",
+        "./aperture-server-core/pom.xml",
+        "./pom.xml",
+        "./ensemble/pom.xml",
+        "./ensemble-clustering/pom.xml",
+        "./aperture-geo/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-layout/pom.xml"
+      ]
+    },
+    "org.apache.logging.log4j:log4j-slf4j-impl": {
+      "key": "org.apache.logging.log4j:log4j-slf4j-impl",
+      "groupId": "org.apache.logging.log4j",
+      "artifactId": "log4j-slf4j-impl",
+      "versions": [
+        "2.25.2",
+        "2.23.1"
+      ],
+      "scopes": [
+        "test",
+        "compile"
+      ],
+      "usage_count": 8,
+      "used_in": [
+        "./aperture-cms/pom.xml",
+        "./aperture-server/pom.xml",
+        "./aperture-server-core/pom.xml",
+        "./ensemble/pom.xml",
+        "./ensemble-clustering/pom.xml",
+        "./aperture-geo/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-layout/pom.xml"
+      ]
+    },
+    "org.apache.maven.plugin-tools:maven-plugin-annotations": {
+      "key": "org.apache.maven.plugin-tools:maven-plugin-annotations",
+      "groupId": "org.apache.maven.plugin-tools",
+      "artifactId": "maven-plugin-annotations",
+      "versions": [
+        "3.15.2"
+      ],
+      "scopes": [
+        "provided"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./spotless-maven-plugin/pom.xml"
+      ]
+    },
+    "org.apache.maven:maven-core": {
+      "key": "org.apache.maven:maven-core",
+      "groupId": "org.apache.maven",
+      "artifactId": "maven-core",
+      "versions": [
+        "${maven.version}"
+      ],
+      "scopes": [
+        "provided"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./spotless-maven-plugin/pom.xml"
+      ]
+    },
+    "org.apache.maven:maven-plugin-api": {
+      "key": "org.apache.maven:maven-plugin-api",
+      "groupId": "org.apache.maven",
+      "artifactId": "maven-plugin-api",
+      "versions": [
+        "${maven.version}"
+      ],
+      "scopes": [
+        "provided"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./spotless-maven-plugin/pom.xml"
+      ]
+    },
+    "org.apache.shiro:shiro-core": {
+      "key": "org.apache.shiro:shiro-core",
+      "groupId": "org.apache.shiro",
+      "artifactId": "shiro-core",
+      "versions": [
+        "1.13.0",
+        "2.0.6"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "org.apache.shiro:shiro-guice": {
+      "key": "org.apache.shiro:shiro-guice",
+      "groupId": "org.apache.shiro",
+      "artifactId": "shiro-guice",
+      "versions": [
+        "1.13.0",
+        "2.0.6"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "org.apache.shiro:shiro-web": {
+      "key": "org.apache.shiro:shiro-web",
+      "groupId": "org.apache.shiro",
+      "artifactId": "shiro-web",
+      "versions": [
+        "1.13.0",
+        "2.0.6"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "org.apache.solr:solr-solrj": {
+      "key": "org.apache.solr:solr-solrj",
+      "groupId": "org.apache.solr",
+      "artifactId": "solr-solrj",
+      "versions": [
+        "9.10.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 4,
+      "used_in": [
+        "./kiva/pom.xml",
+        "./walker/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "org.apache.spark:spark-core_2.12": {
+      "key": "org.apache.spark:spark-core_2.12",
+      "groupId": "org.apache.spark",
+      "artifactId": "spark-core_2.12",
+      "versions": [
+        "3.5.1"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./ensemble-clustering-spark/pom.xml",
+        "./ensemble/ensemble-clustering-spark/pom.xml"
+      ]
+    },
+    "org.apache.xmlgraphics:batik-dom": {
+      "key": "org.apache.xmlgraphics:batik-dom",
+      "groupId": "org.apache.xmlgraphics",
+      "artifactId": "batik-dom",
+      "versions": [
+        "1.19"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "org.apache.xmlgraphics:batik-svg-dom": {
+      "key": "org.apache.xmlgraphics:batik-svg-dom",
+      "groupId": "org.apache.xmlgraphics",
+      "artifactId": "batik-svg-dom",
+      "versions": [
+        "1.19"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "org.apache.xmlgraphics:batik-transcoder": {
+      "key": "org.apache.xmlgraphics:batik-transcoder",
+      "groupId": "org.apache.xmlgraphics",
+      "artifactId": "batik-transcoder",
+      "versions": [
+        "1.19"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "org.codehaus.jackson:jackson-core-asl": {
+      "key": "org.codehaus.jackson:jackson-core-asl",
+      "groupId": "org.codehaus.jackson",
+      "artifactId": "jackson-core-asl",
+      "versions": [
+        "1.9.13"
+      ],
+      "scopes": [
+        "provided"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "org.codehaus.jackson:jackson-mapper-asl": {
+      "key": "org.codehaus.jackson:jackson-mapper-asl",
+      "groupId": "org.codehaus.jackson",
+      "artifactId": "jackson-mapper-asl",
+      "versions": [
+        "1.9.13"
+      ],
+      "scopes": [
+        "provided"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./pom.xml"
+      ]
+    },
+    "org.eclipse.jetty:jetty-server": {
+      "key": "org.eclipse.jetty:jetty-server",
+      "groupId": "org.eclipse.jetty",
+      "artifactId": "jetty-server",
+      "versions": [
+        "12.0.22",
+        "12.1.4",
+        "9.4.56.v20240826"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 11,
+      "used_in": [
+        "./influent-app/pom.xml",
+        "./aperture-server/pom.xml",
+        "./server/pom.xml",
+        "./bitcoin/pom.xml",
+        "./kiva/pom.xml",
+        "./aperture-client/pom.xml",
+        "./walker/pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml"
+      ]
+    },
+    "org.eclipse.persistence:org.eclipse.persistence.moxy": {
+      "key": "org.eclipse.persistence:org.eclipse.persistence.moxy",
+      "groupId": "org.eclipse.persistence",
+      "artifactId": "org.eclipse.persistence.moxy",
+      "versions": [
+        "4.0.8"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "org.glassfish.jaxb:jaxb-runtime": {
+      "key": "org.glassfish.jaxb:jaxb-runtime",
+      "groupId": "org.glassfish.jaxb",
+      "artifactId": "jaxb-runtime",
+      "versions": [
+        "4.0.6"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "org.hsqldb:hsqldb": {
+      "key": "org.hsqldb:hsqldb",
+      "groupId": "org.hsqldb",
+      "artifactId": "hsqldb",
+      "versions": [
+        "2.7.4"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./kiva/pom.xml"
+      ]
+    },
+    "org.jmock:jmock": {
+      "key": "org.jmock:jmock",
+      "groupId": "org.jmock",
+      "artifactId": "jmock",
+      "versions": [
+        "2.13.1"
+      ],
+      "scopes": [
+        "test"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "org.json:json": {
+      "key": "org.json:json",
+      "groupId": "org.json",
+      "artifactId": "json",
+      "versions": [
+        "20250517"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-common/pom.xml"
+      ]
+    },
+    "org.lightcouch:lightcouch": {
+      "key": "org.lightcouch:lightcouch",
+      "groupId": "org.lightcouch",
+      "artifactId": "lightcouch",
+      "versions": [
+        "0.2.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-cms/pom.xml"
+      ]
+    },
+    "org.restlet:org.restlet": {
+      "key": "org.restlet:org.restlet",
+      "groupId": "org.restlet",
+      "artifactId": "org.restlet",
+      "versions": [
+        "2.6.0",
+        "managed"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 9,
+      "used_in": [
+        "./aperture-layout/pom.xml",
+        "./aperture-cms/pom.xml",
+        "./aperture-server-core/pom.xml",
+        "./pom.xml",
+        "./aperture-parchment/pom.xml",
+        "./aperture-common/pom.xml",
+        "./aperture-geo/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-icons/pom.xml"
+      ]
+    },
+    "org.restlet:org.restlet.ext.fileupload": {
+      "key": "org.restlet:org.restlet.ext.fileupload",
+      "groupId": "org.restlet",
+      "artifactId": "org.restlet.ext.fileupload",
+      "versions": [
+        "2.5.2"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "org.restlet:org.restlet.ext.jackson": {
+      "key": "org.restlet:org.restlet.ext.jackson",
+      "groupId": "org.restlet",
+      "artifactId": "org.restlet.ext.jackson",
+      "versions": [
+        "2.6.0",
+        "managed"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./pom.xml",
+        "./aperture-layout/pom.xml",
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "org.restlet:org.restlet.ext.json": {
+      "key": "org.restlet:org.restlet.ext.json",
+      "groupId": "org.restlet",
+      "artifactId": "org.restlet.ext.json",
+      "versions": [
+        "2.6.0",
+        "managed"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 7,
+      "used_in": [
+        "./aperture-cms/pom.xml",
+        "./aperture-server-core/pom.xml",
+        "./pom.xml",
+        "./aperture-common/pom.xml",
+        "./aperture-geo/pom.xml",
+        "./aperture-capture-phantom/pom.xml",
+        "./aperture-layout/pom.xml"
+      ]
+    },
+    "org.restlet:org.restlet.ext.servlet": {
+      "key": "org.restlet:org.restlet.ext.servlet",
+      "groupId": "org.restlet",
+      "artifactId": "org.restlet.ext.servlet",
+      "versions": [
+        "2.6.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./pom.xml",
+        "./aperture-server-core/pom.xml"
+      ]
+    },
+    "org.seleniumhq.selenium:selenium-chrome-driver": {
+      "key": "org.seleniumhq.selenium:selenium-chrome-driver",
+      "groupId": "org.seleniumhq.selenium",
+      "artifactId": "selenium-chrome-driver",
+      "versions": [
+        "4.38.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-selenium-test/pom.xml"
+      ]
+    },
+    "org.seleniumhq.selenium:selenium-firefox-driver": {
+      "key": "org.seleniumhq.selenium:selenium-firefox-driver",
+      "groupId": "org.seleniumhq.selenium",
+      "artifactId": "selenium-firefox-driver",
+      "versions": [
+        "4.38.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-selenium-test/pom.xml"
+      ]
+    },
+    "org.seleniumhq.selenium:selenium-ie-driver": {
+      "key": "org.seleniumhq.selenium:selenium-ie-driver",
+      "groupId": "org.seleniumhq.selenium",
+      "artifactId": "selenium-ie-driver",
+      "versions": [
+        "4.38.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-selenium-test/pom.xml"
+      ]
+    },
+    "org.seleniumhq.selenium:selenium-java": {
+      "key": "org.seleniumhq.selenium:selenium-java",
+      "groupId": "org.seleniumhq.selenium",
+      "artifactId": "selenium-java",
+      "versions": [
+        "4.38.0"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-selenium-test/pom.xml"
+      ]
+    },
+    "org.slf4j:slf4j-api": {
+      "key": "org.slf4j:slf4j-api",
+      "groupId": "org.slf4j",
+      "artifactId": "slf4j-api",
+      "versions": [
+        "1.6.1",
+        "managed",
+        "2.0.17"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 7,
+      "used_in": [
+        "./server/pom.xml",
+        "./pom.xml",
+        "./ensemble-clustering/pom.xml",
+        "./aperture-common/pom.xml",
+        "./aperture-graph/pom.xml",
+        "./aperture-layout/pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml"
+      ]
+    },
+    "org.slf4j:slf4j-log4j12": {
+      "key": "org.slf4j:slf4j-log4j12",
+      "groupId": "org.slf4j",
+      "artifactId": "slf4j-log4j12",
+      "versions": [
+        "1.7.33",
+        "1.6.1",
+        "managed"
+      ],
+      "scopes": [
+        "test",
+        "provided",
+        "runtime"
+      ],
+      "usage_count": 4,
+      "used_in": [
+        "./pom.xml",
+        "./server/pom.xml",
+        "./influent-spi/pom.xml",
+        "./aperturejs-bootstrap/server/pom.xml"
+      ]
+    },
+    "org.spark-project:spark-core_2.9.3": {
+      "key": "org.spark-project:spark-core_2.9.3",
+      "groupId": "org.spark-project",
+      "artifactId": "spark-core_2.9.3",
+      "versions": [
+        "0.7.3"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-clustering-job/pom.xml"
+      ]
+    },
+    "org.tinyjee.jgraphx:jgraphx": {
+      "key": "org.tinyjee.jgraphx:jgraphx",
+      "groupId": "org.tinyjee.jgraphx",
+      "artifactId": "jgraphx",
+      "versions": [
+        "3.4.1.3"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-layout/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-capture-phantom": {
+      "key": "software.uncharted.influent:aperture-capture-phantom",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-capture-phantom",
+      "versions": [
+        "${project.version}",
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./aperture-distribution/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-client": {
+      "key": "software.uncharted.influent:aperture-client",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-client",
+      "versions": [
+        "${project.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-client/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-cms": {
+      "key": "software.uncharted.influent:aperture-cms",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-cms",
+      "versions": [
+        "${project.version}",
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./aperture-distribution/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-icons": {
+      "key": "software.uncharted.influent:aperture-icons",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-icons",
+      "versions": [
+        "${project.version}",
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 3,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./aperture-distribution/pom.xml",
+        "./influent-server/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-layout": {
+      "key": "software.uncharted.influent:aperture-layout",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-layout",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 2,
+      "used_in": [
+        "./aperture-server/pom.xml",
+        "./aperture-distribution/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-layout-yworks": {
+      "key": "software.uncharted.influent:aperture-layout-yworks",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-layout-yworks",
+      "versions": [
+        "${project.parent.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./aperture-server/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-parchment": {
+      "key": "software.uncharted.influent:aperture-parchment",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-parchment",
+      "versions": [
+        "${project.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-server-core": {
+      "key": "software.uncharted.influent:aperture-server-core",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-server-core",
+      "versions": [
+        "${project.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:aperture-spi": {
+      "key": "software.uncharted.influent:aperture-spi",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "aperture-spi",
+      "versions": [
+        "${project.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "software.uncharted.influent:ensemble-clustering": {
+      "key": "software.uncharted.influent:ensemble-clustering",
+      "groupId": "software.uncharted.influent",
+      "artifactId": "ensemble-clustering",
+      "versions": [
+        "${project.version}"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-server/pom.xml"
+      ]
+    },
+    "xalan:xalan": {
+      "key": "xalan:xalan",
+      "groupId": "xalan",
+      "artifactId": "xalan",
+      "versions": [
+        "2.7.3"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-clustering-job/pom.xml"
+      ]
+    },
+    "xerces:xercesImpl": {
+      "key": "xerces:xercesImpl",
+      "groupId": "xerces",
+      "artifactId": "xercesImpl",
+      "versions": [
+        "2.12.2"
+      ],
+      "scopes": [
+        "compile"
+      ],
+      "usage_count": 1,
+      "used_in": [
+        "./influent-clustering-job/pom.xml"
+      ]
+    }
+  }
+}
