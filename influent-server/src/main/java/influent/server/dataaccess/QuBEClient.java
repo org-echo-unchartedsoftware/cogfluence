@@ -118,7 +118,7 @@ public class QuBEClient extends RestClient implements FL_PatternSearch {
 
       // args
       // this is the equivalent of resultLimit and can be removed once the latter works
-      form.add("max", SerializationHelper.toJson(new Long(max), LONG_SCHEMA));
+      form.add("max", SerializationHelper.toJson(Long.valueOf(max), LONG_SCHEMA));
 
       //			form.add("example",
       // "{\"uid\":\"PD0\",\"name\":\"PatternDescriptor0\",\"description\":null,\"entities\":[{\"uid\":\"E0\",\"role\":{\"string\":\"EntityRole0\"},\"entities\":null,\"tags\":null,\"properties\":null,\"examplars\":{\"array\":[\"12564\"]},\"constraint\":null},{\"uid\":\"E1\",\"role\":{\"string\":\"EntityRole1\"},\"entities\":null,\"tags\":null,\"properties\":null,\"examplars\":{\"array\":[\"28497\"]},\"constraint\":null}],\"links\":[]}");
@@ -126,11 +126,11 @@ public class QuBEClient extends RestClient implements FL_PatternSearch {
       // 0\",\"description\":null,\"entities\":[{\"uid\":\"E0\",\"role\":{\"string\":\"Entity Role
       // 0\"},\"entities\":null,\"tags\":null,\"properties\":null,\"examplars\":{\"array\":[\"5249540\"]},\"constraint\":null},{\"uid\":\"E1\",\"role\":{\"string\":\"Entity Role 1\"},\"entities\":null,\"tags\":null,\"properties\":null,\"examplars\":{\"array\":[\"5249569\"]},\"constraint\":null},{\"uid\":\"E2\",\"role\":{\"string\":\"Entity Role 2\"},\"entities\":null,\"tags\":null,\"properties\":null,\"examplars\":{\"array\":[\"5249535\"]},\"constraint\":null},{\"uid\":\"E3\",\"role\":{\"string\":\"Entity Role 3\"},\"entities\":null,\"tags\":null,\"properties\":null,\"examplars\":{\"array\":[\"5254968\"]},\"constraint\":null},{\"uid\":\"E4\",\"role\":{\"string\":\"Entity Role 4\"},\"entities\":null,\"tags\":null,\"properties\":null,\"examplars\":{\"array\":[\"11\"]},\"constraint\":null}],\"links\":[]}");
       form.add("example", exampleJson);
-      form.add("resultLimit", SerializationHelper.toJson(new Long(max), LONG_SCHEMA));
-      form.add("startIndex", SerializationHelper.toJson(new Long(start), LONG_SCHEMA));
+      form.add("resultLimit", SerializationHelper.toJson(Long.valueOf(max), LONG_SCHEMA));
+      form.add("startIndex", SerializationHelper.toJson(Long.valueOf(start), LONG_SCHEMA));
       form.add("dateRange", SerializationHelper.toJson(dateRange));
       if (useAptima) {
-        form.add("aptimaQueryIndex", SerializationHelper.toJson(new Long(0), LONG_SCHEMA));
+        form.add("aptimaQueryIndex", SerializationHelper.toJson(Long.valueOf(0), LONG_SCHEMA));
       }
 
       // call

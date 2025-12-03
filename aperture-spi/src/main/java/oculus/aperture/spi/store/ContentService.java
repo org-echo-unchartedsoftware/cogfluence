@@ -102,7 +102,7 @@ public interface ContentService {
   /**
    * Retrieves the given document from the store.
    *
-   * @param store the document store to access
+   * @param storeName the document store to access
    * @param id the document id to get
    * @param rev the document revision to get. If null, the most recent revision of the document with
    *     the given id will be returned.
@@ -117,7 +117,7 @@ public interface ContentService {
   /**
    * Removes and returns the given document from the store.
    *
-   * @param store the document store to access
+   * @param storeName the document store to access
    * @param id the document id to get
    * @param rev the document revision to get. If null, the most recent revision of the document with
    *     the given id will be returned.

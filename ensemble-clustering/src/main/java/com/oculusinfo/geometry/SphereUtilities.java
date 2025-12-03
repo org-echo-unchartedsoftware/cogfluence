@@ -118,11 +118,11 @@ public class SphereUtilities {
    * Get the angle ABC (i.e., the angle at point B between the lines BA and BC)
    *
    * @param thetaA The azimuth of point A
-   * @param phiA The polar angle fo point A
+   * @param phiA The polar angle of point A
    * @param thetaB The azimuth of point B
-   * @param phiB The polar angle fo point B
+   * @param phiB The polar angle of point B
    * @param thetaC The azimuth of point C
-   * @param phiB The polar angle fo point C
+   * @param phiC The polar angle of point C
    * @return The angle ABC, in radians
    */
   public static double getAngle(
@@ -139,11 +139,11 @@ public class SphereUtilities {
    * Get the angular area subtended by the triangle formed by the given three points
    *
    * @param thetaA The azimuth of point A
-   * @param phiA The polar angle fo point A
+   * @param phiA The polar angle of point A
    * @param thetaB The azimuth of point B
-   * @param phiB The polar angle fo point B
+   * @param phiB The polar angle of point B
    * @param thetaC The azimuth of point C
-   * @param phiB The polar angle fo point C
+   * @param phiC The polar angle of point C
    * @return The area subtended by the triangle (A, B, C), in steradians
    */
   public static double getTriangleArea(

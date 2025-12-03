@@ -39,8 +39,8 @@ public class ImageRasterizer {
     BufferedImageTranscoder transcoder = new BufferedImageTranscoder(BufferedImage.TYPE_INT_ARGB);
 
     // hints
-    if (width > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_WIDTH, new Float(width));
-    if (height > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, new Float(height));
+    if (width > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_WIDTH, Float.valueOf(width));
+    if (height > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, Float.valueOf(height));
 
     TranscoderInput input = new TranscoderInput(svg);
     try {

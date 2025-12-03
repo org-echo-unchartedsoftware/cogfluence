@@ -503,7 +503,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
     if (isDist) {
       List<FL_Frequency> freqs = new ArrayList<FL_Frequency>();
       freqs.add(
-          FL_Frequency.newBuilder().setRange(propValue).setFrequency(new Double(stat)).build());
+          FL_Frequency.newBuilder().setRange(propValue).setFrequency(Double.valueOf(stat)).build());
       FL_DistributionRange range =
           FL_DistributionRange.newBuilder()
               .setDistribution(freqs)
@@ -551,7 +551,7 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
     // - which should be the case
     List<FL_Frequency> freqs = (List<FL_Frequency>) property.getValue();
 
-    freqs.add(FL_Frequency.newBuilder().setRange(propValue).setFrequency(new Double(stat)).build());
+    freqs.add(FL_Frequency.newBuilder().setRange(propValue).setFrequency(Double.valueOf(stat)).build());
   }
 
   @SuppressWarnings("unchecked")

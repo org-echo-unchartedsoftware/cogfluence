@@ -71,12 +71,20 @@ public class Vector implements Serializable {
     return Math.sqrt(getDistanceSquared(other));
   }
 
-  /** {@inheritDoc} */
+  /**
+   * Calculates the squared distance between this vector and another vector.
+   * @param v the other vector
+   * @return the squared distance
+   */
   public double getDistanceSquared(Vector v) {
     return subtract(v).vectorLengthSquared();
   }
 
-  /** {@inheritDoc} */
+  /**
+   * Calculates the mean of a list of vectors.
+   * @param data the list of vectors
+   * @return the mean vector
+   */
   public Vector mean(List<? extends Vector> data) {
     if (data.isEmpty()) throw new IllegalArgumentException("Attempt to take the mean of 0 vectors");
 

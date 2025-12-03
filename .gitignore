@@ -11,3 +11,7 @@ target
 .project.gradle/
 .gradle/
 build/
+
+build.log
+dependency-tree.txt
+full-build-verification.log

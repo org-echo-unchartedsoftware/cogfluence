@@ -210,13 +210,13 @@ public class PropertyMatchBuilder {
         if (jObj.has("weight")) {
           termBuilder.setWeight((float) jObj.getInt("weight"));
         } else {
-          termBuilder.setWeight(new Float(1));
+          termBuilder.setWeight(Float.valueOf(1));
         }
 
         if (jObj.has("similarity")) {
           termBuilder.setWeight((float) jObj.getInt("similarity"));
         } else {
-          termBuilder.setSimilarity(new Float(1));
+          termBuilder.setSimilarity(Float.valueOf(1));
         }
 
         if (jObj.has("include")) {

@@ -220,7 +220,7 @@ public class TransactionTableResource extends ApertureServerResource {
           i--;
         }
       }
-      results.setTotal(new Long(searchResults.size()));
+      results.setTotal(Long.valueOf(searchResults.size()));
     }
 
     for (int i = 0; i < searchResults.size(); i++) {

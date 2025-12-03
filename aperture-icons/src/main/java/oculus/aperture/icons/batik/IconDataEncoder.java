@@ -58,7 +58,7 @@ public class IconDataEncoder {
 
         case JPEG:
           JPEGTranscoder jpeg = new JPEGTranscoder();
-          jpeg.addTranscodingHint(JPEGTranscoder.KEY_QUALITY, new Float(1));
+          jpeg.addTranscodingHint(JPEGTranscoder.KEY_QUALITY, Float.valueOf(1));
 
           result = encodeImage(svg, jpeg, ImageType.JPEG.getMimeType(), width, height);
           break;
@@ -207,8 +207,8 @@ public class IconDataEncoder {
       TranscoderOutput output = new TranscoderOutput(buffer);
 
       // hints
-      if (width > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_WIDTH, new Float(width));
-      if (height > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, new Float(height));
+      if (width > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_WIDTH, Float.valueOf(width));
+      if (height > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, Float.valueOf(height));
 
       // do the transcoding
       transcoder.transcode(input, output);
