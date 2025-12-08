@@ -208,7 +208,8 @@ public class IconDataEncoder {
 
       // hints
       if (width > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_WIDTH, Float.valueOf(width));
-      if (height > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, Float.valueOf(height));
+      if (height > 0)
+        transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, Float.valueOf(height));
 
       // do the transcoding
       transcoder.transcode(input, output);

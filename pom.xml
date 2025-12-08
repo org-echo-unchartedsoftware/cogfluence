@@ -323,6 +323,7 @@
 		<module>ensemble-clustering</module>
 		
 		<!-- Influent modules -->
+		<module>influent-common</module>
 		<module>influent-spi</module>
 		<module>influent-server</module>
 		<module>influent-client</module>

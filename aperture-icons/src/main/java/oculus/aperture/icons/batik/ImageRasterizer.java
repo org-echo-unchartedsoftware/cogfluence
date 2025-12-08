@@ -40,7 +40,8 @@ public class ImageRasterizer {
 
     // hints
     if (width > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_WIDTH, Float.valueOf(width));
-    if (height > 0) transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, Float.valueOf(height));
+    if (height > 0)
+      transcoder.addTranscodingHint(ImageTranscoder.KEY_HEIGHT, Float.valueOf(height));
 
     TranscoderInput input = new TranscoderInput(svg);
     try {

@@ -73,6 +73,7 @@ public class Vector implements Serializable {
 
   /**
    * Calculates the squared distance between this vector and another vector.
+   *
    * @param v the other vector
    * @return the squared distance
    */
@@ -82,6 +83,7 @@ public class Vector implements Serializable {
 
   /**
    * Calculates the mean of a list of vectors.
+   *
    * @param data the list of vectors
    * @return the mean vector
    */

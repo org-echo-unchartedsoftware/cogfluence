@@ -65,30 +65,11 @@
 							<outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
 						</configuration>
 					</execution>
-			</executions>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-antrun-plugin</artifactId>
-			<version>3.1.0</version>
-			<executions>
-				<execution>
-					<id>fix-avro-generated-code</id>
-					<phase>generate-sources</phase>
-					<goals>
-						<goal>run</goal>
-					</goals>
-					<configuration>
-						<target>
-							<replace file="${project.basedir}/src/main/java/influent/idl/FL_SearchResult.java" token="result = 31 * result + (result == null ? 0 : result.hashCode());" value="result = 31 * result + (this.result == null ? 0 : this.result.hashCode());" />
-						</target>
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.14.1</version>
 				<configuration>
 					<source>11</source>

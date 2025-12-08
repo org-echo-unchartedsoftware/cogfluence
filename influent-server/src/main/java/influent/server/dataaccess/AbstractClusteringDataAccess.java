@@ -551,7 +551,8 @@ public abstract class AbstractClusteringDataAccess implements FL_ClusteringDataA
     // - which should be the case
     List<FL_Frequency> freqs = (List<FL_Frequency>) property.getValue();
 
-    freqs.add(FL_Frequency.newBuilder().setRange(propValue).setFrequency(Double.valueOf(stat)).build());
+    freqs.add(
+        FL_Frequency.newBuilder().setRange(propValue).setFrequency(Double.valueOf(stat)).build());
   }
 
   @SuppressWarnings("unchecked")
