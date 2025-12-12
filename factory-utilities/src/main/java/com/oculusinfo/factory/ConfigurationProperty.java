@@ -23,7 +23,7 @@
  */
 package com.oculusinfo.factory;
 
-import org.json.JSONException;
+import oculus.aperture.common.json.JSONException;
 
 /**
  * This class provides a description of a property to be read from JSON files or

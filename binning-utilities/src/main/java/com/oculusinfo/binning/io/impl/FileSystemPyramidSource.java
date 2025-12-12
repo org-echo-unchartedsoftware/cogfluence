@@ -39,7 +39,7 @@ import com.oculusinfo.binning.TileData;
 import com.oculusinfo.binning.TileIndex;
 import com.oculusinfo.binning.io.PyramidIO;
 import com.oculusinfo.binning.io.serialization.TileSerializer;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 
 /**

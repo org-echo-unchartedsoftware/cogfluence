@@ -28,7 +28,7 @@ package com.oculusinfo.annotation.filter.impl;
 import com.oculusinfo.annotation.filter.AnnotationFilter;
 import com.oculusinfo.factory.ConfigurableFactory;
 import com.oculusinfo.factory.properties.JSONProperty;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

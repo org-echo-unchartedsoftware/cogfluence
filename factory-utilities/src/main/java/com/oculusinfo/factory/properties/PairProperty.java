@@ -27,8 +27,8 @@ import com.oculusinfo.factory.util.Pair;
 import com.oculusinfo.factory.ConfigurationException;
 import com.oculusinfo.factory.ConfigurationProperty;
 import com.oculusinfo.factory.JSONNode;
-import org.json.JSONArray;
-import org.json.JSONException;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
 
 import java.util.UUID;
 

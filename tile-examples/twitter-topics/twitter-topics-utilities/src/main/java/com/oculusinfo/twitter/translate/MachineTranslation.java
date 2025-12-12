@@ -30,9 +30,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 
 /**
  * Machine Translation using Google Translate API, which is accessed using REST

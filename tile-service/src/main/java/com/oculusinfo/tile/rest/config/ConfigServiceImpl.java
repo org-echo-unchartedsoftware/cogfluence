@@ -27,7 +27,7 @@ package com.oculusinfo.tile.rest.config;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.oculusinfo.tile.rest.layer.LayerServiceImpl;
-import org.json.JSONArray;
+import oculus.aperture.common.json.JSONArray;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

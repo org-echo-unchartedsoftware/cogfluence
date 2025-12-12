@@ -30,7 +30,7 @@ import com.oculusinfo.binning.io.serialization.TileSerializer;
 import com.oculusinfo.factory.ConfigurationException;
 import com.oculusinfo.factory.util.Pair;
 import com.oculusinfo.tile.rendering.LayerConfiguration;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 /**
  * Created by wmayo on 2015-10-02.

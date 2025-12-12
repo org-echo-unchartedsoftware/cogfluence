@@ -25,7 +25,7 @@ package com.oculusinfo.binning.io.serialization.impl;
 
 import java.util.Arrays;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.junit.Test;
 
 import com.oculusinfo.binning.io.serialization.SerializationTypeChecker;

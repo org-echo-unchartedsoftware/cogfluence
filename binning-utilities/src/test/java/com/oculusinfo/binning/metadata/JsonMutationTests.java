@@ -29,9 +29,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 

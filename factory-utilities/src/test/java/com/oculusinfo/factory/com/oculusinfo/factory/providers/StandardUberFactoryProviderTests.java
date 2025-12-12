@@ -30,8 +30,8 @@ import com.oculusinfo.factory.properties.IntegerProperty;
 import com.oculusinfo.factory.providers.FactoryProvider;
 import com.oculusinfo.factory.providers.AbstractFactoryProvider;
 import com.oculusinfo.factory.providers.StandardUberFactoryProvider;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -40,9 +40,9 @@ import com.oculusinfo.factory.util.Pair;
 import com.oculusinfo.tile.rendering.LayerConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 
 
 /**

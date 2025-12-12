@@ -30,8 +30,8 @@ import com.google.inject.Singleton;
 import com.oculusinfo.tile.rest.config.ConfigException;
 import com.oculusinfo.tile.rest.config.ConfigPropertiesService;
 import org.apache.commons.lang.StringUtils;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

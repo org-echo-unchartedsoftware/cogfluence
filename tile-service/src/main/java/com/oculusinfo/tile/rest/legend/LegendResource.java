@@ -31,7 +31,7 @@ import java.net.URLEncoder;
 
 import javax.imageio.ImageIO;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.restlet.data.MediaType;
 import org.restlet.data.Status;
 import org.restlet.engine.util.Base64;

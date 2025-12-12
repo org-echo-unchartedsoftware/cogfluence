@@ -25,8 +25,8 @@ package com.oculusinfo.annotation.impl;
 
 import com.oculusinfo.annotation.AnnotationData;
 import com.oculusinfo.factory.util.Pair;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONObject;
 
 import java.sql.Timestamp;
 import java.util.Date;

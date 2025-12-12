@@ -36,14 +36,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
+import oculus.aperture.common.json.XML;
 import oculus.aperture.spi.store.ConflictException;
 import oculus.aperture.spi.store.ContentService;
 import oculus.aperture.spi.store.ContentService.Document;
 import oculus.aperture.spi.store.ContentService.DocumentDescriptor;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.XML;
 import org.restlet.data.Status;
 import org.restlet.resource.ResourceException;
 
@@ -125,7 +125,8 @@ public class GraphMLExportDataService implements ExportDataService {
     addDefinitionKeys(graphML);
 
     miscData = new JSONObject(); // add misc data
-    for (String dataKey : JSONObject.getNames(jsonData)) {
+    for (Object dataKeyObj : JSONObject.getNames(jsonData)) {
+      String dataKey = dataKeyObj.toString();
       if (!dataKey.equals("children")) {
         miscData.put(dataKey, jsonData.get(dataKey));
       }
@@ -140,7 +141,8 @@ public class GraphMLExportDataService implements ExportDataService {
       columnObject = columns.getJSONObject(i);
 
       columnData = new JSONObject(); // add column data
-      for (String dataKey : JSONObject.getNames(columnObject)) {
+      for (Object dataKeyObj : JSONObject.getNames(columnObject)) {
+        String dataKey = dataKeyObj.toString();
         if (!dataKey.equals("children")) {
           columnData.put(dataKey, columnObject.get(dataKey));
         }

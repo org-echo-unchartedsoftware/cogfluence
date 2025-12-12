@@ -30,7 +30,7 @@ import com.oculusinfo.factory.properties.DoubleProperty;
 import com.oculusinfo.factory.properties.IntegerProperty;
 import com.oculusinfo.factory.properties.StringProperty;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 

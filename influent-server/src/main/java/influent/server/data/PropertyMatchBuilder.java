@@ -46,12 +46,12 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class PropertyMatchBuilder {
 
@@ -125,7 +125,8 @@ public class PropertyMatchBuilder {
     _isLinkSearch = isLinkSearch;
     _isMultiType = isMultiType;
 
-    for (String type : JSONObject.getNames(pmdMap)) {
+    for (Object typeObj : JSONObject.getNames(pmdMap)) {
+      String type = typeObj.toString();
       JSONArray pmds = pmdMap.getJSONArray(type);
       List<FL_PropertyMatchDescriptor> termList = new ArrayList<FL_PropertyMatchDescriptor>();
       for (int i = 0; i < pmds.length(); i++) {

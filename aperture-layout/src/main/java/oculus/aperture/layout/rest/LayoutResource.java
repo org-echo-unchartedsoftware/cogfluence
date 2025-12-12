@@ -28,6 +28,9 @@ import oculus.aperture.common.BasicLink;
 import oculus.aperture.common.BasicNode;
 import oculus.aperture.common.BasicNodeTag;
 import oculus.aperture.common.JSONProperties;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import oculus.aperture.common.rest.ApertureServerResource;
 import oculus.aperture.spi.common.Alignments.AnchorX;
 import oculus.aperture.spi.common.Alignments.AnchorY;
@@ -37,9 +40,6 @@ import oculus.aperture.spi.common.Properties;
 import oculus.aperture.spi.layout.LayoutResults;
 import oculus.aperture.spi.layout.LayoutService;
 import oculus.aperture.spi.layout.options.LayoutOptions;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.restlet.resource.Post;
 
 public class LayoutResource extends ApertureServerResource {

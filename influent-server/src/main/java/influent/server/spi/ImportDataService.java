@@ -19,9 +19,9 @@
 package influent.server.spi;
 
 import jakarta.xml.bind.JAXBException;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import oculus.aperture.spi.store.ConflictException;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public interface ImportDataService {
 

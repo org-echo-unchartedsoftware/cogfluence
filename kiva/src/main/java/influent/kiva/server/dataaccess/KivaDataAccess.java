@@ -33,8 +33,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import oculus.aperture.common.json.JSONException;
 import oculus.aperture.spi.common.Properties;
-import org.json.JSONException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

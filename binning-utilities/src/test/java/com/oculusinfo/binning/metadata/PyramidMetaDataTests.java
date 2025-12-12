@@ -27,7 +27,7 @@ import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import org.json.JSONException;
+import oculus.aperture.common.json.JSONException;
 import org.junit.Assert;
 import org.junit.Test;
 

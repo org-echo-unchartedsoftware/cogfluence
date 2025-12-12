@@ -29,7 +29,7 @@ import com.oculusinfo.binning.io.PyramidIO;
 import com.oculusinfo.binning.io.serialization.TileSerializer;
 import com.oculusinfo.factory.ConfigurationException;
 import com.oculusinfo.tile.rendering.LayerConfiguration;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 /**
  * Default tile combiner that does nothing.

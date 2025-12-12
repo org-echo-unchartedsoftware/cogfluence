@@ -26,8 +26,8 @@ package com.oculusinfo.binning.metadata;
 import com.oculusinfo.binning.metadata.updaters.MetaDataF0p0T1p0;
 import com.oculusinfo.factory.util.Pair;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collection;

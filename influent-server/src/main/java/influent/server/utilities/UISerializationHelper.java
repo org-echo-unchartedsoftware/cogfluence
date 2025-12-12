@@ -25,11 +25,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import oculus.aperture.spi.common.Properties;
 import org.apache.avro.specific.SpecificRecord;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 /** Takes FL_* objects and converts them into JSON expected by the front-end */
 public class UISerializationHelper {

@@ -58,7 +58,7 @@ import javax.swing.SwingConstants;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 import com.oculusinfo.binning.TileIndex;
 import com.oculusinfo.binning.TilePyramid;

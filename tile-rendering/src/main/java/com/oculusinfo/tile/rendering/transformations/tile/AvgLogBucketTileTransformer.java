@@ -31,8 +31,8 @@ import com.oculusinfo.binning.util.UnaryOperator;
 import com.oculusinfo.factory.ConfigurationException;
 import com.oculusinfo.factory.util.Pair;
 import com.oculusinfo.tile.rendering.LayerConfiguration;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

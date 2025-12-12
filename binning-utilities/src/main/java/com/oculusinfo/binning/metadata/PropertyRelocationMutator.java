@@ -23,8 +23,8 @@
  */
 package com.oculusinfo.binning.metadata;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 
 public class PropertyRelocationMutator extends JsonMutator {
     private String _name;

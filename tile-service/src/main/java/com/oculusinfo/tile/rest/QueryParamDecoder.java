@@ -24,8 +24,8 @@
  */
 package com.oculusinfo.tile.rest;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONObject;
 
 import java.net.URLDecoder;
 import java.util.Arrays;

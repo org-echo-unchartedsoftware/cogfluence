@@ -27,7 +27,7 @@ package com.oculusinfo.tile.rest.layer;
 
 import com.oculusinfo.binning.metadata.PyramidMetaData;
 import com.oculusinfo.tile.rendering.LayerConfiguration;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import java.util.List;
 
 

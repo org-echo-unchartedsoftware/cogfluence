@@ -25,7 +25,7 @@ package com.oculusinfo.sparktile.rest.tile.caching;
 
 import java.util.List;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

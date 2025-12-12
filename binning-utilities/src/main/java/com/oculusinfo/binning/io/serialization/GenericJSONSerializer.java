@@ -36,9 +36,9 @@ import java.util.List;
 
 import com.oculusinfo.binning.TileData;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 
 import com.oculusinfo.binning.TileIndex;
 import com.oculusinfo.binning.impl.DenseTileData;

@@ -20,7 +20,7 @@ package influent.server.spi;
 
 import influent.idl.FL_Entity;
 import influent.server.dataaccess.DataAccessException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 public interface EntityPropertiesViewService {
 

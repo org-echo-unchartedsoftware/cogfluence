@@ -26,9 +26,9 @@ package com.oculusinfo.binning.metadata;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 
 abstract public class PropertyIndexToArrayMutator<T> extends JsonMutator {
     private String[] _fromPath;

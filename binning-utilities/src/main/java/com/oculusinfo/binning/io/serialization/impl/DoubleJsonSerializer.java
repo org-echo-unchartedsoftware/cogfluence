@@ -26,7 +26,7 @@ package com.oculusinfo.binning.io.serialization.impl;
 
 import com.oculusinfo.binning.io.serialization.GenericJSONSerializer;
 import com.oculusinfo.binning.util.TypeDescriptor;
-import org.json.JSONException;
+import oculus.aperture.common.json.JSONException;
 
 /**
  * A serializer to serialize tiles whose bin values are a double, using JSON.

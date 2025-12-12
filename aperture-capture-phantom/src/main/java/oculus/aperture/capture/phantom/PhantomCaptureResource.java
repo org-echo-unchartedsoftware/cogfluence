@@ -28,11 +28,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import oculus.aperture.common.EmptyProperties;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONObject;
 import oculus.aperture.common.rest.ApertureServerResource;
 import oculus.aperture.spi.capture.CaptureService;
 import oculus.aperture.spi.common.Properties;
-import org.json.JSONArray;
-import org.json.JSONObject;
 import org.restlet.data.CacheDirective;
 import org.restlet.data.Cookie;
 import org.restlet.data.Form;
@@ -185,7 +185,12 @@ public abstract class PhantomCaptureResource extends ApertureServerResource {
       } else if (!cookie.getDomain().equals(hostDomain)) {
         continue; // filter out cookies from other domains
       }
-      cookies.put(new JSONObject(cookie));
+      try {
+        cookies.put(new JSONObject(cookie));
+      } catch (Exception e) {
+        // Skip cookies that can't be converted to JSON
+        getApertureLogger().warn("Failed to convert cookie to JSON", e);
+      }
     }
 
     // Create JSON object to that packages up information needed by phantomJS

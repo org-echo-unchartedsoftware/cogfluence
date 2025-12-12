@@ -27,8 +27,8 @@ package com.oculusinfo.binning.io.serialization.impl;
 import com.oculusinfo.binning.io.serialization.GenericJSONSerializer;
 import com.oculusinfo.factory.util.Pair;
 import com.oculusinfo.binning.util.TypeDescriptor;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 
 import java.util.*;
 

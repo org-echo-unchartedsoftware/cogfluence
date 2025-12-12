@@ -23,7 +23,7 @@
  */
 package com.oculusinfo.factory;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 

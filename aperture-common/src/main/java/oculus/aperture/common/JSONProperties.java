@@ -21,10 +21,10 @@
 package oculus.aperture.common;
 
 import java.util.Iterator;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import oculus.aperture.spi.common.Properties;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 /**
  * Wraps a JSONObject to expose a Properties interface.

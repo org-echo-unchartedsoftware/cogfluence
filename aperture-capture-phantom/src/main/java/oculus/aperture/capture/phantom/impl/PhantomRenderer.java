@@ -34,12 +34,12 @@ import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.TimeUnit;
 import oculus.aperture.capture.phantom.data.PhantomImageData;
 import oculus.aperture.capture.phantom.data.ProcessedTaskInfo;
+import oculus.aperture.common.json.JSONObject;
 import oculus.aperture.spi.capture.CaptureService;
 import oculus.aperture.spi.store.ConflictException;
 import oculus.aperture.spi.store.ContentService;
 import oculus.aperture.spi.store.ContentService.Document;
 import oculus.aperture.spi.store.ContentService.DocumentDescriptor;
-import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -26,10 +26,10 @@ import influent.server.utilities.RestClient;
 import java.io.IOException;
 import java.util.List;
 import javax.ws.rs.core.Response.Status.Family;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import org.apache.avro.Schema;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class QuBEClient extends RestClient implements FL_PatternSearch {
   //	private static Logger logger = Logger.getLogger(RestPatternSearch.class);

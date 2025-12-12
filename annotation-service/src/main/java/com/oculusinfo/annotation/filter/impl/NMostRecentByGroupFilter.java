@@ -27,7 +27,7 @@ import com.oculusinfo.annotation.AnnotationBin;
 import com.oculusinfo.annotation.AnnotationData;
 import com.oculusinfo.annotation.filter.AnnotationFilter;
 import com.oculusinfo.factory.util.Pair;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 import java.util.*;
 

@@ -32,7 +32,7 @@ import com.oculusinfo.binning.util.TypeDescriptor;
 import com.oculusinfo.factory.util.Pair;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.client.Row;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

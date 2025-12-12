@@ -30,7 +30,7 @@ import com.oculusinfo.annotation.index.AnnotationIndexer;
 import com.oculusinfo.annotation.index.impl.AnnotationIndexerImpl;
 import com.oculusinfo.binning.TilePyramid;
 import com.oculusinfo.binning.impl.WebMercatorTilePyramid;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

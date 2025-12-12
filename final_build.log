@@ -1,0 +1,225 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Influent Project Modules                                           [pom]
+[INFO] aperture-spi                                                       [jar]
+[INFO] aperture-common                                                    [jar]
+[INFO] Aperture Client                                                    [jar]
+[INFO] Aperture Server Core Components                                    [jar]
+[INFO] aperture-geo                                                       [jar]
+[INFO] aperture-icons                                                     [jar]
+[INFO] aperture-capture-phantom                                           [jar]
+[INFO] aperture-cms                                                       [jar]
+[INFO] aperture-parchment                                                 [jar]
+[INFO] aperture-layout                                                    [jar]
+[INFO] Aperture Examples                                                  [jar]
+[INFO] Ensemble Clustering Library                                        [jar]
+[INFO] influent-common                                                    [jar]
+[INFO] influent-spi                                                       [jar]
+[INFO] influent-server                                                    [jar]
+[INFO] influent-client                                                    [pom]
+[INFO] influent-app                                                       [war]
+[INFO] kiva                                                               [war]
+[INFO] bitcoin                                                            [war]
+[INFO] walker                                                             [war]
+[INFO] influent-selenium-test                                             [jar]
+[INFO] Distribution Builder                                               [pom]
+[INFO] 
+[INFO] ----------------< software.uncharted.influent:influent >----------------
+[INFO] Building Influent Project Modules 2.0.0                           [1/23]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ influent ---
+[INFO] Deleting /home/ubuntu/cogfluence/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ influent ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ influent ---
+[INFO] Installing /home/ubuntu/cogfluence/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/influent/2.0.0/influent-2.0.0.pom
+[INFO] 
+[INFO] --------------< software.uncharted.influent:aperture-spi >--------------
+[INFO] Building aperture-spi 2.0.0                                       [2/23]
+[INFO]   from aperture-spi/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'target' is unknown for plugin 'maven-javadoc-plugin:3.12.0:jar (package-javadoc)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-spi ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-spi/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-spi ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-spi ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-spi/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-spi ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 35 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-spi ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-spi/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-spi ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-spi ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-spi ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0.jar
+[INFO] 
+[INFO] >>> source:3.4.0:jar (attach-sources) > generate-sources @ aperture-spi >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-spi ---
+[INFO] 
+[INFO] <<< source:3.4.0:jar (attach-sources) < generate-sources @ aperture-spi <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.4.0:jar (attach-sources) @ aperture-spi ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0-sources.jar
+[INFO] 
+[INFO] --- javadoc:3.12.0:jar (package-javadoc) @ aperture-spi ---
+[WARNING] Javadoc Warnings
+[WARNING] /home/ubuntu/cogfluence/aperture-spi/src/main/java/oculus/aperture/spi/store/ContentService.java:105: warning: @param argument "storeName" is not a parameter name.
+[WARNING] * @param storeName the document store to access
+[WARNING] ^
+[WARNING] 1 warning
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0-javadoc.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-spi ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-spi ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 35 files clean - 0 needs changes to be clean, 35 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-spi ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-spi ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-spi/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-spi/2.0.0/aperture-spi-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-spi/2.0.0/aperture-spi-2.0.0.jar
+[INFO] Installing /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0-sources.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-spi/2.0.0/aperture-spi-2.0.0-sources.jar
+[INFO] Installing /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0-javadoc.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-spi/2.0.0/aperture-spi-2.0.0-javadoc.jar
+[INFO] 
+[INFO] ------------< software.uncharted.influent:aperture-common >-------------
+[INFO] Building aperture-common 2.0.0                                    [3/23]
+[INFO]   from aperture-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-common ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-common/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-common ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-common ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-common ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 27 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-common ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-common/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-common ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-common ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-common/target/aperture-common-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-common ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-common ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 27 files clean - 1 needs changes to be clean, 26 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Influent Project Modules 2.0.0:
+[INFO] 
+[INFO] Influent Project Modules ........................... SUCCESS [  0.730 s]
+[INFO] aperture-spi ....................................... SUCCESS [  4.804 s]
+[INFO] aperture-common .................................... FAILURE [  3.035 s]
+[INFO] Aperture Client .................................... SKIPPED
+[INFO] Aperture Server Core Components .................... SKIPPED
+[INFO] aperture-geo ....................................... SKIPPED
+[INFO] aperture-icons ..................................... SKIPPED
+[INFO] aperture-capture-phantom ........................... SKIPPED
+[INFO] aperture-cms ....................................... SKIPPED
+[INFO] aperture-parchment ................................. SKIPPED
+[INFO] aperture-layout .................................... SKIPPED
+[INFO] Aperture Examples .................................. SKIPPED
+[INFO] Ensemble Clustering Library ........................ SKIPPED
+[INFO] influent-common .................................... SKIPPED
+[INFO] influent-spi ....................................... SKIPPED
+[INFO] influent-server .................................... SKIPPED
+[INFO] influent-client .................................... SKIPPED
+[INFO] influent-app ....................................... SKIPPED
+[INFO] kiva ............................................... SKIPPED
+[INFO] bitcoin ............................................ SKIPPED
+[INFO] walker ............................................. SKIPPED
+[INFO] influent-selenium-test ............................. SKIPPED
+[INFO] Distribution Builder ............................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.780 s
+[INFO] Finished at: 2025-12-12T18:17:37-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.diffplug.spotless:spotless-maven-plugin:3.1.0:check (default) on project aperture-common: The following files had format violations:
+[ERROR]     src/main/java/oculus/aperture/common/json/JSONObject.java
+[ERROR]         @@ -13,13 +13,14 @@
+[ERROR]          ·*/
+[ERROR]          public·class·JSONObject·{
+[ERROR]          ··/**·Sentinel·value·to·explicitly·represent·null·in·JSONObject·*/
+[ERROR]         -··public·static·final·Object·NULL·=·new·Object()·{
+[ERROR]         -····@Override
+[ERROR]         -····public·String·toString()·{
+[ERROR]         -······return·"null";
+[ERROR]         -····}
+[ERROR]         -··};
+[ERROR]         -··
+[ERROR]         +··public·static·final·Object·NULL·=
+[ERROR]         +······new·Object()·{
+[ERROR]         +········@Override
+[ERROR]         +········public·String·toString()·{
+[ERROR]         +··········return·"null";
+[ERROR]         +········}
+[ERROR]         +······};
+[ERROR]         +
+[ERROR]          ··private·final·Map<String,·Object>·map;
+[ERROR]          
+[ERROR]          ··public·JSONObject()·{
+[ERROR]         @@ -390,10 +391,8 @@
+[ERROR]          ····}
+[ERROR]          ····return·new·JSONArray(new·ArrayList<>(map.keySet()));
+[ERROR]          ··}
+[ERROR]         -··
+[ERROR]         -··/**
+[ERROR]         -···*·Get·an·array·of·field·names·from·a·JSONObject.
+[ERROR]         -···*/
+[ERROR]         +
+[ERROR]         +··/**·Get·an·array·of·field·names·from·a·JSONObject.·*/
+[ERROR]          ··public·static·JSONArray·getNames(JSONObject·jo)·{
+[ERROR]          ····return·jo.names();
+[ERROR]          ··}
+[ERROR] Run 'mvn spotless:apply' to fix these violations.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :aperture-common

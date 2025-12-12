@@ -26,7 +26,7 @@ package com.oculusinfo.tile.rendering.transformations.tile;
 import java.util.List;
 
 import com.oculusinfo.factory.ConfigurationException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 import com.oculusinfo.factory.ConfigurableFactory;
 import com.oculusinfo.factory.properties.JSONProperty;

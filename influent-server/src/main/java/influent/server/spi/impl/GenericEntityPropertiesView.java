@@ -22,8 +22,8 @@ import influent.idl.*;
 import influent.server.dataaccess.DataAccessException;
 import influent.server.spi.EntityPropertiesViewService;
 import influent.server.utilities.UISerializationHelper;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 import org.restlet.data.Status;
 import org.restlet.resource.ResourceException;
 

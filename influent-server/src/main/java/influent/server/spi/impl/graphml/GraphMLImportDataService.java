@@ -34,12 +34,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import oculus.aperture.common.json.JSONArray;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
+import oculus.aperture.common.json.XML;
 import oculus.aperture.spi.store.ConflictException;
 import org.apache.commons.lang3.StringEscapeUtils;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.json.XML;
 import org.restlet.data.Status;
 import org.restlet.resource.ResourceException;
 import org.slf4j.Logger;
@@ -177,7 +177,8 @@ public class GraphMLImportDataService implements ImportDataService {
 
     // finally, place the child columns and misc data in the resulting JSON object
     toReturn.put("children", new JSONArray(outColumns));
-    for (String dataKey : JSONObject.getNames(miscData)) {
+    for (Object dataKeyObj : JSONObject.getNames(miscData)) {
+      String dataKey = dataKeyObj.toString();
       toReturn.put(dataKey, miscData.get(dataKey));
     }
 

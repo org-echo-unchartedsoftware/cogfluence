@@ -24,7 +24,7 @@
  */
 package com.oculusinfo.tile.rest.translation;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 
 public interface TileTranslationService {

@@ -1,7 +1,7 @@
 package com.oculusinfo.tile.rest.layer;
 
 import com.google.inject.Inject;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.restlet.data.MediaType;
 import org.restlet.data.Status;
 import org.restlet.representation.FileRepresentation;

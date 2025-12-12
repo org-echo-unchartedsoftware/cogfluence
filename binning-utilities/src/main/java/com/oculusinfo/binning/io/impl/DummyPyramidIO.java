@@ -37,7 +37,7 @@ import com.oculusinfo.binning.TileIndex;
 import com.oculusinfo.binning.impl.DenseTileData;
 import com.oculusinfo.binning.io.PyramidIO;
 import com.oculusinfo.binning.io.serialization.TileSerializer;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 /** A dummy pyramid IO that doesn't actually read anything, just returns empty tiles */
 public class DummyPyramidIO implements PyramidIO {

@@ -24,7 +24,7 @@
  */
 package com.oculusinfo.tile.rest.legend;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import java.awt.image.BufferedImage;
 
 public interface LegendService {

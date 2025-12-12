@@ -27,7 +27,7 @@ package com.oculusinfo.sparktile.spark;
 import org.apache.spark.SparkContext;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.SQLContext;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 /**
  * Very simple interface to provide a consistent spark context to anyone who needs it.

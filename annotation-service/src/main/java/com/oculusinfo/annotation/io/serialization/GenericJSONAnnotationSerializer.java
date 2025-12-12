@@ -25,8 +25,8 @@
 package com.oculusinfo.annotation.io.serialization;
 
 import com.oculusinfo.annotation.AnnotationData;
-import org.json.JSONException;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONException;
+import oculus.aperture.common.json.JSONObject;
 
 import java.io.*;
 

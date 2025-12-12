@@ -25,7 +25,7 @@ package com.oculusinfo.tile.rest.layer;
 
 import com.google.inject.Inject;
 import com.oculusinfo.tile.rendering.LayerConfiguration;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 import org.restlet.data.CacheDirective;
 import org.restlet.data.Status;
 import org.restlet.ext.json.JsonRepresentation;

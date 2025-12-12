@@ -32,7 +32,7 @@ import com.oculusinfo.factory.properties.JSONProperty;
 import com.oculusinfo.factory.properties.StringProperty;
 import com.oculusinfo.factory.providers.FactoryProvider;
 import com.oculusinfo.tile.rendering.transformations.tile.*;
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 import java.util.Arrays;
 import java.util.Collections;

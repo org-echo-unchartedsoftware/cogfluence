@@ -25,7 +25,7 @@ package com.oculusinfo.annotation.rest;
 
 import java.util.List;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 import com.oculusinfo.annotation.AnnotationData;
 import com.oculusinfo.binning.TileIndex;

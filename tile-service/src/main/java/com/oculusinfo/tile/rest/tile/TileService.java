@@ -26,7 +26,7 @@ package com.oculusinfo.tile.rest.tile;
 
 import java.awt.image.BufferedImage;
 
-import org.json.JSONObject;
+import oculus.aperture.common.json.JSONObject;
 
 import com.oculusinfo.binning.TileIndex;
 
