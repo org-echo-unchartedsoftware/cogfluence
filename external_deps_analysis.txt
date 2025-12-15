@@ -1,0 +1,414 @@
+Total external dependencies: 82
+
+External Dependencies:
+================================================================================
+
+com.diffplug.spotless:spotless-lib
+  Versions: 4.1.0
+  Scopes: compile
+  Used in 1 module(s)
+
+com.diffplug.spotless:spotless-lib-extra
+  Versions: 4.1.0
+  Scopes: compile
+  Used in 1 module(s)
+
+com.fasterxml.jackson.core:jackson-annotations
+  Versions: 2.20
+  Scopes: compile
+  Used in 1 module(s)
+
+com.fasterxml.jackson.core:jackson-core
+  Versions: inherited, 2.20.1
+  Scopes: compile
+  Used in 2 module(s)
+
+com.fasterxml.jackson.core:jackson-databind
+  Versions: 2.18.1, inherited, 2.20.1
+  Scopes: compile
+  Used in 3 module(s)
+
+com.fasterxml.woodstox:woodstox-core
+  Versions: 7.1.1
+  Scopes: compile
+  Used in 1 module(s)
+
+com.google.guava:guava
+  Versions: 23.0, inherited
+  Scopes: compile
+  Used in 4 module(s)
+
+com.google.inject.extensions:guice-assistedinject
+  Versions: inherited, 7.0.0
+  Scopes: compile
+  Used in 3 module(s)
+
+com.google.inject.extensions:guice-multibindings
+  Versions: inherited, 4.2.3
+  Scopes: compile
+  Used in 6 module(s)
+
+com.google.inject.extensions:guice-servlet
+  Versions: 7.0.0
+  Scopes: compile
+  Used in 2 module(s)
+
+com.google.inject:guice
+  Versions: inherited, 7.0.0
+  Scopes: compile
+  Used in 8 module(s)
+
+com.jolbox:bonecp
+  Versions: 0.8.0.RELEASE
+  Scopes: compile
+  Used in 1 module(s)
+
+com.mysql:mysql-connector-j
+  Versions: 9.5.0
+  Scopes: compile
+  Used in 2 module(s)
+
+com.oculusinfo.ml:ml
+  Versions: 0.0.14-SNAPSHOT
+  Scopes: compile
+  Used in 1 module(s)
+
+com.oculusinfo:ensemble-clustering
+  Versions: 0.1.0-SNAPSHOT
+  Scopes: compile
+  Used in 2 module(s)
+
+com.sun.jersey.contribs:jersey-apache-client
+  Versions: 1.19.4
+  Scopes: compile
+  Used in 1 module(s)
+
+com.sun.xml.ws:jaxws-rt
+  Versions: 4.0.3
+  Scopes: compile
+  Used in 1 module(s)
+
+com.yworks:yfiles
+  Versions: 2.4.0.3
+  Scopes: compile
+  Used in 1 module(s)
+
+commons-io:commons-io
+  Versions: 2.21.0
+  Scopes: compile
+  Used in 1 module(s)
+
+commons-lang:commons-lang
+  Versions: 2.6
+  Scopes: compile
+  Used in 1 module(s)
+
+commons-logging:commons-logging
+  Versions: 1.3.5
+  Scopes: compile
+  Used in 1 module(s)
+
+jakarta.activation:jakarta.activation-api
+  Versions: 2.1.4
+  Scopes: compile
+  Used in 1 module(s)
+
+jakarta.servlet:jakarta.servlet-api
+  Versions: 6.1.0, inherited
+  Scopes: compile, provided
+  Used in 3 module(s)
+
+jakarta.ws.rs:jakarta.ws.rs-api
+  Versions: 4.0.0
+  Scopes: compile
+  Used in 1 module(s)
+
+jakarta.xml.bind:jakarta.xml.bind-api
+  Versions: 4.0.4
+  Scopes: compile
+  Used in 1 module(s)
+
+jakarta.xml.ws:jakarta.xml.ws-api
+  Versions: 4.0.2
+  Scopes: compile
+  Used in 1 module(s)
+
+javax.servlet:javax.servlet-api
+  Versions: inherited, 4.0.1
+  Scopes: compile, provided
+  Used in 2 module(s)
+
+javax.servlet:servlet-api
+  Versions: 2.5
+  Scopes: compile
+  Used in 1 module(s)
+
+joda-time:joda-time
+  Versions: 2.14.0
+  Scopes: compile
+  Used in 2 module(s)
+
+junit:junit
+  Versions: 4.0, 4.13.2, inherited
+  Scopes: compile, test
+  Used in 14 module(s)
+
+log4j:log4j
+  Versions: 1.2.17
+  Scopes: provided
+  Used in 1 module(s)
+
+net.sf.ehcache:ehcache-core
+  Versions: 2.6.11, inherited, 2.6.5
+  Scopes: compile
+  Used in 5 module(s)
+
+net.sf.ehcache:ehcache-web
+  Versions: inherited, 2.0.4
+  Scopes: compile
+  Used in 4 module(s)
+
+net.sf.jgrapht:jgrapht
+  Versions: 0.8.3
+  Scopes: compile
+  Used in 1 module(s)
+
+net.sourceforge.jtds:jtds
+  Versions: 1.3.1
+  Scopes: compile
+  Used in 2 module(s)
+
+net.sourceforge:javaml
+  Versions: 0.1.7
+  Scopes: compile
+  Used in 1 module(s)
+
+oculus.aperture:aperture-client
+  Versions: ${aperture.version}
+  Scopes: compile
+  Used in 2 module(s)
+
+oculus.aperture:aperture-server-core
+  Versions: ${aperture.version}
+  Scopes: compile
+  Used in 2 module(s)
+
+oculus.aperture:aperture-spi
+  Versions: ${aperture.version}
+  Scopes: compile
+  Used in 2 module(s)
+
+org.apache.avro:avro
+  Versions: 1.12.1
+  Scopes: compile
+  Used in 1 module(s)
+
+org.apache.avro:avro-ipc
+  Versions: 1.12.1
+  Scopes: compile
+  Used in 1 module(s)
+
+org.apache.commons:commons-lang3
+  Versions: 3.18.0, 3.20.0
+  Scopes: compile
+  Used in 2 module(s)
+
+org.apache.hadoop:hadoop-client
+  Versions: 3.4.2, 2.7.0
+  Scopes: compile
+  Used in 3 module(s)
+
+org.apache.hadoop:hadoop-core
+  Versions: 2.6.0-mr1-cdh5.16.99
+  Scopes: compile
+  Used in 1 module(s)
+
+org.apache.logging.log4j:log4j-1.2-api
+  Versions: 2.25.2
+  Scopes: compile
+  Used in 1 module(s)
+
+org.apache.logging.log4j:log4j-api
+  Versions: 2.25.2
+  Scopes: compile
+  Used in 1 module(s)
+
+org.apache.logging.log4j:log4j-core
+  Versions: 2.25.2, inherited, 2.23.1
+  Scopes: compile, test
+  Used in 9 module(s)
+
+org.apache.logging.log4j:log4j-slf4j-impl
+  Versions: 2.25.2, 2.23.1
+  Scopes: compile, test
+  Used in 8 module(s)
+
+org.apache.maven.plugin-tools:maven-plugin-annotations
+  Versions: 3.15.2
+  Scopes: provided
+  Used in 1 module(s)
+
+org.apache.maven:maven-core
+  Versions: ${maven.version}
+  Scopes: provided
+  Used in 1 module(s)
+
+org.apache.maven:maven-plugin-api
+  Versions: ${maven.version}
+  Scopes: provided
+  Used in 1 module(s)
+
+org.apache.shiro:shiro-core
+  Versions: 1.13.0, 2.0.6
+  Scopes: compile
+  Used in 2 module(s)
+
+org.apache.shiro:shiro-guice
+  Versions: 1.13.0, 2.0.6
+  Scopes: compile
+  Used in 2 module(s)
+
+org.apache.shiro:shiro-web
+  Versions: 1.13.0, 2.0.6
+  Scopes: compile
+  Used in 2 module(s)
+
+org.apache.solr:solr-solrj
+  Versions: 9.10.0
+  Scopes: compile
+  Used in 4 module(s)
+
+org.apache.spark:spark-core_2.12
+  Versions: 3.5.1
+  Scopes: compile
+  Used in 2 module(s)
+
+org.apache.xmlgraphics:batik-dom
+  Versions: 1.19
+  Scopes: compile
+  Used in 1 module(s)
+
+org.apache.xmlgraphics:batik-svg-dom
+  Versions: 1.19
+  Scopes: compile
+  Used in 1 module(s)
+
+org.apache.xmlgraphics:batik-transcoder
+  Versions: 1.19
+  Scopes: compile
+  Used in 1 module(s)
+
+org.codehaus.jackson:jackson-core-asl
+  Versions: 1.9.13
+  Scopes: provided
+  Used in 1 module(s)
+
+org.codehaus.jackson:jackson-mapper-asl
+  Versions: 1.9.13
+  Scopes: provided
+  Used in 1 module(s)
+
+org.eclipse.jetty:jetty-server
+  Versions: 12.0.22, 9.4.56.v20240826, 12.1.4
+  Scopes: compile
+  Used in 11 module(s)
+
+org.eclipse.persistence:org.eclipse.persistence.moxy
+  Versions: 4.0.8
+  Scopes: compile
+  Used in 1 module(s)
+
+org.glassfish.jaxb:jaxb-runtime
+  Versions: 4.0.6
+  Scopes: compile
+  Used in 1 module(s)
+
+org.hsqldb:hsqldb
+  Versions: 2.7.4
+  Scopes: compile
+  Used in 1 module(s)
+
+org.jmock:jmock
+  Versions: 2.13.1
+  Scopes: test
+  Used in 1 module(s)
+
+org.lightcouch:lightcouch
+  Versions: 0.2.0
+  Scopes: compile
+  Used in 1 module(s)
+
+org.restlet:org.restlet
+  Versions: 2.6.0, inherited
+  Scopes: compile
+  Used in 9 module(s)
+
+org.restlet:org.restlet.ext.fileupload
+  Versions: 2.5.2
+  Scopes: compile
+  Used in 1 module(s)
+
+org.restlet:org.restlet.ext.jackson
+  Versions: 2.6.0, inherited
+  Scopes: compile
+  Used in 3 module(s)
+
+org.restlet:org.restlet.ext.json
+  Versions: 2.6.0, inherited
+  Scopes: compile
+  Used in 7 module(s)
+
+org.restlet:org.restlet.ext.servlet
+  Versions: 2.6.0
+  Scopes: compile
+  Used in 2 module(s)
+
+org.seleniumhq.selenium:selenium-chrome-driver
+  Versions: 4.38.0
+  Scopes: compile
+  Used in 1 module(s)
+
+org.seleniumhq.selenium:selenium-firefox-driver
+  Versions: 4.38.0
+  Scopes: compile
+  Used in 1 module(s)
+
+org.seleniumhq.selenium:selenium-ie-driver
+  Versions: 4.38.0
+  Scopes: compile
+  Used in 1 module(s)
+
+org.seleniumhq.selenium:selenium-java
+  Versions: 4.38.0
+  Scopes: compile
+  Used in 1 module(s)
+
+org.slf4j:slf4j-api
+  Versions: 1.6.1, 2.0.17, inherited
+  Scopes: compile
+  Used in 7 module(s)
+
+org.slf4j:slf4j-log4j12
+  Versions: inherited, 1.7.33, 1.6.1
+  Scopes: runtime, provided, test
+  Used in 4 module(s)
+
+org.spark-project:spark-core_2.9.3
+  Versions: 0.7.3
+  Scopes: compile
+  Used in 1 module(s)
+
+org.tinyjee.jgraphx:jgraphx
+  Versions: 3.4.1.3
+  Scopes: compile
+  Used in 1 module(s)
+
+xalan:xalan
+  Versions: 2.7.3
+  Scopes: compile
+  Used in 1 module(s)
+
+xerces:xercesImpl
+  Versions: 2.12.2
+  Scopes: compile
+  Used in 1 module(s)

@@ -1,0 +1,1599 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Influent Project Modules                                           [pom]
+[INFO] aperture-spi                                                       [jar]
+[INFO] aperture-common                                                    [jar]
+[INFO] Aperture Client                                                    [jar]
+[INFO] Aperture Server Core Components                                    [jar]
+[INFO] aperture-geo                                                       [jar]
+[INFO] aperture-icons                                                     [jar]
+[INFO] aperture-capture-phantom                                           [jar]
+[INFO] aperture-cms                                                       [jar]
+[INFO] aperture-parchment                                                 [jar]
+[INFO] aperture-layout                                                    [jar]
+[INFO] Aperture Examples                                                  [jar]
+[INFO] Ensemble Clustering Library                                        [jar]
+[INFO] influent-common                                                    [jar]
+[INFO] influent-spi                                                       [jar]
+[INFO] influent-server                                                    [jar]
+[INFO] influent-client                                                    [pom]
+[INFO] influent-app                                                       [war]
+[INFO] kiva                                                               [war]
+[INFO] bitcoin                                                            [war]
+[INFO] walker                                                             [war]
+[INFO] influent-selenium-test                                             [jar]
+[INFO] Distribution Builder                                               [pom]
+[INFO] 
+[INFO] ----------------< software.uncharted.influent:influent >----------------
+[INFO] Building Influent Project Modules 2.0.0                           [1/23]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ influent ---
+[INFO] Deleting /home/ubuntu/cogfluence/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ influent ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ influent ---
+[INFO] Installing /home/ubuntu/cogfluence/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/influent/2.0.0/influent-2.0.0.pom
+[INFO] 
+[INFO] --------------< software.uncharted.influent:aperture-spi >--------------
+[INFO] Building aperture-spi 2.0.0                                       [2/23]
+[INFO]   from aperture-spi/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'target' is unknown for plugin 'maven-javadoc-plugin:3.12.0:jar (package-javadoc)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-spi ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-spi/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-spi ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-spi ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-spi/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-spi ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 35 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-spi ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-spi/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-spi ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-spi ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-spi ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0.jar
+[INFO] 
+[INFO] >>> source:3.4.0:jar (attach-sources) > generate-sources @ aperture-spi >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-spi ---
+[INFO] 
+[INFO] <<< source:3.4.0:jar (attach-sources) < generate-sources @ aperture-spi <<<
+[INFO] 
+[INFO] 
+[INFO] --- source:3.4.0:jar (attach-sources) @ aperture-spi ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0-sources.jar
+[INFO] 
+[INFO] --- javadoc:3.12.0:jar (package-javadoc) @ aperture-spi ---
+[WARNING] Javadoc Warnings
+[WARNING] /home/ubuntu/cogfluence/aperture-spi/src/main/java/oculus/aperture/spi/store/ContentService.java:105: warning: @param argument "storeName" is not a parameter name.
+[WARNING] * @param storeName the document store to access
+[WARNING] ^
+[WARNING] 1 warning
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0-javadoc.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-spi ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-spi ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 35 files clean - 0 needs changes to be clean, 35 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-spi ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-spi ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-spi/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-spi/2.0.0/aperture-spi-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-spi/2.0.0/aperture-spi-2.0.0.jar
+[INFO] Installing /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0-sources.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-spi/2.0.0/aperture-spi-2.0.0-sources.jar
+[INFO] Installing /home/ubuntu/cogfluence/aperture-spi/target/aperture-spi-2.0.0-javadoc.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-spi/2.0.0/aperture-spi-2.0.0-javadoc.jar
+[INFO] 
+[INFO] ------------< software.uncharted.influent:aperture-common >-------------
+[INFO] Building aperture-common 2.0.0                                    [3/23]
+[INFO]   from aperture-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-common ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-common/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-common ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-common ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-common ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 27 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-common ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-common/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-common ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-common ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-common/target/aperture-common-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-common ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-common ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 27 files clean - 0 needs changes to be clean, 27 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-common ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-common ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-common/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-common/2.0.0/aperture-common-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-common/target/aperture-common-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-common/2.0.0/aperture-common-2.0.0.jar
+[INFO] 
+[INFO] ------------< software.uncharted.influent:aperture-client >-------------
+[INFO] Building Aperture Client 2.0.0                                    [4/23]
+[INFO]   from aperture-client/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-client ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-client/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-client ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-client ---
+[INFO] Copying 54 resources from src/main/javascript to target/processed-scripts
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-client ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:resources (compile-jsdoc) @ aperture-client ---
+[INFO] Copying 54 resources from src/main/javascript to target/processed-scripts
+[INFO] 
+[INFO] --- antrun:3.2.0:run (compile-js) @ aperture-client ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-client ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-client/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-client ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-client ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- antrun:3.2.0:run (compile-jsdoc) @ aperture-client ---
+[INFO] Executing tasks
+[INFO]      [java]  > JsDoc Toolkit main() running at Mon Dec 15 2025 07:41:29 GMT-0500 (EST).
+[INFO]      [java]  > With options: 
+[INFO]      [java]  >     d: target/api/js/
+[INFO]      [java]  >     D: noGlobal:true,title:Aperture JS API
+[INFO]      [java]  >     E: "(pre|pre-package|post)\.js",raphael-group.js,tooltip.js,esri.js,TableLayer.js,header.js,aperture-exampleconfig.js
+[INFO]      [java]  >     r: 3
+[INFO]      [java]  >     t: lib/jsdoc-toolkit/templates/aperture/
+[INFO]      [java]  >     _: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts
+[INFO]      [java]  >     v: true
+[INFO]      [java]  >     m: true
+[INFO]      [java]  > Output directory set to 'target/api/js/'.
+[INFO]      [java]  > Excluding /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/aperture-exampleconfig.js
+[INFO]      [java]  > Excluding /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-packages/tooltip.js
+[INFO]      [java]  > Excluding /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/header.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/aperture.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/base.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/BarLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Class.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Color.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Date.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Format.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/IconLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/LabelLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Layer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/LinkLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/MapKey.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Mapping.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/NodeLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/NodeSet.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/RadialLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Range.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/SankeyPathLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Set.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-classes/Transition.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-packages/canvas.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-packages/config.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-packages/filter.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-packages/io.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-packages/log.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-packages/palette.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/core-packages/vizlet.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/canvas/RaphaelCanvas.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/capture.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/chart/AxisLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/chart/BarSeriesLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/chart/ChartLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/chart/LineSeriesLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/chart/RuleLayer.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/geo/legacyMap.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/geo/openLayers2.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/geo/openLayers3.js
+[INFO]      [java] >> WARNING: Trying to document CoveringOverlay#postMove without first documenting CoveringOverlay.
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/graph.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/layout.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/log/AjaxAppender.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/log/AlertBoxAppender.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/log/BufferingAppender.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/log/ConsoleAppender.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/log/DOMAppender.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/log/NotifyAppender.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/pubsub.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/packages/store.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/post.js
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/pre-package.js
+[INFO]      [java] >> WARNING: Mismatched } character. Can't parse code in file /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/pre-package.js.
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/pre.js
+[INFO]      [java] >> WARNING: Mismatched } character. Can't parse code in file /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/pre.js.
+[INFO]      [java]  > Parsing file: /home/ubuntu/cogfluence/aperture-client/target/processed-scripts/util.js
+[INFO]      [java] >> WARNING: Can't augment contributer: aperture.geo.BaseMapNodeLayer, not found.
+[INFO]      [java] >> WARNING: Can't augment contributer: aperture.geo.BaseMapNodeLayer, not found.
+[INFO]      [java] 5 warnings.
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-client ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-client/target/aperture-client-2.0.0.jar
+[INFO] 
+[INFO] --- assembly:3.8.0:single (package-jsdoc) @ aperture-client ---
+[INFO] Reading assembly descriptor: src/main/assembly/jsdoc.xml
+[INFO] Building zip: /home/ubuntu/cogfluence/aperture-client/target/aperture-client-2.0.0-jsdoc.zip
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-client ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-client ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-client ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-client ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-client/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-client/2.0.0/aperture-client-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-client/target/aperture-client-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-client/2.0.0/aperture-client-2.0.0.jar
+[INFO] Installing /home/ubuntu/cogfluence/aperture-client/target/aperture-client-2.0.0-jsdoc.zip to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-client/2.0.0/aperture-client-2.0.0-jsdoc.zip
+[INFO] 
+[INFO] ----------< software.uncharted.influent:aperture-server-core >----------
+[INFO] Building Aperture Server Core Components 2.0.0                    [5/23]
+[INFO]   from aperture-server-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-server-core ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-server-core/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-server-core ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ aperture-server-core ---
+[INFO] Storing buildNumber: 2025-12-15 07:41:42 at timestamp: 1765802502059
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/aperture-server-core' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/aperture-server-core
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-server-core ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] The encoding used to copy filtered properties files has not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-server-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 7 source files with javac [debug release 17] to target/classes
+[INFO] /home/ubuntu/cogfluence/aperture-server-core/src/main/java/oculus/aperture/ApertureServerConfig.java: Some input files use or override a deprecated API.
+[INFO] /home/ubuntu/cogfluence/aperture-server-core/src/main/java/oculus/aperture/ApertureServerConfig.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-server-core ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-server-core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-server-core ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-server-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-server-core ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-server-core/target/aperture-server-core-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-server-core ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-server-core ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 7 files clean - 0 needs changes to be clean, 7 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-server-core ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-server-core ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-server-core/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-server-core/2.0.0/aperture-server-core-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-server-core/target/aperture-server-core-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-server-core/2.0.0/aperture-server-core-2.0.0.jar
+[INFO] 
+[INFO] --------------< software.uncharted.influent:aperture-geo >--------------
+[INFO] Building aperture-geo 2.0.0                                       [6/23]
+[INFO]   from aperture-geo/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-geo ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-geo/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-geo ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-geo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-geo ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 4 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-geo ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-geo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-geo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-geo ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-geo ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-geo/target/aperture-geo-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-geo ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-geo ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 4 files clean - 0 needs changes to be clean, 4 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-geo ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-geo ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-geo/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-geo/2.0.0/aperture-geo-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-geo/target/aperture-geo-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-geo/2.0.0/aperture-geo-2.0.0.jar
+[INFO] 
+[INFO] -------------< software.uncharted.influent:aperture-icons >-------------
+[INFO] Building aperture-icons 2.0.0                                     [7/23]
+[INFO]   from aperture-icons/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-icons ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-icons/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-icons ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-icons ---
+[INFO] Copying 62 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-icons ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 19 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-icons ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-icons/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-icons ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-icons ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-icons ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-icons/target/aperture-icons-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-icons ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-icons ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 19 files clean - 0 needs changes to be clean, 19 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-icons ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-icons ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-icons/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-icons/2.0.0/aperture-icons-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-icons/target/aperture-icons-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-icons/2.0.0/aperture-icons-2.0.0.jar
+[INFO] 
+[INFO] --------< software.uncharted.influent:aperture-capture-phantom >--------
+[INFO] Building aperture-capture-phantom 2.0.0                           [8/23]
+[INFO]   from aperture-capture-phantom/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-capture-phantom ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-capture-phantom/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-capture-phantom ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-capture-phantom ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-capture-phantom ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 14 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-capture-phantom ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-capture-phantom ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-capture-phantom ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-capture-phantom ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-capture-phantom/target/aperture-capture-phantom-2.0.0.jar
+[INFO] 
+[INFO] --- build-helper:3.6.1:attach-artifact (attach-artifacts) @ aperture-capture-phantom ---
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-capture-phantom ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-capture-phantom ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 15 files clean - 0 needs changes to be clean, 15 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-capture-phantom ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-capture-phantom ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-capture-phantom/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-capture-phantom/2.0.0/aperture-capture-phantom-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-capture-phantom/target/aperture-capture-phantom-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-capture-phantom/2.0.0/aperture-capture-phantom-2.0.0.jar
+[INFO] Installing /home/ubuntu/cogfluence/aperture-capture-phantom/bin/windows/phantomjs.exe to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-capture-phantom/2.0.0/aperture-capture-phantom-2.0.0.exe
+[INFO] Installing /home/ubuntu/cogfluence/aperture-capture-phantom/bin/linux-x86-64/phantomjs to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-capture-phantom/2.0.0/aperture-capture-phantom-2.0.0.linux-x86-64
+[INFO] Installing /home/ubuntu/cogfluence/aperture-capture-phantom/bin/linux-i686/phantomjs to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-capture-phantom/2.0.0/aperture-capture-phantom-2.0.0.linux-i686
+[INFO] Installing /home/ubuntu/cogfluence/aperture-capture-phantom/bin/macosx/phantomjs to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-capture-phantom/2.0.0/aperture-capture-phantom-2.0.0.macosx
+[INFO] 
+[INFO] --------------< software.uncharted.influent:aperture-cms >--------------
+[INFO] Building aperture-cms 2.0.0                                       [9/23]
+[INFO]   from aperture-cms/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-cms ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-cms/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-cms ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-cms ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-cms/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-cms ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 6 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-cms ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-cms/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-cms ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-cms ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-cms ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-cms/target/aperture-cms-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-cms ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-cms ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 9 files clean - 0 needs changes to be clean, 9 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-cms ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-cms ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-cms/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-cms/2.0.0/aperture-cms-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-cms/target/aperture-cms-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-cms/2.0.0/aperture-cms-2.0.0.jar
+[INFO] 
+[INFO] -----------< software.uncharted.influent:aperture-parchment >-----------
+[INFO] Building aperture-parchment 2.0.0                                [10/23]
+[INFO]   from aperture-parchment/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-parchment ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-parchment/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-parchment ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-parchment ---
+[INFO] Copying 37 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-parchment ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-parchment ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-parchment/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-parchment ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-parchment ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-parchment ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-parchment/target/aperture-parchment-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-parchment ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-parchment ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 3 files clean - 0 needs changes to be clean, 3 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-parchment ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-parchment ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-parchment/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-parchment/2.0.0/aperture-parchment-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-parchment/target/aperture-parchment-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-parchment/2.0.0/aperture-parchment-2.0.0.jar
+[INFO] 
+[INFO] ------------< software.uncharted.influent:aperture-layout >-------------
+[INFO] Building aperture-layout 2.0.0                                   [11/23]
+[INFO]   from aperture-layout/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-layout ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-layout/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-layout ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-layout ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-layout/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-layout ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 29 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-layout ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-layout/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-layout ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-layout ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-layout ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-layout/target/aperture-layout-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-layout ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-layout ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 29 files clean - 0 needs changes to be clean, 29 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-layout ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-layout ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-layout/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-layout/2.0.0/aperture-layout-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-layout/target/aperture-layout-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-layout/2.0.0/aperture-layout-2.0.0.jar
+[INFO] 
+[INFO] -----------< software.uncharted.influent:aperture-examples >------------
+[INFO] Building Aperture Examples 2.0.0                                 [12/23]
+[INFO]   from aperture-examples/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-examples ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-examples/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-examples ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-examples ---
+[INFO] Copying 254 resources from src/main/javascript to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-examples ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-examples ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-examples/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-examples ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ aperture-examples ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ aperture-examples ---
+[INFO] Building jar: /home/ubuntu/cogfluence/aperture-examples/target/aperture-examples-2.0.0.jar
+[INFO] 
+[INFO] --- jarsigner:3.1.0:sign (sign) @ aperture-examples ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-examples ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- jarsigner:3.1.0:verify (verify) @ aperture-examples ---
+[INFO] Disabled
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-examples ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-examples/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-examples/2.0.0/aperture-examples-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-examples/target/aperture-examples-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-examples/2.0.0/aperture-examples-2.0.0.jar
+[INFO] 
+[INFO] ----------< software.uncharted.influent:ensemble-clustering >-----------
+[INFO] Building Ensemble Clustering Library 2.0.0                       [13/23]
+[INFO]   from ensemble-clustering/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ ensemble-clustering ---
+[INFO] Deleting /home/ubuntu/cogfluence/ensemble-clustering/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ ensemble-clustering ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ ensemble-clustering ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/ensemble-clustering/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ ensemble-clustering ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 84 source files with javac [debug release 17] to target/classes
+[INFO] /home/ubuntu/cogfluence/ensemble-clustering/src/main/java/com/oculusinfo/ml/unsupervised/cluster/Cluster.java: /home/ubuntu/cogfluence/ensemble-clustering/src/main/java/com/oculusinfo/ml/unsupervised/cluster/Cluster.java uses or overrides a deprecated API.
+[INFO] /home/ubuntu/cogfluence/ensemble-clustering/src/main/java/com/oculusinfo/ml/unsupervised/cluster/Cluster.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ ensemble-clustering ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/ensemble-clustering/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ ensemble-clustering ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 38 source files with javac [debug release 17] to target/test-classes
+[INFO] /home/ubuntu/cogfluence/ensemble-clustering/src/test/java/com/oculusinfo/geometry/SphereUtilityTests.java: Some input files use or override a deprecated API.
+[INFO] /home/ubuntu/cogfluence/ensemble-clustering/src/test/java/com/oculusinfo/geometry/SphereUtilityTests.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ ensemble-clustering ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ ensemble-clustering ---
+[INFO] Building jar: /home/ubuntu/cogfluence/ensemble-clustering/target/ensemble-clustering-2.0.0.jar
+[INFO] 
+[INFO] --- javadoc:3.12.0:jar (package-javadoc) @ ensemble-clustering ---
+[INFO] Building jar: /home/ubuntu/cogfluence/ensemble-clustering/target/ensemble-clustering-2.0.0-javadoc.jar
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ ensemble-clustering ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 122 files clean - 0 needs changes to be clean, 122 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ ensemble-clustering ---
+[INFO] Installing /home/ubuntu/cogfluence/ensemble-clustering/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/ensemble-clustering/2.0.0/ensemble-clustering-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/ensemble-clustering/target/ensemble-clustering-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/ensemble-clustering/2.0.0/ensemble-clustering-2.0.0.jar
+[INFO] Installing /home/ubuntu/cogfluence/ensemble-clustering/target/ensemble-clustering-2.0.0-javadoc.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/ensemble-clustering/2.0.0/ensemble-clustering-2.0.0-javadoc.jar
+[INFO] 
+[INFO] ------------< software.uncharted.influent:influent-common >-------------
+[INFO] Building influent-common 2.0.0                                   [14/23]
+[INFO]   from influent-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ influent-common ---
+[INFO] Deleting /home/ubuntu/cogfluence/influent-common/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-common ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-common ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-common/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-common ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 5 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-common ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-common/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ influent-common ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ influent-common ---
+[INFO] Building jar: /home/ubuntu/cogfluence/influent-common/target/influent-common-2.0.0.jar
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ influent-common ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 5 files clean - 0 needs changes to be clean, 5 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ influent-common ---
+[INFO] Installing /home/ubuntu/cogfluence/influent-common/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-common/2.0.0/influent-common-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/influent-common/target/influent-common-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-common/2.0.0/influent-common-2.0.0.jar
+[INFO] 
+[INFO] --------------< software.uncharted.influent:influent-spi >--------------
+[INFO] Building influent-spi 2.0.0                                      [15/23]
+[INFO]   from influent-spi/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ influent-spi ---
+[INFO] Deleting /home/ubuntu/cogfluence/influent-spi/target
+[INFO] Deleting /home/ubuntu/cogfluence/influent-spi/src/main/java/influent/idl (includes = [*.java], excludes = [])
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-spi ---
+[INFO] 
+[INFO] --- avro:1.12.1:schema (default) @ influent-spi ---
+[INFO] 
+[INFO] --- avro:1.12.1:idl-protocol (default) @ influent-spi ---
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] FutureResults_v2.0.avdl line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[INFO] 
+[INFO] --- antrun:3.1.0:run (fix-avro-generated-code) @ influent-spi ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-spi ---
+[INFO] Copying 0 resource from src/main/java to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-spi ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 75 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-spi ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-spi/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-spi ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 2 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ influent-spi ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ influent-spi ---
+[INFO] Building jar: /home/ubuntu/cogfluence/influent-spi/target/influent-spi-2.0.0.jar
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ influent-spi ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 13 files clean - 0 needs changes to be clean, 13 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ influent-spi ---
+[INFO] Installing /home/ubuntu/cogfluence/influent-spi/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-spi/2.0.0/influent-spi-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/influent-spi/target/influent-spi-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-spi/2.0.0/influent-spi-2.0.0.jar
+[INFO] 
+[INFO] ------------< software.uncharted.influent:influent-server >-------------
+[INFO] Building influent-server 2.0.0                                   [16/23]
+[INFO]   from influent-server/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ influent-server ---
+[INFO] Deleting /home/ubuntu/cogfluence/influent-server/target
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ influent-server ---
+[INFO] Storing buildNumber: 2025-12-15 07:41:59 at timestamp: 1765802519263
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/influent-server' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/influent-server
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-server ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-server ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-server ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 180 source files with javac [debug release 17] to target/classes
+[INFO] /home/ubuntu/cogfluence/influent-server/src/main/java/influent/server/clustering/utils/ClusterContextCache.java: Some input files use or override a deprecated API.
+[INFO] /home/ubuntu/cogfluence/influent-server/src/main/java/influent/server/clustering/utils/ClusterContextCache.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-server ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-server ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 3 source files with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ influent-server ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ influent-server ---
+[INFO] Building jar: /home/ubuntu/cogfluence/influent-server/target/influent-server-2.0.0.jar
+[INFO] 
+[INFO] --- assembly:3.8.0:single (compile-dist) @ influent-server ---
+[INFO] Reading assembly descriptor: src/main/assembly/distribution.xml
+[WARNING] The following patterns were never triggered in this artifact exclusion filter:
+o  'org.mortbay.jetty'
+
+[INFO] Building zip: /home/ubuntu/cogfluence/influent-server/target/influent-server-2.0.0-nosolr.zip
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ influent-server ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 183 files clean - 0 needs changes to be clean, 183 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ influent-server ---
+[INFO] Installing /home/ubuntu/cogfluence/influent-server/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-server/2.0.0/influent-server-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/influent-server/target/influent-server-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-server/2.0.0/influent-server-2.0.0.jar
+[INFO] Installing /home/ubuntu/cogfluence/influent-server/target/influent-server-2.0.0-nosolr.zip to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-server/2.0.0/influent-server-2.0.0-nosolr.zip
+[INFO] 
+[INFO] ------------< software.uncharted.influent:influent-client >-------------
+[INFO] Building influent-client 2.0.0                                   [17/23]
+[INFO]   from influent-client/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[WARNING] Parameter 'version' is unknown for plugin 'jshint-maven-plugin:1.6.0:lint (default)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ influent-client ---
+[INFO] Deleting /home/ubuntu/cogfluence/influent-client/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-client ---
+[INFO] 
+[INFO] --- resources:3.4.0:copy-resources (copy-client-src) @ influent-client ---
+[INFO] Copying 254 resources from influent-clientjs/src to target/tempWebapp/webapp
+[INFO] Copying 4 resources from influent-clientjs/filtered to target/tempWebapp/webapp
+[INFO] 
+[INFO] --- resources:3.4.0:copy-resources (copy-app-build) @ influent-client ---
+[INFO] Copying 3 resources from src/main to target/tempWebapp
+[INFO] 
+[INFO] --- lesscss:1.7.0.1.1:compile (process-less) @ influent-client ---
+[INFO] Compiling LESS source: app.less...
+done
+[INFO] Finished compilation to /home/ubuntu/cogfluence/influent-client/target/tempWebapp/webapp/theme in 1332 ms
+[INFO] Complete Less compile job finished in 1351 ms
+[INFO] 
+[INFO] --- jshint:1.6.0:lint (default) @ influent-client ---
+[INFO] using jshint version 2.5.6
+[INFO] Using configuration file: /home/ubuntu/cogfluence/influent-client/../.jshintrc
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/OpenAjaxUnmanagedHub.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/cookieUtil.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/draper.activity_logger-2.1.1.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/draper.activity_worker-2.1.1.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/handlebars.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/handlebars.runtime.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/i18nprecompile.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/json2.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/underscore.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/jquery-ui.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/jquery.blockUI.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/jquery.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/jquery.unescape.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/less.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/moment.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/order.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/raphael.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/require.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/route-recognizer.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/router.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/rsvp.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/underscore.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/influent-jquery/influent-jquery.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/ifCond.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/advanced-search/infSearchParams.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/advanced-search/infToolbarAdvancedMatchCriteria.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/advanced-search/infToolbarAdvancedSearch.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/app.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/communication/accountsViewChannels.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/communication/applicationChannels.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/communication/flowViewChannels.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/communication/transactionsViewChannels.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/constants.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/infRouter.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/interfaces/xfResultObject.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/interfaces/xfUIObject.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/layout/xfLayoutProvider.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/log/DraperAppender.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfAccountsSearchResult.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfCard.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfClusterBase.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfColumn.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfEntityResult.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfEntityResultCluster.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfFile.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfImmutableCluster.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfLink.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfMatch.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfMutableCluster.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfResultBase.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfResultClusterBase.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfSearchResultBase.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfSummaryCluster.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfTransactionResult.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfTransactionResultCluster.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfTransactionsSearchResult.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfWorkspace.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/module.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/plugins.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/cardRenderer.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/clusterRenderer.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/columnRenderer.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/fileRenderer.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/matchRenderer.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/toolbarRenderer.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/workspaceRenderer.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/sandbox.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/search.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbar.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbarDatePicker.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbarOptionPicker.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbarPatternSearch.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbarSearch.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/carousel.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/criteria.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/infOperationsBar.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/ordering.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/toolbarOperations.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/xfLinkType.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/xfModalDialog.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/xfSearchFilter.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/GUID.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/currency.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/date.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/duration.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/iconUtil.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/infDescriptorUtilities.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/infTagUtilities.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/params.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/percentchange.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/xfUtil.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/viewPlugins.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/main.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infEntityDetails.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infFileUpload.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infFooter.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infHeader.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infRenderer.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infRest.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infSankey.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infTransactionGraph.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infTransactionTable.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infWorkspace.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/callback.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/ellipsis.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/formatDate.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/isElementDisabled.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/isEqual.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/markupTerms.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/valueOfPropertyWithTag.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/accounts-view-components/accountsResultClusterComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/accounts-view-components/accountsResultComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/accounts-view-components/accountsResultFooterComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/accounts-view-components/accountsResultHeaderComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultClusterComponentBase.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultComponentBase.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultFooterComponentBase.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultHeaderComponentBase.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultSingleComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultSummaryComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infAccountsView.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infFlowView.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infSummaryView.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infTransactionsView.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infView.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/transactions-view-components/transactionsResultClusterComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/transactions-view-components/transactionsResultComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/transactions-view-components/transactionsResultFooterComponent.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/transactions-view-components/transactionsResultHeaderComponent.js
+[INFO] 
+[INFO] --- requirejs:2.0.0:optimize (default) @ influent-client ---
+v22.13.0
+[INFO] Running with Node @ node
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/app.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/bootstrap/css/bootstrap-select.min.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/bootstrap/css/bootstrap.min.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/bootstrap/css/datepicker3.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/custom-theme/jquery-ui-1.11.3.custom.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/font-awesome/css/font-awesome.min.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/parchment.css
+
+Tracing dependencies for: ../../main
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-exampleconfig.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-capture.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-chart.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-cms.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-core.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-geo.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-graph.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-layout.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-log.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-pubsub.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-raphael.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/bootstrap/bootstrap-datepicker.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/bootstrap/bootstrap-select.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/bootstrap/bootstrap.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/OpenAjaxUnmanagedHub.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/draper.activity_logger-2.1.1.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/draper.activity_worker-2.1.1.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/hbs/handlebars.runtime.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/jquery-ui.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/jquery.blockUI.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/jquery.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/jquery.unescape.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/less.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/order.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/raphael.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/require.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/route-recognizer.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/rsvp.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/influent-jquery/influent-jquery.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/log/DraperAppender.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/ui/carousel.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/ui/xfSearchFilter.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/util/percentchange.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/main.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/templates/helpers/callback.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/templates/helpers/formatDate.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/templates/helpers/isEqual.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/templates/helpers/valueOfPropertyWithTag.js
+
+theme/app.css
+----------------
+theme/app.css
+
+theme/bootstrap/css/bootstrap-select.min.css
+----------------
+theme/bootstrap/css/bootstrap-select.min.css
+
+theme/bootstrap/css/bootstrap.min.css
+----------------
+theme/bootstrap/css/bootstrap.min.css
+
+theme/bootstrap/css/datepicker3.css
+----------------
+theme/bootstrap/css/datepicker3.css
+
+theme/custom-theme/jquery-ui-1.11.3.custom.css
+----------------
+theme/custom-theme/jquery-ui-1.11.3.custom.css
+
+theme/font-awesome/css/font-awesome.min.css
+----------------
+theme/font-awesome/css/font-awesome.min.css
+
+theme/parchment.css
+----------------
+theme/parchment.css
+
+scripts/lib/extern/../../main.js
+----------------
+scripts/lib/communication/applicationChannels.js
+scripts/lib/sandbox.js
+scripts/lib/extern/underscore.js
+scripts/lib/module.js
+scripts/lib/util/params.js
+scripts/lib/extern/router.js
+scripts/lib/extern/hbs/handlebars.js
+scripts/lib/extern/hbs/underscore.js
+scripts/lib/extern/hbs/i18nprecompile.js
+scripts/lib/extern/hbs/json2.js
+scripts/lib/extern/hbs.js
+scripts/templates/helpers/isElementDisabled.js
+hbs!templates/InfHeader
+scripts/lib/constants.js
+scripts/modules/infHeader.js
+scripts/lib/infRouter.js
+scripts/lib/extern/cookieUtil.js
+scripts/lib/util/GUID.js
+scripts/lib/ui/xfModalDialog.js
+scripts/lib/plugins.js
+scripts/views/infView.js
+scripts/modules/infRest.js
+hbs!templates/InfWorkspace
+scripts/modules/infWorkspace.js
+scripts/lib/search.js
+scripts/lib/util/infDescriptorUtilities.js
+scripts/lib/viewPlugins.js
+scripts/lib/util/xfUtil.js
+scripts/lib/ui/toolbarOperations.js
+scripts/lib/util/currency.js
+scripts/lib/render/toolbarRenderer.js
+scripts/lib/render/cardRenderer.js
+scripts/lib/render/clusterRenderer.js
+scripts/lib/communication/flowViewChannels.js
+scripts/lib/render/matchRenderer.js
+hbs!templates/flowView/file
+hbs!templates/flowView/fileDropDialog
+scripts/lib/render/fileRenderer.js
+hbs!templates/flowView/column
+scripts/lib/render/columnRenderer.js
+hbs!templates/flowView/branchHint
+hbs!templates/flowView/emptyHint
+scripts/lib/render/workspaceRenderer.js
+scripts/modules/infRenderer.js
+scripts/lib/util/duration.js
+scripts/lib/util/date.js
+scripts/lib/extern/moment.js
+scripts/lib/util/infTagUtilities.js
+scripts/lib/interfaces/xfUIObject.js
+scripts/lib/models/xfClusterBase.js
+scripts/lib/models/xfCard.js
+scripts/lib/util/iconUtil.js
+hbs!templates/footer/infEntityDetails
+scripts/modules/infEntityDetails.js
+scripts/lib/ui/xfLinkType.js
+scripts/modules/infSankey.js
+hbs!templates/footer/transactionsTable
+scripts/modules/infTransactionTable.js
+scripts/modules/infTransactionGraph.js
+scripts/lib/layout/xfLayoutProvider.js
+scripts/lib/models/xfSummaryCluster.js
+scripts/lib/models/xfImmutableCluster.js
+scripts/lib/models/xfMutableCluster.js
+scripts/lib/models/xfMatch.js
+scripts/lib/models/xfFile.js
+scripts/lib/models/xfLink.js
+scripts/lib/models/xfColumn.js
+scripts/lib/models/xfWorkspace.js
+hbs!templates/viewToolbar/infToolbarDatePicker
+scripts/lib/toolbar/infToolbarDatePicker.js
+hbs!templates/viewToolbar/infToolbarOptionPicker
+scripts/lib/toolbar/infToolbarOptionPicker.js
+hbs!templates/viewToolbar/infToolbarPatternSearch
+scripts/lib/toolbar/infToolbarPatternSearch.js
+hbs!templates/viewToolbar/infToolbarAdvancedMatchCriteriaBody
+hbs!templates/criteria/fieldSelector
+scripts/lib/ui/criteria.js
+scripts/lib/ui/ordering.js
+scripts/lib/advanced-search/infSearchParams.js
+scripts/lib/advanced-search/infToolbarAdvancedMatchCriteria.js
+hbs!templates/viewToolbar/infToolbarAdvancedSearch
+scripts/lib/advanced-search/infToolbarAdvancedSearch.js
+hbs!templates/viewToolbar/infToolbarSearch
+scripts/lib/toolbar/infToolbarSearch.js
+hbs!templates/viewToolbar/infToolbar
+scripts/lib/toolbar/infToolbar.js
+hbs!templates/flowView/flowView
+scripts/views/infFlowView.js
+hbs!templates/footer/footer
+scripts/modules/infFooter.js
+scripts/modules/infFileUpload.js
+scripts/lib/communication/accountsViewChannels.js
+scripts/lib/models/xfSearchResultBase.js
+scripts/lib/interfaces/xfResultObject.js
+scripts/lib/models/xfResultClusterBase.js
+scripts/lib/models/xfResultBase.js
+scripts/lib/models/xfEntityResult.js
+scripts/lib/models/xfEntityResultCluster.js
+scripts/lib/models/xfAccountsSearchResult.js
+hbs!templates/operationsBar/infOperationsBarButton
+scripts/lib/ui/infOperationsBar.js
+scripts/templates/helpers/ellipsis.js
+scripts/templates/helpers/markupTerms.js
+hbs!templates/searchResults/searchResultCluster
+scripts/views/components/resultClusterComponentBase.js
+scripts/views/accounts-view-components/accountsResultClusterComponent.js
+hbs!templates/searchResults/searchDetails
+hbs!templates/searchResults/searchResult
+scripts/views/components/resultComponentBase.js
+scripts/views/accounts-view-components/accountsResultComponent.js
+hbs!templates/searchResults/searchResultsFooter
+scripts/views/components/resultFooterComponentBase.js
+scripts/views/accounts-view-components/accountsResultFooterComponent.js
+scripts/templates/helpers/ifCond.js
+hbs!templates/searchResults/searchResultsHeader
+scripts/views/components/resultHeaderComponentBase.js
+scripts/views/accounts-view-components/accountsResultHeaderComponent.js
+hbs!templates/searchResults/searchResultSingle
+scripts/views/components/resultSingleComponent.js
+hbs!templates/searchResults/resultsSummary
+scripts/views/components/resultSummaryComponent.js
+hbs!templates/accountsView/accountsView
+hbs!templates/searchResults/expandedSearchResults
+hbs!templates/loading
+hbs!templates/accountsView/emptyHint
+scripts/views/infAccountsView.js
+hbs!templates/summaryView/summaryView
+scripts/views/infSummaryView.js
+scripts/lib/communication/transactionsViewChannels.js
+scripts/lib/models/xfTransactionResult.js
+scripts/lib/models/xfTransactionResultCluster.js
+scripts/lib/models/xfTransactionsSearchResult.js
+scripts/views/transactions-view-components/transactionsResultClusterComponent.js
+scripts/views/transactions-view-components/transactionsResultComponent.js
+scripts/views/transactions-view-components/transactionsResultFooterComponent.js
+scripts/views/transactions-view-components/transactionsResultHeaderComponent.js
+hbs!templates/transactionsView/transactionsView
+hbs!templates/transactionsView/emptyHint
+scripts/views/infTransactionsView.js
+scripts/lib/app.js
+scripts/lib/extern/../../main.js
+
+[INFO] 
+[INFO] --- dependency:3.9.0:unpack-dependencies (unpack-dependencies) @ influent-client ---
+[INFO] 
+[INFO] --- assembly:3.8.0:single (compile-dist) @ influent-client ---
+[INFO] Reading assembly descriptor: src/main/assembly/src-distribution.xml
+[INFO] Building zip: /home/ubuntu/cogfluence/influent-client/target/influent-client-2.0.0-src.zip
+[INFO] 
+[INFO] --- assembly:3.8.0:single (compile-min-dist) @ influent-client ---
+[INFO] Reading assembly descriptor: src/main/assembly/min-distribution.xml
+[INFO] Building zip: /home/ubuntu/cogfluence/influent-client/target/influent-client-2.0.0-min.zip
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ influent-client ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ influent-client ---
+[INFO] Installing /home/ubuntu/cogfluence/influent-client/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-client/2.0.0/influent-client-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/influent-client/target/influent-client-2.0.0-src.zip to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-client/2.0.0/influent-client-2.0.0-src.zip
+[INFO] Installing /home/ubuntu/cogfluence/influent-client/target/influent-client-2.0.0-min.zip to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-client/2.0.0/influent-client-2.0.0-min.zip
+[INFO] 
+[INFO] --------------< software.uncharted.influent:influent-app >--------------
+[INFO] Building influent-app 2.0.0                                      [18/23]
+[INFO]   from influent-app/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ influent-app ---
+[INFO] Deleting /home/ubuntu/cogfluence/influent-app/target
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ influent-app ---
+[INFO] Storing buildNumber: 2025-12-15 07:42:36 at timestamp: 1765802556791
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/influent-app' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/influent-app
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-app ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-app ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-app ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-app ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-app/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-app ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ influent-app ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- war:3.5.1:war (default-war) @ influent-app ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [influent-app] in [/home/ubuntu/cogfluence/influent-app/target/influent-app-2.0.0]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/ubuntu/cogfluence/influent-app/src/main/webapp]
+[INFO] Processing overlay [ id software.uncharted.influent:influent-client:src]
+[INFO] Building war: /home/ubuntu/cogfluence/influent-app/target/influent-app-2.0.0.war
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ influent-app ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ influent-app ---
+[INFO] Installing /home/ubuntu/cogfluence/influent-app/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-app/2.0.0/influent-app-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/influent-app/target/influent-app-2.0.0.war to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-app/2.0.0/influent-app-2.0.0.war
+[INFO] 
+[INFO] ------------------< software.uncharted.influent:kiva >------------------
+[INFO] Building kiva 2.0.0                                              [19/23]
+[INFO]   from kiva/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ kiva ---
+[INFO] Deleting /home/ubuntu/cogfluence/kiva/target
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ kiva ---
+[INFO] Storing buildNumber: 2025-12-15 07:42:38 at timestamp: 1765802558674
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/kiva' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/kiva
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ kiva ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ kiva ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ kiva ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 9 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ kiva ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/kiva/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ kiva ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ kiva ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- war:3.5.1:war (default-war) @ kiva ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [kiva] in [/home/ubuntu/cogfluence/kiva/target/kiva-2.0.0]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/ubuntu/cogfluence/kiva/src/main/webapp]
+[INFO] Processing overlay [ id software.uncharted.influent:influent-client:min]
+[INFO] Building war: /home/ubuntu/cogfluence/kiva/target/kiva-2.0.0.war
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ kiva ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 9 files clean - 0 needs changes to be clean, 9 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ kiva ---
+[INFO] Installing /home/ubuntu/cogfluence/kiva/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/kiva/2.0.0/kiva-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/kiva/target/kiva-2.0.0.war to /home/ubuntu/.m2/repository/software/uncharted/influent/kiva/2.0.0/kiva-2.0.0.war
+[INFO] 
+[INFO] ----------------< software.uncharted.influent:bitcoin >-----------------
+[INFO] Building bitcoin 2.0.0                                           [20/23]
+[INFO]   from bitcoin/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ bitcoin ---
+[INFO] Deleting /home/ubuntu/cogfluence/bitcoin/target
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ bitcoin ---
+[INFO] Storing buildNumber: 2025-12-15 07:42:40 at timestamp: 1765802560438
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/bitcoin' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/bitcoin
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ bitcoin ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ bitcoin ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ bitcoin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ bitcoin ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/bitcoin/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ bitcoin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ bitcoin ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- war:3.5.1:war (default-war) @ bitcoin ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [bitcoin] in [/home/ubuntu/cogfluence/bitcoin/target/bitcoin-2.0.0]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/ubuntu/cogfluence/bitcoin/src/main/webapp]
+[INFO] Processing overlay [ id software.uncharted.influent:influent-client:src]
+[INFO] Building war: /home/ubuntu/cogfluence/bitcoin/target/bitcoin-2.0.0.war
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ bitcoin ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ bitcoin ---
+[INFO] Installing /home/ubuntu/cogfluence/bitcoin/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/bitcoin/2.0.0/bitcoin-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/bitcoin/target/bitcoin-2.0.0.war to /home/ubuntu/.m2/repository/software/uncharted/influent/bitcoin/2.0.0/bitcoin-2.0.0.war
+[INFO] 
+[INFO] -----------------< software.uncharted.influent:walker >-----------------
+[INFO] Building walker 2.0.0                                            [21/23]
+[INFO]   from walker/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ walker ---
+[INFO] Deleting /home/ubuntu/cogfluence/walker/target
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ walker ---
+[INFO] Storing buildNumber: 2025-12-15 07:42:41 at timestamp: 1765802561885
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/walker' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/walker
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ walker ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ walker ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 6 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ walker ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ walker ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/walker/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ walker ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ walker ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- war:3.5.1:war (default-war) @ walker ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [walker] in [/home/ubuntu/cogfluence/walker/target/walker-2.0.0]
+[INFO] Processing war project
+[INFO] Copying webapp resources [/home/ubuntu/cogfluence/walker/src/main/webapp]
+[INFO] Processing overlay [ id software.uncharted.influent:influent-client:src]
+[INFO] Building war: /home/ubuntu/cogfluence/walker/target/walker-2.0.0.war
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ walker ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ walker ---
+[INFO] Installing /home/ubuntu/cogfluence/walker/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/walker/2.0.0/walker-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/walker/target/walker-2.0.0.war to /home/ubuntu/.m2/repository/software/uncharted/influent/walker/2.0.0/walker-2.0.0.war
+[INFO] 
+[INFO] ---------< software.uncharted.influent:influent-selenium-test >---------
+[INFO] Building influent-selenium-test 2.0.0                            [22/23]
+[INFO]   from influent-selenium-test/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ influent-selenium-test ---
+[INFO] Deleting /home/ubuntu/cogfluence/influent-selenium-test/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-selenium-test ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-selenium-test ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-selenium-test/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-selenium-test ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 18 source files with javac [debug release 17] to target/classes
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-selenium-test ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-selenium-test/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-selenium-test ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ influent-selenium-test ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jar:3.5.0:jar (default-jar) @ influent-selenium-test ---
+[INFO] Building jar: /home/ubuntu/cogfluence/influent-selenium-test/target/influent-selenium-test-2.0.0.jar
+[INFO] 
+[INFO] --- shade:3.6.1:shade (default) @ influent-selenium-test ---
+[INFO] Dependency-reduced POM written at: /home/ubuntu/cogfluence/influent-selenium-test/dependency-reduced-pom.xml
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] Discovered module-info.class. Shading will break its strong encapsulation.
+[WARNING] selenium-devtools-v140-4.38.0.jar, selenium-devtools-v141-4.38.0.jar, selenium-devtools-v142-4.38.0.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/services/org.openqa.selenium.devtools.CdpInfo
+[WARNING] selenium-chrome-driver-4.38.0.jar, selenium-chromium-driver-4.38.0.jar, selenium-edge-driver-4.38.0.jar, selenium-firefox-driver-4.38.0.jar, selenium-safari-driver-4.38.0.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/services/org.openqa.selenium.remote.AdditionalHttpCommands
+[WARNING] byte-buddy-1.17.8.jar, commons-exec-1.5.0.jar, jspecify-1.0.0.jar define 1 overlapping classes: 
+[WARNING]   - META-INF.versions.9.module-info
+[WARNING] selenium-chrome-driver-4.38.0.jar, selenium-chromium-driver-4.38.0.jar, selenium-edge-driver-4.38.0.jar, selenium-firefox-driver-4.38.0.jar, selenium-remote-driver-4.38.0.jar, selenium-safari-driver-4.38.0.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/services/org.openqa.selenium.remote.AugmenterProvider
+[WARNING] animal-sniffer-annotations-1.14.jar, auto-service-annotations-1.1.1.jar, byte-buddy-1.17.8.jar, commons-exec-1.5.0.jar, error_prone_annotations-2.0.18.jar, guava-23.0.jar, hamcrest-core-1.3.jar, influent-selenium-test-2.0.0.jar, j2objc-annotations-1.1.jar, jspecify-1.0.0.jar, jsr305-1.3.9.jar, junit-4.13.2.jar, opentelemetry-api-1.55.0.jar, opentelemetry-common-1.55.0.jar, opentelemetry-context-1.55.0.jar, opentelemetry-exporter-logging-1.55.0.jar, opentelemetry-sdk-1.55.0.jar, opentelemetry-sdk-common-1.55.0.jar, opentelemetry-sdk-extension-autoconfigure-1.55.0.jar, opentelemetry-sdk-extension-autoconfigure-spi-1.55.0.jar, opentelemetry-sdk-logs-1.55.0.jar, opentelemetry-sdk-metrics-1.55.0.jar, opentelemetry-sdk-trace-1.55.0.jar, selenium-api-4.38.0.jar, selenium-chrome-driver-4.38.0.jar, selenium-chromium-driver-4.38.0.jar, selenium-devtools-v140-4.38.0.jar, selenium-devtools-v141-4.38.0.jar, selenium-devtools-v142-4.38.0.jar, selenium-edge-driver-4.38.0.jar, selenium-firefox-driver-4.38.0.jar, selenium-http-4.38.0.jar, selenium-ie-driver-4.38.0.jar, selenium-java-4.38.0.jar, selenium-json-4.38.0.jar, selenium-manager-4.38.0.jar, selenium-os-4.38.0.jar, selenium-remote-driver-4.38.0.jar, selenium-safari-driver-4.38.0.jar, selenium-support-4.38.0.jar define 1 overlapping resource: 
+[WARNING]   - META-INF/MANIFEST.MF
+[WARNING] selenium-chrome-driver-4.38.0.jar, selenium-edge-driver-4.38.0.jar, selenium-firefox-driver-4.38.0.jar, selenium-ie-driver-4.38.0.jar, selenium-safari-driver-4.38.0.jar define 2 overlapping resources: 
+[WARNING]   - META-INF/services/org.openqa.selenium.WebDriverInfo
+[WARNING]   - META-INF/services/org.openqa.selenium.remote.service.DriverService$Builder
+[WARNING] maven-shade-plugin has detected that some files are
+[WARNING] present in two or more JARs. When this happens, only one
+[WARNING] single version of the file is copied to the uber jar.
+[WARNING] Usually this is not harmful and you can skip these warnings,
+[WARNING] otherwise try to manually exclude artifacts based on
+[WARNING] mvn dependency:tree -Ddetail=true and the above output.
+[WARNING] See https://maven.apache.org/plugins/maven-shade-plugin/
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ influent-selenium-test ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] Spotless.Java is keeping 18 files clean - 0 needs changes to be clean, 18 were already clean, 0 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ influent-selenium-test ---
+[INFO] Installing /home/ubuntu/cogfluence/influent-selenium-test/dependency-reduced-pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-selenium-test/2.0.0/influent-selenium-test-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/influent-selenium-test/target/influent-selenium-test-2.0.0.jar to /home/ubuntu/.m2/repository/software/uncharted/influent/influent-selenium-test/2.0.0/influent-selenium-test-2.0.0.jar
+[INFO] 
+[INFO] -------------< software.uncharted.influent:aperture-dist >--------------
+[INFO] Building Distribution Builder 2.0.0                              [23/23]
+[INFO]   from aperture-distribution/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ aperture-dist ---
+[INFO] Deleting /home/ubuntu/cogfluence/aperture-distribution/target
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-dist ---
+[INFO] 
+[INFO] --- assembly:3.8.0:single (compile-dist) @ aperture-dist ---
+[INFO] Reading assembly descriptor: src/main/assembly/distribution.xml
+[WARNING] Cannot include project artifact: software.uncharted.influent:aperture-dist:pom:2.0.0; it doesn't have an associated file or directory.
+[WARNING] The following patterns were never triggered in this artifact inclusion filter:
+o  'oculus.aperture:aperture-common'
+o  'oculus.aperture:aperture-spi'
+o  'oculus.aperture:aperture-server-core'
+o  'oculus.aperture.service:aperture-layout'
+o  'oculus.aperture.service:aperture-icons'
+o  'oculus.aperture.service:aperture-cms'
+o  'oculus.aperture.service:aperture-capture-phantom'
+
+[WARNING] Cannot include project artifact: software.uncharted.influent:aperture-dist:pom:2.0.0; it doesn't have an associated file or directory.
+[WARNING] The following patterns were never triggered in this artifact inclusion filter:
+o  'oculus.aperture:aperture-client:jar'
+
+[WARNING] Cannot include project artifact: software.uncharted.influent:aperture-dist:pom:2.0.0; it doesn't have an associated file or directory.
+[WARNING] The following patterns were never triggered in this artifact inclusion filter:
+o  'oculus.aperture:aperture-server'
+
+[INFO] Building zip: /home/ubuntu/cogfluence/aperture-distribution/target/aperture-dist-2.0.0-full.zip
+[INFO] 
+[INFO] --- assembly:3.8.0:single (compile-dist-js) @ aperture-dist ---
+[INFO] Reading assembly descriptor: src/main/assembly/distribution-js.xml
+[WARNING] Cannot include project artifact: software.uncharted.influent:aperture-dist:pom:2.0.0; it doesn't have an associated file or directory.
+[WARNING] The following patterns were never triggered in this artifact inclusion filter:
+o  'oculus.aperture:aperture-client:jar'
+
+[INFO] Building zip: /home/ubuntu/cogfluence/aperture-distribution/target/aperture-dist-2.0.0-js.zip
+[INFO] 
+[INFO] --- spotless:3.1.0:check (default) @ aperture-dist ---
+[INFO] Index file does not exist. Fallback to an empty index
+[INFO] 
+[INFO] --- install:3.1.4:install (default-install) @ aperture-dist ---
+[INFO] Installing /home/ubuntu/cogfluence/aperture-distribution/pom.xml to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-dist/2.0.0/aperture-dist-2.0.0.pom
+[INFO] Installing /home/ubuntu/cogfluence/aperture-distribution/target/aperture-dist-2.0.0-full.zip to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-dist/2.0.0/aperture-dist-2.0.0-full.zip
+[INFO] Installing /home/ubuntu/cogfluence/aperture-distribution/target/aperture-dist-2.0.0-js.zip to /home/ubuntu/.m2/repository/software/uncharted/influent/aperture-dist/2.0.0/aperture-dist-2.0.0-js.zip
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Influent Project Modules 2.0.0:
+[INFO] 
+[INFO] Influent Project Modules ........................... SUCCESS [  0.952 s]
+[INFO] aperture-spi ....................................... SUCCESS [  5.078 s]
+[INFO] aperture-common .................................... SUCCESS [  1.732 s]
+[INFO] Aperture Client .................................... SUCCESS [ 13.579 s]
+[INFO] Aperture Server Core Components .................... SUCCESS [  0.853 s]
+[INFO] aperture-geo ....................................... SUCCESS [  0.440 s]
+[INFO] aperture-icons ..................................... SUCCESS [  0.571 s]
+[INFO] aperture-capture-phantom ........................... SUCCESS [  0.561 s]
+[INFO] aperture-cms ....................................... SUCCESS [  0.422 s]
+[INFO] aperture-parchment ................................. SUCCESS [  0.324 s]
+[INFO] aperture-layout .................................... SUCCESS [  1.065 s]
+[INFO] Aperture Examples .................................. SUCCESS [  0.204 s]
+[INFO] Ensemble Clustering Library ........................ SUCCESS [  5.737 s]
+[INFO] influent-common .................................... SUCCESS [  0.162 s]
+[INFO] influent-spi ....................................... SUCCESS [  6.972 s]
+[INFO] influent-server .................................... SUCCESS [  6.211 s]
+[INFO] influent-client .................................... SUCCESS [ 31.444 s]
+[INFO] influent-app ....................................... SUCCESS [  1.887 s]
+[INFO] kiva ............................................... SUCCESS [  1.765 s]
+[INFO] bitcoin ............................................ SUCCESS [  1.436 s]
+[INFO] walker ............................................. SUCCESS [  1.527 s]
+[INFO] influent-selenium-test ............................. SUCCESS [  3.805 s]
+[INFO] Distribution Builder ............................... SUCCESS [  0.100 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:27 min
+[INFO] Finished at: 2025-12-15T07:42:47-05:00
+[INFO] ------------------------------------------------------------------------

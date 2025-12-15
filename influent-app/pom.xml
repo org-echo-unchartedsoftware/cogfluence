@@ -266,16 +266,17 @@
 				<plugins>
 				
 					<!-- OPTIONAL: Copy phantomjs binary into local directory for launching with Jetty below. -->
+					<!-- DISABLED: PhantomJS dependency not available in Maven Central
 			   	    <plugin>
 			   	        <groupId>org.codehaus.mojo</groupId>
 			   	        <artifactId>dependency-maven-plugin</artifactId>
-		   	        	<version>1.0</version>
-		   	        	<executions>
-		   	        		<execution>
-			   	        		<id>copy</id>
-			   	        		<goals>
-				   	        		<goal>copy</goal>
-			   	        		</goals>
+			   	        	<version>1.0</version>
+			   	        	<executions>
+			   	        		<execution>
+			   	        			<id>copy</id>
+			   	        			<goals>
+				   	        			<goal>copy</goal>
+			   	        			</goals>
 				   	            <configuration>
 				   	              <artifactItems>
 				   	                <artifactItem>
@@ -289,8 +290,9 @@
 				   	              </artifactItems>
 				   	            </configuration>
 							</execution>
-		   	        	</executions>
+			   	        	</executions>
 			   	    </plugin>
+					-->
 					
 					<!-- OPTIONAL: For running Jetty in Eclipse -->
 					<plugin>
