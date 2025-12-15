@@ -124,6 +124,14 @@
 			<scope>compile</scope>
 		</dependency>
 
+		<!-- Javax Servlet API (required for Shiro 1.x) -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- Use Log4j 2.x instead of vulnerable log4j 1.2.x -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
@@ -139,6 +147,7 @@
 
 	<build>
 		<plugins>
+			<!-- DISABLED: PhantomJS dependency not available in Maven Central
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>dependency-maven-plugin</artifactId>
@@ -165,6 +174,7 @@
 					</execution>
 				</executions>
 			</plugin>
+			-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>

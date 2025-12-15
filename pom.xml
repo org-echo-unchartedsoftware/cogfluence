@@ -317,8 +317,8 @@
 		<module>aperture-parchment</module>
 		<module>aperture-layout</module>
 		<!-- <module>aperture-layout-yworks</module> --> <!-- Missing yworks dependency -->
-		<!-- <module>aperture-graph</module> --> <!-- Missing javaml dependency -->
-		<!-- <module>aperture-server</module> --> 
+		<module>aperture-graph</module> <!-- javaml dependency replaced with local implementation -->
+		<!-- <module>aperture-server</module> --> <!-- Disabled: Guice 7.0.0 (Jakarta EE) incompatible with Shiro 1.x (javax.servlet) --> 
 		<module>aperture-examples</module>
 		<module>ensemble-clustering</module>
 		

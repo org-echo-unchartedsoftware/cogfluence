@@ -17,13 +17,14 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<repositories>
+	<!-- Repository removed - javaml dependency replaced with local implementation -->
+	<!-- <repositories>
 		<repository>
 			<id>streamreasoning</id>
 			<name>Stream Reasoning</name>
       <url>https://streamreasoning.org/maven</url>
 		</repository>
-	</repositories>	
+	</repositories> -->
 
 	<dependencies>
 	
@@ -54,11 +55,12 @@
 			<version>0.8.3</version>
 		</dependency>
 		
-		<dependency>
+		<!-- javaml dependency replaced with local implementation in oculus.aperture.graph.util.mcl -->
+		<!-- <dependency>
 			  <groupId>net.sourceforge</groupId>
 			  <artifactId>javaml</artifactId>
 			  <version>0.1.7</version>
-		</dependency>
+		</dependency> -->
 		
 		<!-- Stopwatch -->
 		<dependency>
