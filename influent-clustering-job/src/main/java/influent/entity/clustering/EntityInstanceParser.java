@@ -19,15 +19,15 @@
 package influent.entity.clustering;
 
 import com.oculusinfo.ml.Instance;
-import com.oculusinfo.ml.feature.BagOfWordsFeature;
-import com.oculusinfo.ml.feature.GeoSpatialFeature;
-import com.oculusinfo.ml.feature.NumericVectorFeature;
+import com.oculusinfo.ml.feature.bagofwords.BagOfWordsFeature;
+import com.oculusinfo.ml.feature.numeric.NumericVectorFeature;
+import com.oculusinfo.ml.feature.spatial.GeoSpatialFeature;
 import com.oculusinfo.ml.spark.SparkInstanceParser;
 import com.oculusinfo.ml.spark.SparkInstanceParserHelper;
 import java.util.Collection;
 import scala.Tuple2;
 
-public class EntityInstanceParser extends SparkInstanceParser {
+public class EntityInstanceParser implements SparkInstanceParser {
   private static final long serialVersionUID = 7832910126397517914L;
 
   private Collection<SchemaField> schema;
@@ -37,7 +37,7 @@ public class EntityInstanceParser extends SparkInstanceParser {
   }
 
   @Override
-  public Tuple2<String, Instance> call(String line) throws Exception {
+  public Tuple2<String, Instance> parse(String line) throws Exception {
     String str = line;
     String key = null;
     if (line.startsWith("(")) {

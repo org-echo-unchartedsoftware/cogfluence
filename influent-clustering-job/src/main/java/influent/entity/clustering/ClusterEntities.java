@@ -19,14 +19,14 @@
 package influent.entity.clustering;
 
 import com.oculusinfo.ml.Instance;
-import com.oculusinfo.ml.distance.semantic.EditDistance;
-import com.oculusinfo.ml.distance.semantic.ExactTokenMatchDistance;
-import com.oculusinfo.ml.distance.spatial.HaversineDistance;
-import com.oculusinfo.ml.distance.vector.EuclideanDistance;
-import com.oculusinfo.ml.feature.BagOfWordsFeature;
-import com.oculusinfo.ml.feature.centroid.BagOfWordsCentroid;
-import com.oculusinfo.ml.feature.centroid.FastGeoSpatialCentroid;
-import com.oculusinfo.ml.feature.centroid.MeanNumericVectorCentroid;
+import com.oculusinfo.ml.feature.bagofwords.BagOfWordsFeature;
+import com.oculusinfo.ml.feature.bagofwords.centroid.BagOfWordsCentroid;
+import com.oculusinfo.ml.feature.bagofwords.distance.EditDistance;
+import com.oculusinfo.ml.feature.bagofwords.distance.ExactTokenMatchDistance;
+import com.oculusinfo.ml.feature.numeric.centroid.MeanNumericVectorCentroid;
+import com.oculusinfo.ml.feature.numeric.distance.EuclideanDistance;
+import com.oculusinfo.ml.feature.spatial.centroid.FastGeoSpatialCentroid;
+import com.oculusinfo.ml.feature.spatial.distance.HaversineDistance;
 import com.oculusinfo.ml.spark.SparkDataSet;
 import com.oculusinfo.ml.spark.unsupervised.KMeansClusterer;
 import com.oculusinfo.ml.spark.unsupervised.SparkClusterResult;
@@ -41,13 +41,13 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
+import org.apache.spark.api.java.function.PairFunction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import scala.Tuple2;
-import spark.api.java.JavaPairRDD;
-import spark.api.java.JavaSparkContext;
-import spark.api.java.function.Function;
-import spark.api.java.function.PairFunction;
 
 public class ClusterEntities implements Serializable {
   private static final long serialVersionUID = 9201465724526156883L;
@@ -132,7 +132,7 @@ public class ClusterEntities implements Serializable {
   private JavaPairRDD<String, Instance> clusterByCategory(
       JavaPairRDD<String, Instance> instances, final String fieldName, final String clusterKey) {
     JavaPairRDD<String, Instance> results =
-        instances.map(
+        instances.mapToPair(
             new PairFunction<Tuple2<String, Instance>, String, Instance>() {
               private static final long serialVersionUID = 952727691373866019L;
 
@@ -142,9 +142,8 @@ public class ClusterEntities implements Serializable {
 
                 String category = "Unknown";
 
-                if (inst.containsFeature(fieldName, fieldName)) {
-                  BagOfWordsFeature f =
-                      (BagOfWordsFeature) inst.getFeature(fieldName, fieldName).iterator().next();
+                if (inst.containsFeature(fieldName)) {
+                  BagOfWordsFeature f = (BagOfWordsFeature) inst.getFeature(fieldName);
                   category = f.getFreqTable().getAll().iterator().next().getFeature().getName();
                 }
                 return new Tuple2<String, Instance>(
@@ -160,7 +159,7 @@ public class ClusterEntities implements Serializable {
       final String clusterKey,
       final GEOLevel lvl) {
     JavaPairRDD<String, Instance> results =
-        instances.map(
+        instances.mapToPair(
             new PairFunction<Tuple2<String, Instance>, String, Instance>() {
               private static final long serialVersionUID = 952727691373866019L;
 
@@ -169,9 +168,8 @@ public class ClusterEntities implements Serializable {
                 Instance inst = item._2;
                 String geoKey = "Unknown";
                 String countrycode = null;
-                if (inst.containsFeature(fieldName, fieldName)) {
-                  BagOfWordsFeature f =
-                      (BagOfWordsFeature) inst.getFeature(fieldName, fieldName).iterator().next();
+                if (inst.containsFeature(fieldName)) {
+                  BagOfWordsFeature f = (BagOfWordsFeature) inst.getFeature(fieldName);
                   countrycode =
                       f.getFreqTable()
                           .getAll()

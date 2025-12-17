@@ -19,9 +19,9 @@
 package influent.entity.clustering;
 
 import com.oculusinfo.ml.Instance;
-import com.oculusinfo.ml.feature.BagOfWordsFeature;
-import com.oculusinfo.ml.feature.GeoSpatialFeature;
-import com.oculusinfo.ml.feature.NumericVectorFeature;
+import com.oculusinfo.ml.feature.bagofwords.BagOfWordsFeature;
+import com.oculusinfo.ml.feature.numeric.NumericVectorFeature;
+import com.oculusinfo.ml.feature.spatial.GeoSpatialFeature;
 import influent.entity.clustering.SchemaField.FieldType;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -30,17 +30,17 @@ import java.util.Map;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.apache.spark.api.java.JavaPairRDD;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.Function;
+import org.apache.spark.api.java.function.Function2;
+import org.apache.spark.api.java.function.PairFunction;
 import org.skife.csv.CSVReader;
 import org.skife.csv.SimpleReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import scala.Tuple2;
-import spark.api.java.JavaPairRDD;
-import spark.api.java.JavaRDD;
-import spark.api.java.JavaSparkContext;
-import spark.api.java.function.Function;
-import spark.api.java.function.Function2;
-import spark.api.java.function.PairFunction;
 
 public class PreProcessClusterInput {
   private static Logger log = LoggerFactory.getLogger("influent");
@@ -84,7 +84,7 @@ public class PreProcessClusterInput {
 
     // map CSV to instances
     JavaPairRDD<String, Instance> instances =
-        lines.map(
+        lines.mapToPair(
             new PairFunction<String, String, Instance>() {
               private static final long serialVersionUID = -5331107697232275404L;
 
@@ -106,22 +106,19 @@ public class PreProcessClusterInput {
                       break;
                     case CATEGORY:
                     case CC:
-                      BagOfWordsFeature str =
-                          new BagOfWordsFeature(schema[i].fieldName, schema[i].fieldName);
+                      BagOfWordsFeature str = new BagOfWordsFeature(schema[i].fieldName);
                       str.incrementValue(value);
                       inst.addFeature(str);
                       break;
                     case GEO:
-                      GeoSpatialFeature location =
-                          new GeoSpatialFeature(schema[i].fieldName, schema[i].fieldName);
+                      GeoSpatialFeature location = new GeoSpatialFeature(schema[i].fieldName);
                       String[] latlon = value.split(";");
                       location.setValue(
                           Double.parseDouble(latlon[0]), Double.parseDouble(latlon[1]));
                       inst.addFeature(location);
                       break;
                     case LABEL:
-                      BagOfWordsFeature label =
-                          new BagOfWordsFeature(schema[i].fieldName, schema[i].fieldName);
+                      BagOfWordsFeature label = new BagOfWordsFeature(schema[i].fieldName);
                       List<String> tokens = tokenizeString(value);
 
                       for (String token : tokens) {
@@ -130,8 +127,7 @@ public class PreProcessClusterInput {
                       inst.addFeature(label);
                       break;
                     case NUMBER:
-                      NumericVectorFeature num =
-                          new NumericVectorFeature(schema[i].fieldName, schema[i].fieldName);
+                      NumericVectorFeature num = new NumericVectorFeature(schema[i].fieldName);
                       num.setValue(new double[] {Double.parseDouble(value)});
                       inst.addFeature(num);
                       break;
@@ -159,7 +155,7 @@ public class PreProcessClusterInput {
 
                       @Override
                       public Boolean call(Tuple2<String, Instance> t) throws Exception {
-                        return (t._2.containsFeature(field.fieldName, field.fieldName));
+                        return (t._2.containsFeature(field.fieldName));
                       }
                     })
                 .count();
@@ -174,10 +170,9 @@ public class PreProcessClusterInput {
                   @Override
                   public Double call(Double t1, Tuple2<String, Instance> t2) throws Exception {
                     Double sum = t1;
-                    if (t2._2.containsFeature(field.fieldName, field.fieldName)) {
+                    if (t2._2.containsFeature(field.fieldName)) {
                       NumericVectorFeature feature =
-                          (NumericVectorFeature)
-                              t2._2.getFeature(field.fieldName, field.fieldName).iterator().next();
+                          (NumericVectorFeature) t2._2.getFeature(field.fieldName);
                       sum += feature.getValue()[0];
                     }
                     return sum;
@@ -207,13 +202,9 @@ public class PreProcessClusterInput {
                           public Double call(Double t1, Tuple2<String, Instance> t2)
                               throws Exception {
                             Double stdev = t1;
-                            if (t2._2.containsFeature(field.fieldName, field.fieldName)) {
+                            if (t2._2.containsFeature(field.fieldName)) {
                               NumericVectorFeature feature =
-                                  (NumericVectorFeature)
-                                      t2._2
-                                          .getFeature(field.fieldName, field.fieldName)
-                                          .iterator()
-                                          .next();
+                                  (NumericVectorFeature) t2._2.getFeature(field.fieldName);
                               stdev +=
                                   (feature.getValue()[0] - mean) * (feature.getValue()[0] - mean);
                             }
@@ -232,17 +223,16 @@ public class PreProcessClusterInput {
 
         // standardize each instance
         instances =
-            instances.map(
+            instances.mapToPair(
                 new PairFunction<Tuple2<String, Instance>, String, Instance>() {
                   private static final long serialVersionUID = -7950135909235642830L;
 
                   @Override
                   public Tuple2<String, Instance> call(Tuple2<String, Instance> t2)
                       throws Exception {
-                    if (t2._2.containsFeature(field.fieldName, field.fieldName)) {
+                    if (t2._2.containsFeature(field.fieldName)) {
                       NumericVectorFeature feature =
-                          (NumericVectorFeature)
-                              t2._2.getFeature(field.fieldName, field.fieldName).iterator().next();
+                          (NumericVectorFeature) t2._2.getFeature(field.fieldName);
                       feature.setValue(new double[] {(feature.getValue()[0] - mean) / stdev});
                     }
                     return new Tuple2<String, Instance>(t2._1, t2._2);
