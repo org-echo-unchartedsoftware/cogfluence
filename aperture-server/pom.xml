@@ -30,6 +30,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<shiro.version>2.0.6</shiro.version>
 		<!-- Implied environment=development if environment property not set -->
 	</properties>
 
@@ -105,30 +106,34 @@
 			<type>jar</type>
 		</dependency>
 
+		<!-- Apache Shiro 2.x (Jakarta EE compatible) -->
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-core</artifactId>
-			<version>1.13.0</version>
+			<version>${shiro.version}</version>
+			<classifier>jakarta</classifier>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-web</artifactId>
-			<version>1.13.0</version>
+			<version>${shiro.version}</version>
+			<classifier>jakarta</classifier>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-guice</artifactId>
-			<version>1.13.0</version>
+			<version>${shiro.version}</version>
+			<classifier>jakarta</classifier>
 			<scope>compile</scope>
 		</dependency>
 
-		<!-- Javax Servlet API (required for Shiro 1.x) -->
+		<!-- Jakarta Servlet API (required for Shiro 2.x and Guice 7.x) -->
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>4.0.1</version>
+			<groupId>jakarta.servlet</groupId>
+			<artifactId>jakarta.servlet-api</artifactId>
+			<version>6.0.0</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -178,7 +183,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.1.1</version>
+				<version>3.4.0</version>
 				<configuration>
 					<overlays>
 						<!-- Overlay client JS files -->
@@ -322,37 +327,15 @@
 				<plugins>
 					<!-- Jetty Run on content right out of the source folders -->
 					<plugin>
-						<groupId>org.mortbay.jetty</groupId>
-						<artifactId>jetty-maven-plugin</artifactId>
-						<version>9.4.54.v20240208</version>
+						<groupId>org.eclipse.jetty.ee10</groupId>
+						<artifactId>jetty-ee10-maven-plugin</artifactId>
+						<version>12.0.22</version>
 						<configuration>
-
-							<reload>manual</reload>
-
-							<webAppConfig>
+							<scan>0</scan>
+							<webApp>
 								<contextPath>/aperture</contextPath>
-								<baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
-									<resourcesAsCSV>../aperture-client/src/main/javascript,../aperture-examples/src/main/javascript,${project.build.directory}/${project.build.finalName}</resourcesAsCSV>
-								</baseResource>
-
-								<!-- A bit of nasty to include the class files of other modules (avoids rebuild + install) -->
-								<!-- Remove following line unless you need to quickly rebuild/debug Aperture -->
-								<!-- See http://stackoverflow.com/questions/3636493/multi-module-maven-project-and-jettyrun -->
-								<extraClasspath>target/classes;../aperture-server-core/target/classes</extraClasspath>
-
-								<!-- Specify an override web XML to use alternate configuration with no caching -->
-								<overrideDescriptor>src/main/resources/dev-override-web.xml</overrideDescriptor>
-							</webAppConfig>
-
+							</webApp>
 						</configuration>
-
-						<dependencies>
-							<dependency>
-								<groupId>org.eclipse.jetty</groupId>
-								<artifactId>jetty-server</artifactId>
-								<version>12.0.22</version>
-							</dependency>
-						</dependencies>
 					</plugin>
 				</plugins>
 		    </build>
@@ -372,26 +355,15 @@
 				<plugins>
 					<!-- Jetty Run on content right out of the source folders -->
 					<plugin>
-						<groupId>org.mortbay.jetty</groupId>
-						<artifactId>jetty-maven-plugin</artifactId>
-						<version>9.4.54.v20240208</version>
+						<groupId>org.eclipse.jetty.ee10</groupId>
+						<artifactId>jetty-ee10-maven-plugin</artifactId>
+						<version>12.0.22</version>
 						<configuration>
-							<reload>manual</reload>
-							<webAppConfig>
+							<scan>0</scan>
+							<webApp>
 								<contextPath>/aperture</contextPath>
-								<baseResource implementation="org.eclipse.jetty.util.resource.ResourceCollection">
-									<resourcesAsCSV>${project.build.directory}/${project.build.finalName}</resourcesAsCSV>
-								</baseResource>
-							</webAppConfig>
+							</webApp>
 						</configuration>
-
-						<dependencies>
-							<dependency>
-								<groupId>org.eclipse.jetty</groupId>
-								<artifactId>jetty-server</artifactId>
-								<version>12.0.22</version>
-							</dependency>
-						</dependencies>
 					</plugin>
 				</plugins>
 		    </build>

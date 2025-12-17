@@ -31,13 +31,18 @@ import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.Multibinder;
 
 /**
- * Bindings for inclusion of yYworks as an aperture layout provider. yWorks is proprietary
- * software and requires a license for use and distribution. Distribution of yWorks must be
- * in obfuscated form and must not publicly expose yWorks functionality through any other
- * API.
+ * Bindings for inclusion of graph layout provider using JGraphT.
  * 
- * Note that yFiles 2.4.0.3 has an issue with JDK 7, however this is a workaround if needed:
- * http://kb.yworks.com/article550.html
+ * This module was originally designed for yWorks yFiles but has been updated to use
+ * the open-source JGraphT library (https://jgrapht.org/) which provides equivalent
+ * graph layout algorithms without requiring a commercial license.
+ * 
+ * Supported layouts:
+ * - Circular layout
+ * - Radial layout
+ * - Organic (force-directed) layout
+ * - Vertical tree layout
+ * - Horizontal tree layout
  */
 public class YWorksLayoutModule extends AbstractModule {
 

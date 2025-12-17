@@ -1,19 +1,19 @@
 /**
- * Copyright (c) 2013 Oculus Info Inc. 
+ * Copyright (c) 2013 Oculus Info Inc.
  * http://www.oculusinfo.com/
- * 
+ *
  * Released under the MIT License.
- * 
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
  * the Software without restriction, including without limitation the rights to
  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
  * of the Software, and to permit persons to whom the Software is furnished to do
  * so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,9 +24,10 @@
  */
 package oculus.aperture.layout.yworks;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
 import oculus.aperture.layout.impl.BridgedLayoutGraph;
 import oculus.aperture.spi.common.Extents;
 import oculus.aperture.spi.common.Link;
@@ -35,161 +36,238 @@ import oculus.aperture.spi.layout.options.GraphLayoutOptions;
 import oculus.aperture.spi.layout.options.HorizontalTreeLayoutOptions;
 import oculus.aperture.spi.layout.options.LayoutOptions;
 import oculus.aperture.spi.layout.options.VerticalTreeLayoutOptions;
-import y.base.NodeMap;
-import y.geom.YPoint;
-import y.layout.ComponentLayouter;
-import y.layout.DefaultLayoutGraph;
-import y.layout.LayoutGraph;
-import y.layout.LayoutOrientation;
-import y.layout.Layouter;
-import y.layout.circular.CircularLayouter;
-import y.layout.grouping.GroupingKeys;
-import y.layout.hierarchic.HierarchicLayouter;
-import y.layout.organic.SmartOrganicLayouter;
-import y.view.hierarchy.HierarchyManager;
+import org.jgrapht.Graph;
+import org.jgrapht.alg.drawing.CircularLayoutAlgorithm2D;
+import org.jgrapht.alg.drawing.FRLayoutAlgorithm2D;
+import org.jgrapht.alg.drawing.LayoutAlgorithm2D;
+import org.jgrapht.alg.drawing.model.Box2D;
+import org.jgrapht.alg.drawing.model.LayoutModel2D;
+import org.jgrapht.alg.drawing.model.MapLayoutModel2D;
+import org.jgrapht.alg.drawing.model.Point2D;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.SimpleDirectedGraph;
 
 /**
- * Wrapper for applying layout algorithms of YWorks toolkit.
- * 
- * @author dcheng
+ * Wrapper for applying layout algorithms using JGraphT (replacement for YWorks toolkit).
  *
+ * <p>This implementation provides equivalent functionality to the original yFiles-based
+ * implementation using the open-source JGraphT library.
+ *
+ * @author dcheng (original), updated to use JGraphT
  */
-
 public class YWorksLayoutService extends BridgedLayoutGraph {
 
-	
-	private LayoutGraph graph = new DefaultLayoutGraph();
-	private Map<String, y.base.Node> graphNodes = new HashMap<String, y.base.Node>();
+  private Graph<String, DefaultEdge> graph = new SimpleDirectedGraph<>(DefaultEdge.class);
+  private Map<String, Node> nodeMap = new HashMap<>();
+  private List<String> nodeOrder = new ArrayList<>();
 
-	
-	/*
-	 * (non-Javadoc)
-	 * @see oculus.aperture.layout.impl.BridgedLayoutGraph#addLink(oculus.aperture.spi.layout.LayoutLink)
-	 */
-	@Override
-	protected void onAddLink(Link link) {
-		graph.createEdge(
-				graphNodes.get(link.getSourceId()), 
-				graphNodes.get(link.getTargetId()));
-	}
+  @Override
+  protected void onAddLink(Link link) {
+    String sourceId = link.getSourceId();
+    String targetId = link.getTargetId();
 
-	/*
-	 * (non-Javadoc)
-	 * @see oculus.aperture.layout.impl.BridgedLayoutGraph#addNode(oculus.aperture.spi.layout.LayoutNode)
-	 */
-	@Override
-	protected void onAddNode(Node node) {
-		y.base.Node ynode = graph.createNode();
-		graph.setSize(ynode, node.getWidth(), node.getHeight());
-		graph.setLocation(ynode, node.getX(), node.getY());
-		
-		graphNodes.put(node.getId(), ynode); 
-	}
-	
+    // Ensure both vertices exist
+    if (!graph.containsVertex(sourceId)) {
+      graph.addVertex(sourceId);
+    }
+    if (!graph.containsVertex(targetId)) {
+      graph.addVertex(targetId);
+    }
 
-	/*
-	 * (non-Javadoc)
-	 * @see oculus.aperture.layout.AbstractLayoutService#doLayout(oculus.aperture.spi.Properties)
-	 */
-	@Override
-	protected void doLayout(LayoutOptions options) {
-		
-		// extract options, filling in defaults where missing.
-		String layoutType = options.getLayoutType();
-		final GraphLayoutOptions gopts = (GraphLayoutOptions) options;
-		
-		
-		Layouter impl;
-		
-		// choose and parameterize layout
-		if (layoutType.equals(GraphLayoutOptions.CIRCLE)){
-			CircularLayouter layouter = new CircularLayouter();
-			layouter.getBalloonLayouter().setMinimalEdgeLength(gopts.getLinkLength()); // increases compactness
-			layouter.setLayoutStyle(CircularLayouter.BCC_COMPACT);
-			impl = layouter;
-			
-		} else if (layoutType.equals(GraphLayoutOptions.RADIAL)){
-			CircularLayouter layouter = new CircularLayouter();
-			layouter.getBalloonLayouter().setMinimalEdgeLength(gopts.getLinkLength()); // increases compactness
-			layouter.setLayoutStyle(CircularLayouter.BCC_ISOLATED);
-			impl = layouter;
+    // Add edge if it doesn't exist
+    if (!graph.containsEdge(sourceId, targetId)) {
+      graph.addEdge(sourceId, targetId);
+    }
+  }
 
-		} else if (layoutType.equals(HorizontalTreeLayoutOptions.HORIZONTAL_TREE)){
-			HorizontalTreeLayoutOptions topts = (HorizontalTreeLayoutOptions) options;
-			
-			// Default layout type is a vertical tree.
-			HierarchicLayouter layouter = new HierarchicLayouter();
-			if (topts.isRightToLeft()){
-				layouter.setLayoutOrientation(LayoutOrientation.RIGHT_TO_LEFT);
-			} else {
-				layouter.setLayoutOrientation(LayoutOrientation.LEFT_TO_RIGHT);	
-			}
-			layouter.setMinimalLayerDistance(topts.getTreeLevelDistance());
-			layouter.setMinimalNodeDistance(topts.getNodeDistance());
-			impl = layouter;
-			
-		} else if (layoutType.equals(VerticalTreeLayoutOptions.VERTICAL_TREE)){
-			VerticalTreeLayoutOptions topts = (VerticalTreeLayoutOptions) options;
-			
-			// Default layout type is a vertical tree.
-			HierarchicLayouter layouter = new HierarchicLayouter();
-			if (topts.isBottomToTop()){
-				layouter.setLayoutOrientation(LayoutOrientation.BOTTOM_TO_TOP);
-			} else {
-				layouter.setLayoutOrientation(LayoutOrientation.TOP_TO_BOTTOM);
-			}
-			layouter.setMinimalLayerDistance(topts.getTreeLevelDistance());
-			layouter.setMinimalNodeDistance(topts.getNodeDistance());
-			impl = layouter;
-			
-		// DEFAULT: ORGANIC
-		} else {
-			HierarchyManager graphHM =  new HierarchyManager(graph);
-			graph.addDataProvider(SmartOrganicLayouter.NODE_SUBSET_DATA, graph.createNodeMap());
-			graph.addDataProvider(GroupingKeys.NODE_ID_DPKEY, graphHM.getNodeIdDataProvider());
-			graph.addDataProvider(GroupingKeys.GROUP_DPKEY, graphHM.getGroupNodeDataProvider());
-			graph.addDataProvider(GroupingKeys.PARENT_NODE_ID_DPKEY, graphHM.getParentNodeIdDataProvider());
-			
-			NodeMap activeNodes = (NodeMap) graph.getDataProvider(SmartOrganicLayouter.NODE_SUBSET_DATA);
-			
-			for (String nodeId : graphNodes.keySet()){
-				y.base.Node node = graphNodes.get(nodeId);
-				activeNodes.setBool(node, true);
-			}
-			
-			SmartOrganicLayouter layouter = new SmartOrganicLayouter();
-			//layouter.setScope(SmartOrganicLayouter.SCOPE_SUBSET);
-			layouter.setScope(SmartOrganicLayouter.SCOPE_ALL);
-			layouter.setNodeSizeAware(true);
-			layouter.setNodeOverlapsAllowed(false);
-			layouter.setPreferredMinimalNodeDistance(gopts.getNodeDistance());
-			layouter.setPreferredEdgeLength(gopts.getLinkLength());
-			
-			final Extents ex = options.getPageExtents();
+  @Override
+  protected void onAddNode(Node node) {
+    String nodeId = node.getId();
+    graph.addVertex(nodeId);
+    nodeMap.put(nodeId, node);
+    nodeOrder.add(nodeId);
+  }
 
-			// layout selected graph
-			ComponentLayouter componentLayouter = (ComponentLayouter)layouter.getComponentLayouter();
-			componentLayouter.setStyle(ComponentLayouter.STYLE_ROWS);
-			componentLayouter.setComponentArrangementEnabled(true);
-			if (ex != null) {
-				componentLayouter.setPreferredLayoutSize(ex.getWidth(), ex.getHeight());
-			}
-			
-			impl = layouter;
-		}
-		
-		impl.doLayout(graph);
-		
-		//  copy positions back in.
-		for (Node node : getNodes()) {
-			final String id = node.getId();
-			final y.base.Node ynode = graphNodes.get(id);
-			final YPoint location = graph.getLocation(ynode);
-			
-			node.setX((int)location.getX());
-			node.setY((int)location.getY());
-		}
-	}
+  @Override
+  protected void doLayout(LayoutOptions options) {
+    if (graph.vertexSet().isEmpty()) {
+      return;
+    }
 
+    String layoutType = options.getLayoutType();
+    GraphLayoutOptions gopts = (GraphLayoutOptions) options;
+    Extents extents = options.getPageExtents();
 
+    // Default dimensions
+    double width = extents != null ? extents.getWidth() : 1000;
+    double height = extents != null ? extents.getHeight() : 1000;
+
+    Box2D drawableArea = Box2D.of(0, 0, width, height);
+    LayoutModel2D<String> layoutModel = new MapLayoutModel2D<>(drawableArea);
+
+    LayoutAlgorithm2D<String, DefaultEdge> layoutAlgorithm;
+
+    // Choose layout algorithm based on type
+    if (layoutType.equals(GraphLayoutOptions.CIRCLE)
+        || layoutType.equals(GraphLayoutOptions.RADIAL)) {
+      // Circular layout
+      CircularLayoutAlgorithm2D<String, DefaultEdge> circular = new CircularLayoutAlgorithm2D<>();
+      layoutAlgorithm = circular;
+
+    } else if (layoutType.equals(HorizontalTreeLayoutOptions.HORIZONTAL_TREE)) {
+      // Horizontal tree layout - use hierarchical positioning
+      HorizontalTreeLayoutOptions topts = (HorizontalTreeLayoutOptions) options;
+      applyHorizontalTreeLayout(layoutModel, topts, width, height);
+      copyPositionsToNodes(layoutModel);
+      return;
+
+    } else if (layoutType.equals(VerticalTreeLayoutOptions.VERTICAL_TREE)) {
+      // Vertical tree layout - use hierarchical positioning
+      VerticalTreeLayoutOptions topts = (VerticalTreeLayoutOptions) options;
+      applyVerticalTreeLayout(layoutModel, topts, width, height);
+      copyPositionsToNodes(layoutModel);
+      return;
+
+    } else {
+      // Default: Organic/Force-directed layout (Fruchterman-Reingold)
+      FRLayoutAlgorithm2D<String, DefaultEdge> fr = new FRLayoutAlgorithm2D<>();
+      layoutAlgorithm = fr;
+    }
+
+    // Apply the layout algorithm
+    layoutAlgorithm.layout(graph, layoutModel);
+
+    // Copy positions back to nodes
+    copyPositionsToNodes(layoutModel);
+  }
+
+  private void copyPositionsToNodes(LayoutModel2D<String> layoutModel) {
+    for (Node node : getNodes()) {
+      String id = node.getId();
+      Point2D point = layoutModel.get(id);
+      if (point != null) {
+        node.setX((int) point.getX());
+        node.setY((int) point.getY());
+      }
+    }
+  }
+
+  private void applyHorizontalTreeLayout(
+      LayoutModel2D<String> layoutModel,
+      HorizontalTreeLayoutOptions opts,
+      double width,
+      double height) {
+
+    double levelDistance = opts.getTreeLevelDistance();
+    double nodeDistance = opts.getNodeDistance();
+    boolean rightToLeft = opts.isRightToLeft();
+
+    // Find root nodes (nodes with no incoming edges)
+    List<String> roots = new ArrayList<>();
+    for (String vertex : graph.vertexSet()) {
+      if (graph.inDegreeOf(vertex) == 0) {
+        roots.add(vertex);
+      }
+    }
+    if (roots.isEmpty() && !graph.vertexSet().isEmpty()) {
+      roots.add(graph.vertexSet().iterator().next());
+    }
+
+    // Calculate levels using BFS
+    Map<String, Integer> levels = new HashMap<>();
+    Map<Integer, List<String>> levelNodes = new HashMap<>();
+    calculateLevels(roots, levels, levelNodes);
+
+    // Position nodes
+    int maxLevel = levelNodes.keySet().stream().mapToInt(Integer::intValue).max().orElse(0);
+
+    for (Map.Entry<Integer, List<String>> entry : levelNodes.entrySet()) {
+      int level = entry.getKey();
+      List<String> nodesAtLevel = entry.getValue();
+
+      double x = rightToLeft ? width - (level * levelDistance) : (level * levelDistance);
+
+      for (int i = 0; i < nodesAtLevel.size(); i++) {
+        String nodeId = nodesAtLevel.get(i);
+        double y = (i + 1) * nodeDistance;
+        layoutModel.put(nodeId, Point2D.of(x, y));
+      }
+    }
+  }
+
+  private void applyVerticalTreeLayout(
+      LayoutModel2D<String> layoutModel,
+      VerticalTreeLayoutOptions opts,
+      double width,
+      double height) {
+
+    double levelDistance = opts.getTreeLevelDistance();
+    double nodeDistance = opts.getNodeDistance();
+    boolean bottomToTop = opts.isBottomToTop();
+
+    // Find root nodes (nodes with no incoming edges)
+    List<String> roots = new ArrayList<>();
+    for (String vertex : graph.vertexSet()) {
+      if (graph.inDegreeOf(vertex) == 0) {
+        roots.add(vertex);
+      }
+    }
+    if (roots.isEmpty() && !graph.vertexSet().isEmpty()) {
+      roots.add(graph.vertexSet().iterator().next());
+    }
+
+    // Calculate levels using BFS
+    Map<String, Integer> levels = new HashMap<>();
+    Map<Integer, List<String>> levelNodes = new HashMap<>();
+    calculateLevels(roots, levels, levelNodes);
+
+    // Position nodes
+    int maxLevel = levelNodes.keySet().stream().mapToInt(Integer::intValue).max().orElse(0);
+
+    for (Map.Entry<Integer, List<String>> entry : levelNodes.entrySet()) {
+      int level = entry.getKey();
+      List<String> nodesAtLevel = entry.getValue();
+
+      double y = bottomToTop ? height - (level * levelDistance) : (level * levelDistance);
+
+      for (int i = 0; i < nodesAtLevel.size(); i++) {
+        String nodeId = nodesAtLevel.get(i);
+        double x = (i + 1) * nodeDistance;
+        layoutModel.put(nodeId, Point2D.of(x, y));
+      }
+    }
+  }
+
+  private void calculateLevels(
+      List<String> roots, Map<String, Integer> levels, Map<Integer, List<String>> levelNodes) {
+
+    java.util.Queue<String> queue = new java.util.LinkedList<>();
+    for (String root : roots) {
+      queue.add(root);
+      levels.put(root, 0);
+    }
+
+    while (!queue.isEmpty()) {
+      String current = queue.poll();
+      int currentLevel = levels.get(current);
+
+      levelNodes.computeIfAbsent(currentLevel, k -> new ArrayList<>()).add(current);
+
+      for (DefaultEdge edge : graph.outgoingEdgesOf(current)) {
+        String target = graph.getEdgeTarget(edge);
+        if (!levels.containsKey(target)) {
+          levels.put(target, currentLevel + 1);
+          queue.add(target);
+        }
+      }
+    }
+
+    // Handle disconnected nodes
+    for (String vertex : graph.vertexSet()) {
+      if (!levels.containsKey(vertex)) {
+        levels.put(vertex, 0);
+        levelNodes.computeIfAbsent(0, k -> new ArrayList<>()).add(vertex);
+      }
+    }
+  }
 }

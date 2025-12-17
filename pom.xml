@@ -316,9 +316,9 @@
 		<module>aperture-cms</module>
 		<module>aperture-parchment</module>
 		<module>aperture-layout</module>
-		<!-- <module>aperture-layout-yworks</module> --> <!-- Missing yworks dependency -->
+		<module>aperture-layout-yworks</module> <!-- yfiles replaced with JGraphT -->
 		<module>aperture-graph</module> <!-- javaml dependency replaced with local implementation -->
-		<!-- <module>aperture-server</module> --> <!-- Disabled: Guice 7.0.0 (Jakarta EE) incompatible with Shiro 1.x (javax.servlet) --> 
+		<module>aperture-server</module> <!-- Updated to Shiro 2.x for Jakarta EE compatibility --> 
 		<module>aperture-examples</module>
 		<module>ensemble-clustering</module>
 		
