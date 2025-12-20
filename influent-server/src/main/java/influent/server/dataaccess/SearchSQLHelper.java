@@ -21,8 +21,6 @@ package influent.server.dataaccess;
 import static influent.server.configuration.ApplicationConfiguration.SystemPropertyKey.FIN_ENTITY;
 import static influent.server.configuration.ApplicationConfiguration.SystemPropertyKey.FIN_LINK;
 
-import com.google.common.base.Predicate;
-import com.google.common.collect.Iterables;
 import influent.idl.*;
 import influent.idlhelper.EntityHelper;
 import influent.idlhelper.LinkHelper;
@@ -43,6 +41,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.*;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -304,26 +303,20 @@ public class SearchSQLHelper {
   public SQLFilter buildTermsFilter(List<FL_PropertyMatchDescriptor> terms, String type) {
     // split the list into two, one list with constraints == OPTIONAL_EQUALS for OR clauses, and all
     // others which will be AND'ed
-    Iterable<FL_PropertyMatchDescriptor> orTerms =
-        Iterables.filter(
-            terms,
-            new Predicate<FL_PropertyMatchDescriptor>() {
-              @Override
-              public boolean apply(FL_PropertyMatchDescriptor input) {
-                return FL_Constraint.OPTIONAL_EQUALS.equals(input.getConstraint())
-                    || FL_Constraint.FUZZY_PARTIAL_OPTIONAL.equals(input.getConstraint());
-              }
-            });
-    Iterable<FL_PropertyMatchDescriptor> andTerms =
-        Iterables.filter(
-            terms,
-            new Predicate<FL_PropertyMatchDescriptor>() {
-              @Override
-              public boolean apply(FL_PropertyMatchDescriptor input) {
-                return FL_Constraint.REQUIRED_EQUALS.equals(input.getConstraint())
-                    || FL_Constraint.FUZZY_REQUIRED.equals(input.getConstraint());
-              }
-            });
+    List<FL_PropertyMatchDescriptor> orTerms =
+        terms.stream()
+            .filter(
+                input ->
+                    FL_Constraint.OPTIONAL_EQUALS.equals(input.getConstraint())
+                        || FL_Constraint.FUZZY_PARTIAL_OPTIONAL.equals(input.getConstraint()))
+            .collect(Collectors.toList());
+    List<FL_PropertyMatchDescriptor> andTerms =
+        terms.stream()
+            .filter(
+                input ->
+                    FL_Constraint.REQUIRED_EQUALS.equals(input.getConstraint())
+                        || FL_Constraint.FUZZY_REQUIRED.equals(input.getConstraint()))
+            .collect(Collectors.toList());
 
     SQLFilterGroup filter = _sqlBuilder.and();
     filter.addFilter(buildListOfFilters(orTerms, type, _sqlBuilder.or()));

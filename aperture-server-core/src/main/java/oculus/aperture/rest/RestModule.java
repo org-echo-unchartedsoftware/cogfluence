@@ -20,7 +20,6 @@
  */
 package oculus.aperture.rest;
 
-import com.google.common.io.Files;
 import com.google.inject.Provides;
 import com.google.inject.servlet.ServletModule;
 import jakarta.servlet.ServletContext;
@@ -30,6 +29,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Serializable;
+import java.nio.file.Files;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -231,7 +231,8 @@ public class RestModule extends ServletModule implements ServletContextListener 
       logger.info("Loading ehcache configuration...");
 
       if (System.getProperty("ehcache.disk.store.dir") == null) {
-        System.setProperty("ehcache.disk.store.dir", Files.createTempDir().getPath());
+        System.setProperty(
+            "ehcache.disk.store.dir", Files.createTempDirectory("ehcache").toFile().getPath());
       }
 
       // Load properties

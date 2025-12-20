@@ -58,7 +58,7 @@ import org.restlet.routing.TemplateRoute;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.io.Files;
+import java.nio.file.Files;
 import com.google.inject.Provides;
 import com.google.inject.servlet.ServletModule;
 
@@ -217,7 +217,7 @@ public class RestModule extends ServletModule implements ServletContextListener 
 			logger.info( "Loading ehcache configuration..." );
 
 			if ( System.getProperty( "ehcache.disk.store.dir" ) == null ) {
-				System.setProperty( "ehcache.disk.store.dir", Files.createTempDir().getPath() );
+				System.setProperty( "ehcache.disk.store.dir", Files.createTempDirectory("ehcache").toFile().getPath() );
 			}
 
 			// Load properties
