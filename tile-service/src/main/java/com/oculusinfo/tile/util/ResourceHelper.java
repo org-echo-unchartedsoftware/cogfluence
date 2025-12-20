@@ -24,7 +24,7 @@
  */
 package com.oculusinfo.tile.util;
 
-import com.google.common.io.Files;
+import java.io.FileInputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -69,7 +69,7 @@ public class ResourceHelper {
 			try {
 				File file = new File(path);
 				logger.info("Loading file from: " + file.getAbsolutePath());
-				inp = Files.asByteSource(file).openStream();
+				inp = new FileInputStream(file);
 			}
 			catch (IOException e){
 				logger.info("Error loading file from: " + path);

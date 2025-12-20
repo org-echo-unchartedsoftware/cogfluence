@@ -34,7 +34,8 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
-import com.google.common.primitives.Doubles;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 import com.oculusinfo.binning.TileData;
 import com.oculusinfo.binning.TileIndex;
 import com.oculusinfo.binning.impl.DenseTileData;
@@ -65,7 +66,7 @@ public class BackwardCompatibilitySerializer implements TileSerializer<Double>{
 		ObjectInputStream ois = new ObjectInputStream(stream);
 		try {
 			double[] data = (double[]) ois.readObject();
-			List<Double> d = Doubles.asList(data);
+			List<Double> d = Arrays.stream(data).boxed().collect(Collectors.toList());
 			TileData<Double> tileData = new DenseTileData<Double>(index, d);
 			return tileData;			
 		} catch (ClassNotFoundException e) {

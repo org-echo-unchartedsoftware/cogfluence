@@ -39,7 +39,7 @@ import java.lang.reflect.Constructor;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextListener;
 
-import com.google.common.base.Splitter;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Module;
@@ -92,7 +92,7 @@ public class TileServiceConfiguration extends GuiceServletContextListener {
 		_modules.add( new RestModule( context ) );
 
 		if ( moduleNames != null ) {
-			for ( String moduleName : Splitter.on( ':' ).split( moduleNames ) ) {
+			for ( String moduleName : moduleNames.split( ":" ) ) {
 				try {
 					moduleName = moduleName.trim();
 					if ( moduleName.length() > 0 ) {

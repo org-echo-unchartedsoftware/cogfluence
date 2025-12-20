@@ -20,7 +20,6 @@
  */
 package oculus.aperture.cms.couchdb;
 
-import com.google.common.collect.Maps;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.google.inject.name.Named;
@@ -31,6 +30,7 @@ import java.net.HttpURLConnection;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import oculus.aperture.cms.DocumentImpl;
 import oculus.aperture.common.EmptyProperties;
 import oculus.aperture.spi.common.Properties;
@@ -93,7 +93,7 @@ class CouchDbCmsService implements ContentService {
   }
 
   CouchDbCmsService() {
-    dbClientsByDbName = Maps.newConcurrentMap();
+    dbClientsByDbName = new ConcurrentHashMap<>();
   }
 
   // cache for speed

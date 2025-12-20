@@ -20,7 +20,7 @@
  */
 package oculus.aperture.icons;
 
-import com.google.common.collect.Maps;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import oculus.aperture.spi.palette.ImageService.ImageType;
 import org.restlet.data.Status;
@@ -52,7 +52,7 @@ public class IconResourceRequest {
     }
 
     // start with a copy of attributes.
-    attributes = Maps.newLinkedHashMap(resource.getQuery().getValuesMap());
+    attributes = new LinkedHashMap<>(resource.getQuery().getValuesMap());
 
     // then remove the code attribute.
     code = attributes.remove("code");
