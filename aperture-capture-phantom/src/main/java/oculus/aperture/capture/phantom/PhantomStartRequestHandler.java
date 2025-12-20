@@ -20,8 +20,8 @@
  */
 package oculus.aperture.capture.phantom;
 
-import com.google.common.collect.ImmutableList;
 import com.google.inject.Inject;
+import java.util.List;
 import oculus.aperture.common.rest.ApertureServerResource;
 import org.restlet.data.CacheDirective;
 import org.restlet.representation.StringRepresentation;
@@ -48,7 +48,7 @@ public class PhantomStartRequestHandler extends ApertureServerResource {
   public StringRepresentation start() {
 
     // never cache this response (in case you were thinking of it)
-    getResponse().setCacheDirectives(ImmutableList.of(CacheDirective.noCache()));
+    getResponse().setCacheDirectives(List.of(CacheDirective.noCache()));
 
     // make sure this is initialized and ready to go
     executor.init(getRootRef().toString());

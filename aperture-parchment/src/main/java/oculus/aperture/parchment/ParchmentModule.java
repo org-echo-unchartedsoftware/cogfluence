@@ -40,8 +40,6 @@ package oculus.aperture.parchment;
  * DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-import com.google.common.collect.ImmutableMap;
-import com.google.common.io.Closeables;
 import com.google.inject.AbstractModule;
 import com.google.inject.multibindings.MapBinder;
 import com.google.inject.name.Names;
@@ -49,6 +47,7 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.Charset;
+import java.util.Map;
 import oculus.aperture.common.rest.ResourceDefinition;
 import org.restlet.routing.Variable;
 import org.slf4j.Logger;
@@ -83,16 +82,16 @@ public class ParchmentModule extends AbstractModule {
         .toInstance(new ResourceDefinition(ParchmentCSSResource.class));
 
     // Prep CSS
-    InputStream inp = ParchmentModule.class.getResourceAsStream("parchment.css");
     String css = null;
-
-    BufferedReader reader =
-        new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8")));
-    css = reader.lines().reduce("", (a, b) -> a + b + "\n");
-    Closeables.closeQuietly(inp);
+    try (InputStream inp = ParchmentModule.class.getResourceAsStream("parchment.css");
+        BufferedReader reader =
+            new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8")))) {
+      css = reader.lines().reduce("", (a, b) -> a + b + "\n");
+    } catch (Exception e) {
+      logger.error("Failed to load parchment.css", e);
+    }
 
     // bind result in guice.
-    Names.bindProperties(
-        this.binder(), ImmutableMap.of("aperture.parchment.css", css != null ? css : "{}"));
+    Names.bindProperties(this.binder(), Map.of("aperture.parchment.css", css != null ? css : "{}"));
   }
 }

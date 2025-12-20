@@ -18,7 +18,6 @@
  */
 package influent.server.spi.impl;
 
-import com.google.common.io.Closeables;
 import com.google.inject.Singleton;
 import influent.idl.FL_ContinentCode;
 import influent.idl.FL_Country;
@@ -60,12 +59,10 @@ public class BasicCountryLevelGeocoding implements FL_Geocoding {
     nameList = new ArrayList<FL_Country>();
     countryMap = new HashMap<String, FL_Country>();
 
-    final InputStream inp = BasicCountryLevelGeocoding.class.getResourceAsStream("countries.json");
-
-    if (inp != null) {
-      try {
+    try (InputStream inp = BasicCountryLevelGeocoding.class.getResourceAsStream("countries.json");
         BufferedReader reader =
-            new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8")));
+            new BufferedReader(new InputStreamReader(inp, Charset.forName("UTF-8")))) {
+      if (inp != null) {
         final String json = reader.lines().reduce("", (a, b) -> a + b + "\n");
 
         final JSONArray array = new JSONArray(json);
@@ -115,12 +112,11 @@ public class BasicCountryLevelGeocoding implements FL_Geocoding {
                 return o2.getCountry().getText().length() - o1.getCountry().getText().length();
               }
             });
-
-      } catch (JSONException e) {
-        s_logger.error("Failed to parse countries.json", e);
-      } finally {
-        Closeables.closeQuietly(inp);
       }
+    } catch (JSONException e) {
+      s_logger.error("Failed to parse countries.json", e);
+    } catch (Exception e) {
+      s_logger.error("Failed to load countries.json", e);
     }
   }
 

@@ -18,13 +18,13 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import influent.idl.FL_ClusteringDataAccess;
 import influent.idl.FL_DateRange;
 import influent.idl.FL_DirectionFilter;
 import influent.idl.FL_Link;
 import influent.server.clustering.utils.ClusterContextCache;
+import influent.server.util.CollectionUtils;
 import influent.server.utilities.DateRangeBuilder;
 import influent.server.utilities.DateTimeParser;
 import influent.server.utilities.GuidValidator;
@@ -88,8 +88,8 @@ public class AggregatedLinkResource extends ApertureServerResource {
         else direction = FL_DirectionFilter.BOTH;
       }
 
-      List<String> srcEntities = Lists.newArrayList(request.getStrings("sourceIds"));
-      List<String> dstEntities = Lists.newArrayList(request.getStrings("targetIds"));
+      List<String> srcEntities = CollectionUtils.toList(request.getStrings("sourceIds"));
+      List<String> dstEntities = CollectionUtils.toList(request.getStrings("targetIds"));
 
       String startDateStr = request.getString("startdate", null);
       String endDateStr = request.getString("enddate", null);

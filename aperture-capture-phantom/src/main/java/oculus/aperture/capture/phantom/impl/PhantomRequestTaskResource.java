@@ -20,11 +20,11 @@
  */
 package oculus.aperture.capture.phantom.impl;
 
-import com.google.common.collect.ImmutableList;
 import com.google.common.io.Resources;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.List;
 import oculus.aperture.common.rest.ApertureServerResource;
 import org.restlet.data.CacheDirective;
 import org.restlet.data.MediaType;
@@ -55,7 +55,7 @@ public class PhantomRequestTaskResource extends ApertureServerResource {
   @Get
   public StringRepresentation getRequestTask() {
     // never cache this response (in case you were thinking of it)
-    getResponse().setCacheDirectives(ImmutableList.of(CacheDirective.noCache()));
+    getResponse().setCacheDirectives(List.of(CacheDirective.noCache()));
 
     return new StringRepresentation(requestHTML, MediaType.TEXT_HTML);
   }

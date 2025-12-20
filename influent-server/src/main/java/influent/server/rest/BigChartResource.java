@@ -18,7 +18,6 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import influent.idl.FL_ClusteringDataAccess;
@@ -26,6 +25,7 @@ import influent.idl.FL_DateRange;
 import influent.idl.FL_LinkSearch;
 import influent.server.clustering.utils.ClusterContextCache;
 import influent.server.data.ChartData;
+import influent.server.util.CollectionUtils;
 import influent.server.utilities.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -136,7 +136,7 @@ public class BigChartResource extends ApertureServerResource {
       final Integer width = request.getInteger("width", 145);
       final Integer height = request.getInteger("height", 60);
 
-      List<Properties> entityArray = Lists.newArrayList(request.getPropertiesSets("entities"));
+      List<Properties> entityArray = CollectionUtils.toList(request.getPropertiesSets("entities"));
 
       Map<String, ChartData> infoList = new HashMap<String, ChartData>(entityArray.size());
 

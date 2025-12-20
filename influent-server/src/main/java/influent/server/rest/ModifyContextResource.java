@@ -18,7 +18,6 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import influent.idl.FL_Cluster;
 import influent.idl.FL_Clustering;
@@ -31,6 +30,7 @@ import influent.server.clustering.utils.ClusterContextCache.PermitSet;
 import influent.server.clustering.utils.ContextCollapser;
 import influent.server.clustering.utils.ContextReadWrite;
 import influent.server.clustering.utils.EntityClusterFactory;
+import influent.server.util.CollectionUtils;
 import influent.server.utilities.GuidValidator;
 import influent.server.utilities.InfluentId;
 import influent.server.utilities.Pair;
@@ -132,7 +132,7 @@ public class ModifyContextResource extends ApertureServerResource {
           request.getString("edit", null); // Allowed values, 'insert', 'remove', 'create'
 
       // The "entities" to operate on
-      final List<String> entityIds = Lists.newArrayList(request.getStrings("entityIds"));
+      final List<String> entityIds = CollectionUtils.toList(request.getStrings("entityIds"));
 
       PermitSet permits = new PermitSet();
 

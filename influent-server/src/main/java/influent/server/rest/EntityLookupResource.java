@@ -18,7 +18,6 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import influent.idl.FL_Cluster;
 import influent.idl.FL_DataAccess;
@@ -27,6 +26,7 @@ import influent.idl.FL_LevelOfDetail;
 import influent.server.clustering.utils.ClusterContextCache;
 import influent.server.clustering.utils.ClusterContextCache.PermitSet;
 import influent.server.clustering.utils.ContextRead;
+import influent.server.util.CollectionUtils;
 import influent.server.utilities.GuidValidator;
 import influent.server.utilities.InfluentId;
 import influent.server.utilities.UISerializationHelper;
@@ -70,7 +70,7 @@ public class EntityLookupResource extends ApertureServerResource {
       final String contextid = request.getString("contextid", null);
 
       // get the root node ID from the form
-      List<String> entityIds = Lists.newArrayList(request.getStrings("entities"));
+      List<String> entityIds = CollectionUtils.toList(request.getStrings("entities"));
 
       List<String> clusterIds = InfluentId.filterInfluentIds(entityIds, InfluentId.CLUSTER);
       List<String> clusterSummaryIds =

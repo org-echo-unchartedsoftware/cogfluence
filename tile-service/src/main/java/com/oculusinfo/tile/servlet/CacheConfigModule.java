@@ -24,7 +24,7 @@
  */
 package com.oculusinfo.tile.servlet;
 
-import com.google.common.io.Closeables;
+
 import com.google.inject.Singleton;
 import com.google.inject.servlet.ServletModule;
 import com.oculusinfo.tile.util.ResourceHelper;
@@ -107,13 +107,10 @@ public class CacheConfigModule extends ServletModule {
 		try {
 			logger.info("Loading ehcache configuration:");
 
-			// Load properties
-			InputStream inp = ResourceHelper.getStreamForPath(filename, "res:///ehcache.xml");
-
-			// Create cache manager with provided configuration
-			CacheManager.create(inp);
-
-			Closeables.close(inp, false);
+			// Load properties and create cache manager with provided configuration
+			try (InputStream inp = ResourceHelper.getStreamForPath(filename, "res:///ehcache.xml")) {
+				CacheManager.create(inp);
+			}
 		} catch (IOException e) {
 			// Failed to load properties, error
 			addError(e);

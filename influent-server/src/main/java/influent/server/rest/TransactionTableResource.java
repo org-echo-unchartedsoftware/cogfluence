@@ -18,7 +18,6 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import influent.idl.*;
@@ -26,6 +25,7 @@ import influent.idlhelper.PropertyHelper;
 import influent.server.configuration.ApplicationConfiguration;
 import influent.server.data.LedgerResult;
 import influent.server.data.PropertyMatchBuilder;
+import influent.server.util.CollectionUtils;
 import influent.server.utilities.ResultFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -76,7 +76,7 @@ public class TransactionTableResource extends ApertureServerResource {
       String contextId = request.getString("contextId", null);
       Integer startRow = request.getInteger("startRow", null);
       Integer totalRows = request.getInteger("totalRows", null);
-      List<String> focusIds = Lists.newArrayList(request.getStrings("focusIds"));
+      List<String> focusIds = CollectionUtils.toList(request.getStrings("focusIds"));
 
       final List<FL_OrderBy> orderBy = new ArrayList<FL_OrderBy>(2);
       orderBy.add(

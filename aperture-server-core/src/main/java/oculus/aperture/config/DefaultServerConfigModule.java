@@ -20,7 +20,6 @@
  */
 package oculus.aperture.config;
 
-import com.google.common.collect.ImmutableMap;
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
 import jakarta.servlet.ServletContext;
@@ -31,6 +30,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import oculus.aperture.common.UtilProperties;
 import oculus.aperture.common.util.ResourceHelper;
@@ -177,7 +177,7 @@ public class DefaultServerConfigModule extends AbstractModule {
 
       // bind result in guice.
       Names.bindProperties(
-          this.binder(), ImmutableMap.of("aperture.client.config", json != null ? json : "{}"));
+          this.binder(), Map.of("aperture.client.config", json != null ? json : "{}"));
 
     } catch (IOException e) {
       // Failed to load properties, error

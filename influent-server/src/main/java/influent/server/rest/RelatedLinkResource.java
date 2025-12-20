@@ -18,13 +18,13 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import influent.idl.*;
 import influent.server.clustering.utils.ClusterContextCache;
 import influent.server.clustering.utils.ClusterContextCache.PermitSet;
 import influent.server.clustering.utils.ContextCollapser;
 import influent.server.clustering.utils.ContextReadWrite;
+import influent.server.util.CollectionUtils;
 import influent.server.utilities.*;
 import java.util.*;
 import oculus.aperture.common.JSONProperties;
@@ -132,7 +132,7 @@ public class RelatedLinkResource extends ApertureServerResource {
       final Iterable<String> focusIter = request.getStrings("targets");
       List<String> focusIds = null;
       if (focusIter != null) {
-        focusIds = Lists.newArrayList(focusIter);
+        focusIds = CollectionUtils.toList(focusIter);
       } else {
         focusIds = Collections.emptyList();
       }

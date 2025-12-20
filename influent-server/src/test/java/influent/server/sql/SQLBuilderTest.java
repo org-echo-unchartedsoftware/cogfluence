@@ -18,8 +18,8 @@
  */
 package influent.server.sql;
 
-import com.google.common.collect.Lists;
 import influent.server.sql.mssql.MSSQLBuilder;
+import influent.server.util.CollectionUtils;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -220,7 +220,7 @@ public class SQLBuilderTest {
                     builder
                         .filter()
                         .column("col2")
-                        .in(Lists.<Object>newArrayList("'name1'", "'name2'", "'name3'"))));
+                        .in(CollectionUtils.<Object>toList("'name1'", "'name2'", "'name3'"))));
     Assert.assertEquals(
         "SELECT col1,col2 FROM myTable WHERE col2 IN ('name1','name2','name3')", sql.build());
 
@@ -236,7 +236,7 @@ public class SQLBuilderTest {
                         builder
                             .filter()
                             .column("col2")
-                            .in(Lists.<Object>newArrayList("'name1'", "'name2'", "'name3'")))
+                            .in(CollectionUtils.<Object>toList("'name1'", "'name2'", "'name3'")))
                     .not());
     Assert.assertEquals(
         "SELECT col1,col2 FROM myTable WHERE NOT(col2 IN ('name1','name2','name3'))", sql.build());
@@ -253,7 +253,7 @@ public class SQLBuilderTest {
                         builder
                             .filter()
                             .column("col2")
-                            .in(Lists.<Object>newArrayList("'name1'", "'name2'", "'name3'")))));
+                            .in(CollectionUtils.<Object>toList("'name1'", "'name2'", "'name3'")))));
     Assert.assertEquals(
         "SELECT col1,col2 FROM myTable WHERE (col2 IN ('name1','name2','name3'))", sql.build());
   }

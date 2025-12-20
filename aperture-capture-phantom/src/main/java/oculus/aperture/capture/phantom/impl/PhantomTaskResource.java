@@ -20,12 +20,12 @@
  */
 package oculus.aperture.capture.phantom.impl;
 
-import com.google.common.collect.ImmutableList;
 import com.google.inject.Inject;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.util.List;
 import java.util.Map;
 import oculus.aperture.capture.phantom.RenderExecutor;
 import oculus.aperture.common.json.JSONObject;
@@ -126,7 +126,7 @@ public class PhantomTaskResource extends ApertureServerResource {
     }
 
     // never cache this response (in case you were thinking of it)
-    getResponse().setCacheDirectives(ImmutableList.of(CacheDirective.noCache()));
+    getResponse().setCacheDirectives(List.of(CacheDirective.noCache()));
 
     return new StreamStringRepresentation(renderer);
   }

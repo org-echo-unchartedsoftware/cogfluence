@@ -18,8 +18,6 @@
  */
 package influent.server.rest;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
 import influent.idl.*;
@@ -27,6 +25,7 @@ import influent.server.clustering.utils.ClusterContextCache;
 import influent.server.data.ChartData;
 import influent.server.data.ChartImage;
 import influent.server.data.ImageRepresentation;
+import influent.server.util.CollectionUtils;
 import influent.server.utilities.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -103,7 +102,7 @@ public class ChartResource extends ApertureServerResource {
               hashed.getWidth(), hashed.getHeight(), hashed.getFocusMaxDebitCredit(), data);
       image.draw();
 
-      getResponse().setCacheDirectives(ImmutableList.of(CacheDirective.maxAge(maxCacheAge)));
+      getResponse().setCacheDirectives(List.of(CacheDirective.maxAge(maxCacheAge)));
       return new ImageRepresentation(image);
     } catch (Exception e) {
       throw new ResourceException(Status.CLIENT_ERROR_BAD_REQUEST, "Data access error.", e);
@@ -185,7 +184,7 @@ public class ChartResource extends ApertureServerResource {
       final Integer width = request.getInteger("width", 140);
       final Integer height = request.getInteger("height", 60);
 
-      List<Properties> entityArray = Lists.newArrayList(request.getPropertiesSets("entities"));
+      List<Properties> entityArray = CollectionUtils.toList(request.getPropertiesSets("entities"));
 
       Map<String, ChartData> infoList = new HashMap<String, ChartData>(entityArray.size());
 
