@@ -1,0 +1,1350 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Influent Project Modules                                           [pom]
+[INFO] aperture-spi                                                       [jar]
+[INFO] aperture-common                                                    [jar]
+[INFO] Aperture Client                                                    [jar]
+[INFO] Aperture Server Core Components                                    [jar]
+[INFO] aperture-geo                                                       [jar]
+[INFO] aperture-icons                                                     [jar]
+[INFO] aperture-capture-phantom                                           [jar]
+[INFO] aperture-cms                                                       [jar]
+[INFO] aperture-parchment                                                 [jar]
+[INFO] aperture-layout                                                    [jar]
+[INFO] aperture-layout-yworks                                             [jar]
+[INFO] aperture-graph                                                     [jar]
+[INFO] Aperture Examples                                                  [jar]
+[INFO] Aperture Server                                                    [war]
+[INFO] Ensemble Clustering Library                                        [jar]
+[INFO] influent-common                                                    [jar]
+[INFO] influent-spi                                                       [jar]
+[INFO] influent-server                                                    [jar]
+[INFO] influent-client                                                    [pom]
+[INFO] Influent Clustering Job                                            [jar]
+[INFO] influent-app                                                       [war]
+[INFO] kiva                                                               [war]
+[INFO] bitcoin                                                            [war]
+[INFO] walker                                                             [war]
+[INFO] influent-selenium-test                                             [jar]
+[INFO] Distribution Builder                                               [pom]
+[INFO] 
+[INFO] ----------------< software.uncharted.influent:influent >----------------
+[INFO] Building Influent Project Modules 2.0.0                           [1/27]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ influent >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent ---
+[INFO] Rule 0: org.apache.maven.enforcer.rules.version.RequireMavenVersion passed
+[INFO] Rule 1: org.apache.maven.enforcer.rules.version.RequireJavaVersion passed
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ influent <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ influent ---
+[INFO] Skipping pom project
+[INFO] 
+[INFO] --------------< software.uncharted.influent:aperture-spi >--------------
+[INFO] Building aperture-spi 2.0.0                                       [2/27]
+[INFO]   from aperture-spi/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-spi >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-spi ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-spi ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-spi/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-spi ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-spi ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-spi/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-spi ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-spi <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-spi ---
+[INFO] No dependency problems found
+[INFO] 
+[INFO] ------------< software.uncharted.influent:aperture-common >-------------
+[INFO] Building aperture-common 2.0.0                                    [3/27]
+[INFO]   from aperture-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-common >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-common ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-common ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-common ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-common ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-common/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-common ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    com.google.inject:guice:jar:7.0.0:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    com.google.inject.extensions:guice-multibindings:jar:4.2.3:compile
+[WARNING]    com.google.guava:guava:jar:23.0:compile
+[INFO] 
+[INFO] ------------< software.uncharted.influent:aperture-client >-------------
+[INFO] Building Aperture Client 2.0.0                                    [4/27]
+[INFO]   from aperture-client/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-client >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-client ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-client ---
+[INFO] Copying 54 resources from src/main/javascript to target/processed-scripts
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-client ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:resources (compile-jsdoc) @ aperture-client ---
+[INFO] Copying 54 resources from src/main/javascript to target/processed-scripts
+[INFO] 
+[INFO] --- antrun:3.2.0:run (compile-js) @ aperture-client ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-client ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-client/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-client ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-client <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-client ---
+[INFO] No dependency problems found
+[INFO] 
+[INFO] ----------< software.uncharted.influent:aperture-server-core >----------
+[INFO] Building Aperture Server Core Components 2.0.0                    [5/27]
+[INFO]   from aperture-server-core/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-server-core >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-server-core ---
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ aperture-server-core ---
+[INFO] Storing buildNumber: 2025-12-22 17:53:38 at timestamp: 1766444018778
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/aperture-server-core' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/aperture-server-core
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-server-core ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] The encoding used to copy filtered properties files has not been set. This means that the same encoding will be used to copy filtered properties files as when copying other filtered resources. This might not be what you want! Run your build with --debug to see which files might be affected. Read more at https://maven.apache.org/plugins/maven-resources-plugin/examples/filtering-properties-files.html
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-server-core ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-server-core ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-server-core/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-server-core ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-server-core <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-server-core ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    com.google.inject.extensions:guice-assistedinject:jar:7.0.0:compile
+[WARNING]    com.google.inject.extensions:guice-multibindings:jar:4.2.3:compile
+[WARNING]    com.sun.xml.ws:jaxws-rt:jar:4.0.3:compile
+[WARNING]    org.restlet:org.restlet.ext.jackson:jar:2.6.0:compile
+[WARNING]    org.restlet:org.restlet.ext.json:jar:2.6.0:compile
+[WARNING]    org.jmock:jmock:jar:2.13.1:test
+[WARNING]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.25.2:test
+[WARNING]    org.apache.logging.log4j:log4j-core:jar:2.25.2:test
+[INFO] 
+[INFO] --------------< software.uncharted.influent:aperture-geo >--------------
+[INFO] Building aperture-geo 2.0.0                                       [6/27]
+[INFO]   from aperture-geo/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-geo >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-geo ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-geo ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-geo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-geo ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-geo/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-geo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-geo <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-geo ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    org.restlet:org.restlet:jar:2.6.0:compile
+[WARNING]    org.restlet:org.restlet.ext.json:jar:2.6.0:compile
+[WARNING]    junit:junit:jar:4.13.2:test
+[WARNING]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.25.2:test
+[WARNING]    org.apache.logging.log4j:log4j-core:jar:2.25.2:test
+[INFO] 
+[INFO] -------------< software.uncharted.influent:aperture-icons >-------------
+[INFO] Building aperture-icons 2.0.0                                     [7/27]
+[INFO]   from aperture-icons/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-icons >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-icons ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-icons ---
+[INFO] Copying 62 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-icons ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-icons ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-icons/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-icons ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-icons <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-icons ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[WARNING]    org.apache.xmlgraphics:batik-util:jar:1.19:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    org.apache.xmlgraphics:batik-svg-dom:jar:1.19:compile
+[WARNING]    com.google.guava:guava:jar:23.0:compile
+[WARNING]    com.google.inject.extensions:guice-multibindings:jar:4.2.3:compile
+[INFO] 
+[INFO] --------< software.uncharted.influent:aperture-capture-phantom >--------
+[INFO] Building aperture-capture-phantom 2.0.0                           [8/27]
+[INFO]   from aperture-capture-phantom/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-capture-phantom >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-capture-phantom ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-capture-phantom ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-capture-phantom ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-capture-phantom ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-capture-phantom ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-capture-phantom <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-capture-phantom ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    com.google.inject.extensions:guice-assistedinject:jar:7.0.0:compile
+[WARNING]    com.google.inject.extensions:guice-multibindings:jar:4.2.3:compile
+[WARNING]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.25.2:test
+[WARNING]    org.apache.logging.log4j:log4j-core:jar:2.25.2:test
+[WARNING]    junit:junit:jar:4.13.2:test
+[INFO] 
+[INFO] --------------< software.uncharted.influent:aperture-cms >--------------
+[INFO] Building aperture-cms 2.0.0                                       [9/27]
+[INFO]   from aperture-cms/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-cms >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-cms ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-cms ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-cms/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-cms ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-cms ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-cms/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-cms ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-cms <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-cms ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.25.2:test
+[WARNING]    org.apache.logging.log4j:log4j-core:jar:2.25.2:test
+[INFO] 
+[INFO] -----------< software.uncharted.influent:aperture-parchment >-----------
+[INFO] Building aperture-parchment 2.0.0                                [10/27]
+[INFO]   from aperture-parchment/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-parchment >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-parchment ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-parchment ---
+[INFO] Copying 37 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-parchment ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-parchment ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-parchment/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-parchment ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-parchment <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-parchment ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    com.google.guava:guava:jar:23.0:compile
+[WARNING]    com.google.inject.extensions:guice-multibindings:jar:4.2.3:compile
+[INFO] 
+[INFO] ------------< software.uncharted.influent:aperture-layout >-------------
+[INFO] Building aperture-layout 2.0.0                                   [11/27]
+[INFO]   from aperture-layout/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-layout >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-layout ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-layout ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-layout/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-layout ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-layout ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-layout/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-layout ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-layout <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-layout ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    software.uncharted.influent:aperture-spi:jar:2.0.0:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    org.restlet:org.restlet.ext.json:jar:2.6.0:compile
+[WARNING]    org.restlet:org.restlet.ext.jackson:jar:2.6.0:compile
+[WARNING]    junit:junit:jar:4.13.2:test
+[WARNING]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.25.2:compile
+[WARNING]    org.apache.logging.log4j:log4j-core:jar:2.25.2:compile
+[INFO] 
+[INFO] ---------< software.uncharted.influent:aperture-layout-yworks >---------
+[INFO] Building aperture-layout-yworks 2.0.0                            [12/27]
+[INFO]   from aperture-layout-yworks/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-layout-yworks >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-layout-yworks ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-layout-yworks ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-layout-yworks/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-layout-yworks ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-layout-yworks ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-layout-yworks/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-layout-yworks ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-layout-yworks <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-layout-yworks ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    software.uncharted.influent:aperture-common:jar:2.0.0:compile
+[WARNING]    com.google.inject:guice:jar:7.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-spi:jar:2.0.0:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    org.jgrapht:jgrapht-ext:jar:1.5.2:compile
+[INFO] 
+[INFO] -------------< software.uncharted.influent:aperture-graph >-------------
+[INFO] Building aperture-graph 2.0.0                                    [13/27]
+[INFO]   from aperture-graph/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-graph >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-graph ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-graph ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-graph/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-graph ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-graph ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-graph/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-graph ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-graph <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-graph ---
+[INFO] No dependency problems found
+[INFO] 
+[INFO] -----------< software.uncharted.influent:aperture-examples >------------
+[INFO] Building Aperture Examples 2.0.0                                 [14/27]
+[INFO]   from aperture-examples/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-examples >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-examples ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-examples ---
+[INFO] Copying 254 resources from src/main/javascript to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-examples ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-examples ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-examples/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-examples ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-examples <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-examples ---
+[INFO] No dependency problems found
+[INFO] 
+[INFO] ------------< software.uncharted.influent:aperture-server >-------------
+[INFO] Building Aperture Server 2.0.0                                   [15/27]
+[INFO]   from aperture-server/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-server >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-server ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ aperture-server ---
+[INFO] Copying 7 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ aperture-server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ aperture-server ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/aperture-server/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ aperture-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-server <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-server ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    com.google.inject.extensions:guice-servlet:jar:7.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-common:jar:2.0.0:compile
+[WARNING]    org.apache.shiro:shiro-config-core:jar:2.0.6:compile
+[WARNING]    com.google.inject:guice:jar:7.0.0:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    software.uncharted.influent:aperture-client:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-client:zip:jsdoc:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-spi:jar:javadoc:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-server-core:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-icons:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-capture-phantom:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-cms:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-layout:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-examples:jar:2.0.0:compile
+[WARNING]    org.apache.shiro:shiro-web:jar:jakarta:2.0.6:compile
+[WARNING]    org.apache.logging.log4j:log4j-core:jar:2.25.2:compile
+[WARNING]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.23.1:compile
+[INFO] 
+[INFO] ----------< software.uncharted.influent:ensemble-clustering >-----------
+[INFO] Building Ensemble Clustering Library 2.0.0                       [16/27]
+[INFO]   from ensemble-clustering/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ ensemble-clustering >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ ensemble-clustering ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ ensemble-clustering ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/ensemble-clustering/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ ensemble-clustering ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ ensemble-clustering ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/ensemble-clustering/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ ensemble-clustering ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ ensemble-clustering <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ ensemble-clustering ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    com.fasterxml.jackson.core:jackson-annotations:jar:2.20:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    org.apache.logging.log4j:log4j-slf4j-impl:jar:2.25.2:compile
+[WARNING]    org.apache.logging.log4j:log4j-core:jar:2.25.2:compile
+[INFO] 
+[INFO] ------------< software.uncharted.influent:influent-common >-------------
+[INFO] Building influent-common 2.0.0                                   [17/27]
+[INFO]   from influent-common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ influent-common >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-common ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-common ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-common/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-common ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-common ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-common/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ influent-common <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ influent-common ---
+[WARNING] Unused declared dependencies found:
+[WARNING]    junit:junit:jar:4.13.2:test
+[INFO] 
+[INFO] --------------< software.uncharted.influent:influent-spi >--------------
+[INFO] Building influent-spi 2.0.0                                      [18/27]
+[INFO]   from influent-spi/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ influent-spi >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-spi ---
+[INFO] 
+[INFO] --- avro:1.12.1:schema (default) @ influent-spi ---
+[INFO] 
+[INFO] --- avro:1.12.1:idl-protocol (default) @ influent-spi ---
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] FutureResults_v2.0.avdl line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[WARNING] Line 23, char 1: Ignoring out-of-place documentation comment.
+Did you mean to use a multiline comment ( /* ... */ ) instead?
+[INFO] 
+[INFO] --- antrun:3.1.0:run (fix-avro-generated-code) @ influent-spi ---
+[INFO] Executing tasks
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-spi ---
+[INFO] Copying 0 resource from src/main/java to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-spi ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-spi ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-spi/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-spi ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ influent-spi <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ influent-spi ---
+[WARNING] Unused declared dependencies found:
+[WARNING]    org.slf4j:slf4j-log4j12:jar:1.7.33:test
+[WARNING]    joda-time:joda-time:jar:2.14.0:compile
+[INFO] 
+[INFO] ------------< software.uncharted.influent:influent-server >-------------
+[INFO] Building influent-server 2.0.0                                   [19/27]
+[INFO]   from influent-server/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ influent-server >>>
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ influent-server ---
+[INFO] Storing buildNumber: 2025-12-22 17:53:45 at timestamp: 1766444025075
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/influent-server' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/influent-server
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-server ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-server ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-server ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ influent-server <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ influent-server ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.restlet:org.restlet.ext.json:jar:2.6.0:compile
+[WARNING]    org.apache.avro:avro:jar:1.12.1:compile
+[WARNING]    org.restlet:org.restlet:jar:2.6.0:compile
+[WARNING]    com.sun.jersey:jersey-core:jar:1.19.4:compile
+[WARNING]    net.sf.ehcache:ehcache-core:jar:2.6.11:compile
+[WARNING]    com.google.inject.extensions:guice-servlet:jar:7.0.0:compile
+[WARNING]    com.sun.jersey:jersey-client:jar:1.19.4:compile
+[WARNING]    org.apache.shiro:shiro-config-core:jar:2.0.6:compile
+[WARNING]    com.google.inject:guice:jar:7.0.0:compile
+[WARNING]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[WARNING]    javax.servlet:servlet-api:jar:2.5:compile
+[WARNING]    jakarta.inject:jakarta.inject-api:jar:2.0.1:compile
+[WARNING]    commons-fileupload:commons-fileupload:jar:1.6.0:compile
+[WARNING]    software.uncharted.influent:aperture-common:jar:2.0.0:compile
+[WARNING]    javax.ws.rs:jsr311-api:jar:1.1.1:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    software.uncharted.influent:aperture-server-core:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-icons:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-parchment:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-cms:jar:2.0.0:compile
+[WARNING]    net.sourceforge.jtds:jtds:jar:1.3.1:compile
+[WARNING]    org.eclipse.persistence:org.eclipse.persistence.moxy:jar:4.0.8:compile
+[WARNING]    org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:compile
+[INFO] 
+[INFO] ------------< software.uncharted.influent:influent-client >-------------
+[INFO] Building influent-client 2.0.0                                   [20/27]
+[INFO]   from influent-client/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[WARNING] Parameter 'version' is unknown for plugin 'jshint-maven-plugin:1.6.0:lint (default)'
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ influent-client >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-client ---
+[INFO] 
+[INFO] --- resources:3.4.0:copy-resources (copy-client-src) @ influent-client ---
+[INFO] Copying 254 resources from influent-clientjs/src to target/tempWebapp/webapp
+[INFO] Copying 4 resources from influent-clientjs/filtered to target/tempWebapp/webapp
+[INFO] 
+[INFO] --- resources:3.4.0:copy-resources (copy-app-build) @ influent-client ---
+[INFO] Copying 3 resources from src/main to target/tempWebapp
+[INFO] 
+[INFO] --- lesscss:1.7.0.1.1:compile (process-less) @ influent-client ---
+[INFO] Compiling LESS source: app.less...
+done
+[INFO] Finished compilation to /home/ubuntu/cogfluence/influent-client/target/tempWebapp/webapp/theme in 1206 ms
+[INFO] Complete Less compile job finished in 1238 ms
+[INFO] 
+[INFO] --- jshint:1.6.0:lint (default) @ influent-client ---
+[INFO] using jshint version 2.5.6
+[INFO] Using configuration file: /home/ubuntu/cogfluence/influent-client/../.jshintrc
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/OpenAjaxUnmanagedHub.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/cookieUtil.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/draper.activity_logger-2.1.1.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/draper.activity_worker-2.1.1.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/handlebars.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/handlebars.runtime.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/i18nprecompile.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/json2.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/hbs/underscore.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/jquery-ui.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/jquery.blockUI.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/jquery.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/jquery.unescape.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/less.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/moment.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/order.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/raphael.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/require.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/route-recognizer.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/router.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/rsvp.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/extern/underscore.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/influent-jquery/influent-jquery.js
+[WARNING] Excluding /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/ifCond.js
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/advanced-search/infSearchParams.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/advanced-search/infToolbarAdvancedMatchCriteria.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/advanced-search/infToolbarAdvancedSearch.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/app.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/communication/accountsViewChannels.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/communication/applicationChannels.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/communication/flowViewChannels.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/communication/transactionsViewChannels.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/constants.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/infRouter.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/interfaces/xfResultObject.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/interfaces/xfUIObject.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/layout/xfLayoutProvider.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/log/DraperAppender.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfAccountsSearchResult.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfCard.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfClusterBase.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfColumn.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfEntityResult.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfEntityResultCluster.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfFile.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfImmutableCluster.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfLink.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfMatch.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfMutableCluster.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfResultBase.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfResultClusterBase.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfSearchResultBase.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfSummaryCluster.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfTransactionResult.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfTransactionResultCluster.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfTransactionsSearchResult.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/models/xfWorkspace.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/module.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/plugins.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/cardRenderer.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/clusterRenderer.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/columnRenderer.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/fileRenderer.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/matchRenderer.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/toolbarRenderer.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/render/workspaceRenderer.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/sandbox.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/search.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbar.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbarDatePicker.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbarOptionPicker.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbarPatternSearch.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/toolbar/infToolbarSearch.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/carousel.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/criteria.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/infOperationsBar.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/ordering.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/toolbarOperations.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/xfLinkType.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/xfModalDialog.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/ui/xfSearchFilter.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/GUID.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/currency.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/date.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/duration.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/iconUtil.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/infDescriptorUtilities.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/infTagUtilities.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/params.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/percentchange.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/util/xfUtil.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/lib/viewPlugins.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/main.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infEntityDetails.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infFileUpload.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infFooter.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infHeader.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infRenderer.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infRest.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infSankey.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infTransactionGraph.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infTransactionTable.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/modules/infWorkspace.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/callback.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/ellipsis.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/formatDate.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/isElementDisabled.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/isEqual.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/markupTerms.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/templates/helpers/valueOfPropertyWithTag.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/accounts-view-components/accountsResultClusterComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/accounts-view-components/accountsResultComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/accounts-view-components/accountsResultFooterComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/accounts-view-components/accountsResultHeaderComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultClusterComponentBase.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultComponentBase.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultFooterComponentBase.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultHeaderComponentBase.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultSingleComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/components/resultSummaryComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infAccountsView.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infFlowView.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infSummaryView.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infTransactionsView.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/infView.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/transactions-view-components/transactionsResultClusterComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/transactions-view-components/transactionsResultComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/transactions-view-components/transactionsResultFooterComponent.js [no change]
+[INFO]   /home/ubuntu/cogfluence/influent-client/influent-clientjs/src/scripts/views/transactions-view-components/transactionsResultHeaderComponent.js [no change]
+[INFO] 
+[INFO] --- requirejs:2.0.0:optimize (default) @ influent-client ---
+v22.13.0
+[INFO] Running with Node @ node
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/app.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/bootstrap/css/bootstrap-select.min.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/bootstrap/css/bootstrap.min.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/bootstrap/css/datepicker3.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/custom-theme/jquery-ui-1.11.3.custom.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/font-awesome/css/font-awesome.min.css
+Optimizing (standard.keepLines.keepWhitespace) CSS file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/theme/parchment.css
+
+Tracing dependencies for: ../../main
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-exampleconfig.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-capture.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-chart.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-cms.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-core.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-geo.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-graph.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-layout.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-log.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-pubsub.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture-packages/aperture-raphael.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/aperture/aperture.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/bootstrap/bootstrap-datepicker.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/bootstrap/bootstrap-select.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/bootstrap/bootstrap.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/OpenAjaxUnmanagedHub.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/draper.activity_logger-2.1.1.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/draper.activity_worker-2.1.1.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/hbs/handlebars.runtime.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/jquery-ui.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/jquery.blockUI.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/jquery.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/jquery.unescape.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/less.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/order.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/raphael.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/require.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/route-recognizer.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/extern/rsvp.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/influent-jquery/influent-jquery.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/log/DraperAppender.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/ui/carousel.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/ui/xfSearchFilter.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/lib/util/percentchange.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/main.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/templates/helpers/callback.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/templates/helpers/formatDate.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/templates/helpers/isEqual.js
+Uglifying file: /home/ubuntu/cogfluence/influent-client/target/webapp-build/scripts/templates/helpers/valueOfPropertyWithTag.js
+
+theme/app.css
+----------------
+theme/app.css
+
+theme/bootstrap/css/bootstrap-select.min.css
+----------------
+theme/bootstrap/css/bootstrap-select.min.css
+
+theme/bootstrap/css/bootstrap.min.css
+----------------
+theme/bootstrap/css/bootstrap.min.css
+
+theme/bootstrap/css/datepicker3.css
+----------------
+theme/bootstrap/css/datepicker3.css
+
+theme/custom-theme/jquery-ui-1.11.3.custom.css
+----------------
+theme/custom-theme/jquery-ui-1.11.3.custom.css
+
+theme/font-awesome/css/font-awesome.min.css
+----------------
+theme/font-awesome/css/font-awesome.min.css
+
+theme/parchment.css
+----------------
+theme/parchment.css
+
+scripts/lib/extern/../../main.js
+----------------
+scripts/lib/communication/applicationChannels.js
+scripts/lib/sandbox.js
+scripts/lib/extern/underscore.js
+scripts/lib/module.js
+scripts/lib/util/params.js
+scripts/lib/extern/router.js
+scripts/lib/extern/hbs/handlebars.js
+scripts/lib/extern/hbs/underscore.js
+scripts/lib/extern/hbs/i18nprecompile.js
+scripts/lib/extern/hbs/json2.js
+scripts/lib/extern/hbs.js
+scripts/templates/helpers/isElementDisabled.js
+hbs!templates/InfHeader
+scripts/lib/constants.js
+scripts/modules/infHeader.js
+scripts/lib/infRouter.js
+scripts/lib/extern/cookieUtil.js
+scripts/lib/util/GUID.js
+scripts/lib/ui/xfModalDialog.js
+scripts/lib/plugins.js
+scripts/views/infView.js
+scripts/modules/infRest.js
+hbs!templates/InfWorkspace
+scripts/modules/infWorkspace.js
+scripts/lib/search.js
+scripts/lib/util/infDescriptorUtilities.js
+scripts/lib/viewPlugins.js
+scripts/lib/util/xfUtil.js
+scripts/lib/ui/toolbarOperations.js
+scripts/lib/util/currency.js
+scripts/lib/render/toolbarRenderer.js
+scripts/lib/render/cardRenderer.js
+scripts/lib/render/clusterRenderer.js
+scripts/lib/communication/flowViewChannels.js
+scripts/lib/render/matchRenderer.js
+hbs!templates/flowView/file
+hbs!templates/flowView/fileDropDialog
+scripts/lib/render/fileRenderer.js
+hbs!templates/flowView/column
+scripts/lib/render/columnRenderer.js
+hbs!templates/flowView/branchHint
+hbs!templates/flowView/emptyHint
+scripts/lib/render/workspaceRenderer.js
+scripts/modules/infRenderer.js
+scripts/lib/util/duration.js
+scripts/lib/util/date.js
+scripts/lib/extern/moment.js
+scripts/lib/util/infTagUtilities.js
+scripts/lib/interfaces/xfUIObject.js
+scripts/lib/models/xfClusterBase.js
+scripts/lib/models/xfCard.js
+scripts/lib/util/iconUtil.js
+hbs!templates/footer/infEntityDetails
+scripts/modules/infEntityDetails.js
+scripts/lib/ui/xfLinkType.js
+scripts/modules/infSankey.js
+hbs!templates/footer/transactionsTable
+scripts/modules/infTransactionTable.js
+scripts/modules/infTransactionGraph.js
+scripts/lib/layout/xfLayoutProvider.js
+scripts/lib/models/xfSummaryCluster.js
+scripts/lib/models/xfImmutableCluster.js
+scripts/lib/models/xfMutableCluster.js
+scripts/lib/models/xfMatch.js
+scripts/lib/models/xfFile.js
+scripts/lib/models/xfLink.js
+scripts/lib/models/xfColumn.js
+scripts/lib/models/xfWorkspace.js
+hbs!templates/viewToolbar/infToolbarDatePicker
+scripts/lib/toolbar/infToolbarDatePicker.js
+hbs!templates/viewToolbar/infToolbarOptionPicker
+scripts/lib/toolbar/infToolbarOptionPicker.js
+hbs!templates/viewToolbar/infToolbarPatternSearch
+scripts/lib/toolbar/infToolbarPatternSearch.js
+hbs!templates/viewToolbar/infToolbarAdvancedMatchCriteriaBody
+hbs!templates/criteria/fieldSelector
+scripts/lib/ui/criteria.js
+scripts/lib/ui/ordering.js
+scripts/lib/advanced-search/infSearchParams.js
+scripts/lib/advanced-search/infToolbarAdvancedMatchCriteria.js
+hbs!templates/viewToolbar/infToolbarAdvancedSearch
+scripts/lib/advanced-search/infToolbarAdvancedSearch.js
+hbs!templates/viewToolbar/infToolbarSearch
+scripts/lib/toolbar/infToolbarSearch.js
+hbs!templates/viewToolbar/infToolbar
+scripts/lib/toolbar/infToolbar.js
+hbs!templates/flowView/flowView
+scripts/views/infFlowView.js
+hbs!templates/footer/footer
+scripts/modules/infFooter.js
+scripts/modules/infFileUpload.js
+scripts/lib/communication/accountsViewChannels.js
+scripts/lib/models/xfSearchResultBase.js
+scripts/lib/interfaces/xfResultObject.js
+scripts/lib/models/xfResultClusterBase.js
+scripts/lib/models/xfResultBase.js
+scripts/lib/models/xfEntityResult.js
+scripts/lib/models/xfEntityResultCluster.js
+scripts/lib/models/xfAccountsSearchResult.js
+hbs!templates/operationsBar/infOperationsBarButton
+scripts/lib/ui/infOperationsBar.js
+scripts/templates/helpers/ellipsis.js
+scripts/templates/helpers/markupTerms.js
+hbs!templates/searchResults/searchResultCluster
+scripts/views/components/resultClusterComponentBase.js
+scripts/views/accounts-view-components/accountsResultClusterComponent.js
+hbs!templates/searchResults/searchDetails
+hbs!templates/searchResults/searchResult
+scripts/views/components/resultComponentBase.js
+scripts/views/accounts-view-components/accountsResultComponent.js
+hbs!templates/searchResults/searchResultsFooter
+scripts/views/components/resultFooterComponentBase.js
+scripts/views/accounts-view-components/accountsResultFooterComponent.js
+scripts/templates/helpers/ifCond.js
+hbs!templates/searchResults/searchResultsHeader
+scripts/views/components/resultHeaderComponentBase.js
+scripts/views/accounts-view-components/accountsResultHeaderComponent.js
+hbs!templates/searchResults/searchResultSingle
+scripts/views/components/resultSingleComponent.js
+hbs!templates/searchResults/resultsSummary
+scripts/views/components/resultSummaryComponent.js
+hbs!templates/accountsView/accountsView
+hbs!templates/searchResults/expandedSearchResults
+hbs!templates/loading
+hbs!templates/accountsView/emptyHint
+scripts/views/infAccountsView.js
+hbs!templates/summaryView/summaryView
+scripts/views/infSummaryView.js
+scripts/lib/communication/transactionsViewChannels.js
+scripts/lib/models/xfTransactionResult.js
+scripts/lib/models/xfTransactionResultCluster.js
+scripts/lib/models/xfTransactionsSearchResult.js
+scripts/views/transactions-view-components/transactionsResultClusterComponent.js
+scripts/views/transactions-view-components/transactionsResultComponent.js
+scripts/views/transactions-view-components/transactionsResultFooterComponent.js
+scripts/views/transactions-view-components/transactionsResultHeaderComponent.js
+hbs!templates/transactionsView/transactionsView
+hbs!templates/transactionsView/emptyHint
+scripts/views/infTransactionsView.js
+scripts/lib/app.js
+scripts/lib/extern/../../main.js
+
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ influent-client <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ influent-client ---
+[INFO] Skipping pom project
+[INFO] 
+[INFO] --------< software.uncharted.influent:influent-clustering-job >---------
+[INFO] Building Influent Clustering Job 2.0.0                           [21/27]
+[INFO]   from influent-clustering-job/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ influent-clustering-job >>>
+[WARNING] 2 problems were encountered while building the effective model for org.apache.yetus:audience-annotations:jar:0.5.0 during dependency collection step for project (use -X to see details)
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-clustering-job ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-clustering-job ---
+[INFO] Copying 2 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-clustering-job ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-clustering-job ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-clustering-job/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-clustering-job ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ influent-clustering-job <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ influent-clustering-job ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.scala-lang:scala-library:jar:2.12.18:provided
+[WARNING]    org.apache.spark:spark-common-utils_2.12:jar:3.5.1:provided
+[WARNING] Unused declared dependencies found:
+[WARNING]    xerces:xercesImpl:jar:2.12.2:compile
+[WARNING]    xalan:xalan:jar:2.7.3:compile
+[WARNING]    org.apache.spark:spark-sql_2.12:jar:3.5.1:provided
+[WARNING]    org.apache.hadoop:hadoop-client:jar:3.3.6:provided
+[WARNING]    net.sourceforge.jtds:jtds:jar:1.3.1:compile
+[INFO] 
+[INFO] --------------< software.uncharted.influent:influent-app >--------------
+[INFO] Building influent-app 2.0.0                                      [22/27]
+[INFO]   from influent-app/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ influent-app >>>
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ influent-app ---
+[INFO] Storing buildNumber: 2025-12-22 17:53:56 at timestamp: 1766444036170
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/influent-app' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/influent-app
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-app ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-app ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-app ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-app ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-app/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-app ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ influent-app <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ influent-app ---
+[WARNING] Unused declared dependencies found:
+[WARNING]    software.uncharted.influent:influent-server:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:influent-client:zip:src:2.0.0:compile
+[WARNING]    com.mysql:mysql-connector-j:jar:9.5.0:compile
+[INFO] 
+[INFO] ------------------< software.uncharted.influent:kiva >------------------
+[INFO] Building kiva 2.0.0                                              [23/27]
+[INFO]   from kiva/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ kiva >>>
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ kiva ---
+[INFO] Storing buildNumber: 2025-12-22 17:53:56 at timestamp: 1766444036290
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/kiva' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/kiva
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ kiva ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ kiva ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ kiva ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ kiva ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/kiva/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ kiva ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ kiva <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ kiva ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    software.uncharted.influent:influent-spi:jar:2.0.0:compile
+[WARNING]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[WARNING]    software.uncharted.influent:aperture-common:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:aperture-spi:jar:2.0.0:compile
+[WARNING]    com.google.inject:guice:jar:7.0.0:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    software.uncharted.influent:influent-client:zip:min:2.0.0:compile
+[INFO] 
+[INFO] ----------------< software.uncharted.influent:bitcoin >-----------------
+[INFO] Building bitcoin 2.0.0                                           [24/27]
+[INFO]   from bitcoin/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ bitcoin >>>
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ bitcoin ---
+[INFO] Storing buildNumber: 2025-12-22 17:53:56 at timestamp: 1766444036400
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/bitcoin' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/bitcoin
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ bitcoin ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ bitcoin ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 4 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ bitcoin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ bitcoin ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/bitcoin/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ bitcoin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ bitcoin <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ bitcoin ---
+[WARNING] Unused declared dependencies found:
+[WARNING]    software.uncharted.influent:influent-server:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:influent-client:zip:src:2.0.0:compile
+[INFO] 
+[INFO] -----------------< software.uncharted.influent:walker >-----------------
+[INFO] Building walker 2.0.0                                            [25/27]
+[INFO]   from walker/pom.xml
+[INFO] --------------------------------[ war ]---------------------------------
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:compile (default-compile)'
+[WARNING] Parameter 'archive' is unknown for plugin 'maven-compiler-plugin:3.14.1:testCompile (default-testCompile)'
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ walker >>>
+[INFO] 
+[INFO] --- buildnumber:3.2.1:create (default) @ walker ---
+[INFO] Storing buildNumber: 2025-12-22 17:53:56 at timestamp: 1766444036514
+[INFO] Executing: /bin/sh -c cd '/home/ubuntu/cogfluence/walker' && 'git' 'symbolic-ref' 'HEAD'
+[INFO] Working directory: /home/ubuntu/cogfluence/walker
+[INFO] Storing scmBranch: master
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ walker ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ walker ---
+[INFO] Copying 3 resources from src/main/resources to target/classes
+[INFO] Copying 6 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ walker ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ walker ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/walker/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ walker ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ walker <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ walker ---
+[WARNING] Unused declared dependencies found:
+[WARNING]    software.uncharted.influent:influent-server:jar:2.0.0:compile
+[WARNING]    software.uncharted.influent:influent-client:zip:src:2.0.0:compile
+[WARNING]    org.apache.solr:solr-solrj:jar:9.10.0:compile
+[WARNING]    com.mysql:mysql-connector-j:jar:9.5.0:compile
+[INFO] 
+[INFO] ---------< software.uncharted.influent:influent-selenium-test >---------
+[INFO] Building influent-selenium-test 2.0.0                            [26/27]
+[INFO]   from influent-selenium-test/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ influent-selenium-test >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ influent-selenium-test ---
+[INFO] 
+[INFO] --- resources:3.4.0:resources (default-resources) @ influent-selenium-test ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-selenium-test/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ influent-selenium-test ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.4.0:testResources (default-testResources) @ influent-selenium-test ---
+[INFO] skip non existing resourceDirectory /home/ubuntu/cogfluence/influent-selenium-test/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ influent-selenium-test ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ influent-selenium-test <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ influent-selenium-test ---
+[WARNING] Used undeclared dependencies found:
+[WARNING]    org.seleniumhq.selenium:selenium-remote-driver:jar:4.38.0:compile
+[WARNING]    org.seleniumhq.selenium:selenium-api:jar:4.38.0:compile
+[WARNING]    org.seleniumhq.selenium:selenium-support:jar:4.38.0:compile
+[WARNING] Unused declared dependencies found:
+[WARNING]    org.seleniumhq.selenium:selenium-java:jar:4.38.0:compile
+[INFO] 
+[INFO] -------------< software.uncharted.influent:aperture-dist >--------------
+[INFO] Building Distribution Builder 2.0.0                              [27/27]
+[INFO]   from aperture-distribution/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] >>> dependency:3.9.0:analyze (default-cli) > test-compile @ aperture-dist >>>
+[INFO] 
+[INFO] --- enforcer:3.6.2:enforce (enforce-maven) @ aperture-dist ---
+[INFO] 
+[INFO] <<< dependency:3.9.0:analyze (default-cli) < test-compile @ aperture-dist <<<
+[INFO] 
+[INFO] 
+[INFO] --- dependency:3.9.0:analyze (default-cli) @ aperture-dist ---
+[INFO] Skipping pom project
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Influent Project Modules 2.0.0:
+[INFO] 
+[INFO] Influent Project Modules ........................... SUCCESS [  0.860 s]
+[INFO] aperture-spi ....................................... SUCCESS [  0.261 s]
+[INFO] aperture-common .................................... SUCCESS [  0.126 s]
+[INFO] Aperture Client .................................... SUCCESS [  0.764 s]
+[INFO] Aperture Server Core Components .................... SUCCESS [  0.426 s]
+[INFO] aperture-geo ....................................... SUCCESS [  0.042 s]
+[INFO] aperture-icons ..................................... SUCCESS [  0.083 s]
+[INFO] aperture-capture-phantom ........................... SUCCESS [  0.052 s]
+[INFO] aperture-cms ....................................... SUCCESS [  0.060 s]
+[INFO] aperture-parchment ................................. SUCCESS [  0.134 s]
+[INFO] aperture-layout .................................... SUCCESS [  0.046 s]
+[INFO] aperture-layout-yworks ............................. SUCCESS [  0.046 s]
+[INFO] aperture-graph ..................................... SUCCESS [  0.031 s]
+[INFO] Aperture Examples .................................. SUCCESS [  0.095 s]
+[INFO] Aperture Server .................................... SUCCESS [  0.144 s]
+[INFO] Ensemble Clustering Library ........................ SUCCESS [  0.091 s]
+[INFO] influent-common .................................... SUCCESS [  0.018 s]
+[INFO] influent-spi ....................................... SUCCESS [  5.192 s]
+[INFO] influent-server .................................... SUCCESS [  0.360 s]
+[INFO] influent-client .................................... SUCCESS [ 10.164 s]
+[INFO] Influent Clustering Job ............................ SUCCESS [  0.680 s]
+[INFO] influent-app ....................................... SUCCESS [  0.125 s]
+[INFO] kiva ............................................... SUCCESS [  0.114 s]
+[INFO] bitcoin ............................................ SUCCESS [  0.099 s]
+[INFO] walker ............................................. SUCCESS [  0.120 s]
+[INFO] influent-selenium-test ............................. SUCCESS [  0.069 s]
+[INFO] Distribution Builder ............................... SUCCESS [  0.019 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  20.780 s
+[INFO] Finished at: 2025-12-22T17:53:56-05:00
+[INFO] ------------------------------------------------------------------------
