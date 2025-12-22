@@ -39,7 +39,7 @@ import com.oculusinfo.tile.rendering.LayerConfiguration;
 import com.oculusinfo.tile.rest.config.ConfigException;
 import com.oculusinfo.tile.rest.config.ConfigService;
 import com.oculusinfo.tile.rest.tile.caching.CachingPyramidIO.LayerDataChangedListener;
-import org.apache.commons.io.filefilter.WildcardFileFilter;
+
 import oculus.aperture.common.json.JSONArray;
 import oculus.aperture.common.json.JSONException;
 import oculus.aperture.common.json.JSONObject;
@@ -345,7 +345,15 @@ public class LayerServiceImpl implements LayerService {
 				if (resourceDir != null) {
 					// Scan this directory for kml files
 					File dir = new File(getClass().getClassLoader().getResource(resourceDir).getFile());
-					FileFilter filter = new WildcardFileFilter(kmlSet.getString("fileTemplate"));
+					final String pattern = kmlSet.getString("fileTemplate");
+					FileFilter filter = new FileFilter() {
+						@Override
+						public boolean accept(File pathname) {
+							String name = pathname.getName();
+							String regex = pattern.replace("*", ".*").replace("?", ".");
+							return name.matches(regex);
+						}
+					};
 					File[] kmlFiles = dir.listFiles(filter);
 					JSONArray files = new JSONArray();
 

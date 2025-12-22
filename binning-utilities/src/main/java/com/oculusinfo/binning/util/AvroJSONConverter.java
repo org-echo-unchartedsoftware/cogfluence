@@ -35,7 +35,7 @@ import org.apache.avro.generic.GenericDatumWriter;
 import org.apache.avro.io.DatumWriter;
 import org.apache.avro.io.EncoderFactory;
 import org.apache.avro.io.JsonEncoder;
-import org.apache.commons.io.IOUtils;
+import oculus.aperture.common.util.IOUtils;
 import oculus.aperture.common.json.JSONException;
 import oculus.aperture.common.json.JSONObject;
 import oculus.aperture.common.json.JSONArray;

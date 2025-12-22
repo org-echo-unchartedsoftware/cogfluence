@@ -8,7 +8,7 @@ import com.oculusinfo.binning.impl.SparseTileData;
 import com.oculusinfo.binning.io.PyramidIO;
 import com.oculusinfo.binning.io.serialization.TileSerializer;
 import com.oculusinfo.binning.util.JsonUtilities;
-import org.apache.commons.lang.StringEscapeUtils;
+import oculus.aperture.common.util.StringEscapeUtils;
 import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;

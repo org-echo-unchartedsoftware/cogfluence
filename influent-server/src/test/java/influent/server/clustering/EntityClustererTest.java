@@ -46,8 +46,8 @@ import java.util.Hashtable;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import oculus.aperture.common.util.StringUtils;
 import oculus.aperture.spi.common.Properties;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 

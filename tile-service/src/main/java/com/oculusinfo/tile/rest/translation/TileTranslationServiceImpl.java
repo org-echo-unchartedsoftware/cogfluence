@@ -29,7 +29,7 @@ import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.oculusinfo.tile.rest.config.ConfigException;
 import com.oculusinfo.tile.rest.config.ConfigPropertiesService;
-import org.apache.commons.lang.StringUtils;
+import oculus.aperture.common.util.StringUtils;
 import oculus.aperture.common.json.JSONException;
 import oculus.aperture.common.json.JSONObject;
 import org.slf4j.Logger;

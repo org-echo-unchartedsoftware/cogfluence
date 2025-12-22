@@ -27,13 +27,13 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
+import oculus.aperture.common.util.StopWatch;
 import oculus.aperture.graph.aggregation.ClusterConverter;
 import oculus.aperture.graph.aggregation.OculusAggregator;
 import oculus.aperture.graph.aggregation.util.AggregationUtilities;
 import oculus.aperture.spi.common.Link;
 import oculus.aperture.spi.common.Node;
 import oculus.aperture.spi.graph.GraphAggregationResult;
-import org.apache.commons.lang3.time.StopWatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

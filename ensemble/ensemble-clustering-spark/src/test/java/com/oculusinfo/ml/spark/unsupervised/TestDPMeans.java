@@ -44,7 +44,7 @@ import java.util.Random;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
-import org.apache.commons.io.FileUtils;
+import oculus.aperture.common.util.FileUtils;
 import org.apache.spark.api.java.JavaSparkContext;
 
 import com.oculusinfo.ml.feature.numeric.centroid.MeanNumericVectorCentroid;

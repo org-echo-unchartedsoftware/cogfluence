@@ -40,12 +40,12 @@ import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
+import oculus.aperture.common.util.StopWatch;
 import oculus.aperture.graph.aggregation.ClusterConverter;
 import oculus.aperture.graph.aggregation.OculusAggregator;
 import oculus.aperture.spi.common.Link;
 import oculus.aperture.spi.common.Node;
 import oculus.aperture.spi.graph.GraphAggregationResult;
-import org.apache.commons.lang3.time.StopWatch;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

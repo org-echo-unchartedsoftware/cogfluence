@@ -32,7 +32,7 @@ import com.oculusinfo.binning.io.serialization.TileSerializer;
 import com.oculusinfo.binning.io.serialization.impl.PrimitiveAvroSerializer;
 
 import org.apache.avro.file.CodecFactory;
-import org.apache.commons.io.FileUtils;
+import oculus.aperture.common.util.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
