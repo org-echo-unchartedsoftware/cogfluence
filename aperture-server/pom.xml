@@ -44,24 +44,8 @@
 
 		<dependency>
 			<groupId>${project.parent.groupId}</groupId>
-			<artifactId>aperture-client</artifactId>
-			<version>${project.parent.version}</version>
-			<classifier>jsdoc</classifier>
-			<type>zip</type>
-		</dependency>
-
-		<dependency>
-			<groupId>${project.parent.groupId}</groupId>
 			<artifactId>aperture-spi</artifactId>
 			<version>${project.parent.version}</version>
-			<type>jar</type>
-		</dependency>
-
-		<dependency>
-			<groupId>${project.parent.groupId}</groupId>
-			<artifactId>aperture-spi</artifactId>
-			<version>${project.parent.version}</version>
-			<classifier>javadoc</classifier>
 			<type>jar</type>
 		</dependency>
 
@@ -192,22 +176,26 @@
 							<artifactId>aperture-client</artifactId>
 							<type>jar</type>
 						</overlay>
-						<!-- Overlay client JSDoc files -->
-						<overlay>
-							<groupId>${project.parent.groupId}</groupId>
-							<artifactId>aperture-client</artifactId>
-							<classifier>jsdoc</classifier>
-							<type>zip</type>
-							<targetPath>api</targetPath>
-						</overlay>
-						<!-- Overlay client JavaDoc files -->
-						<overlay>
-							<groupId>${project.parent.groupId}</groupId>
-							<artifactId>aperture-spi</artifactId>
-							<classifier>javadoc</classifier>
-							<type>jar</type>
-							<targetPath>api/spi/javadoc</targetPath>
-						</overlay>
+				<!-- Overlay client JSDoc files (optional) -->
+				<!-- Commented out to allow build without jsdoc generation
+				<overlay>
+					<groupId>${project.parent.groupId}</groupId>
+					<artifactId>aperture-client</artifactId>
+					<classifier>jsdoc</classifier>
+					<type>zip</type>
+					<targetPath>api</targetPath>
+				</overlay>
+				-->
+				<!-- Overlay client JavaDoc files (optional) -->
+				<!-- Commented out to allow build without javadoc generation
+				<overlay>
+					<groupId>${project.parent.groupId}</groupId>
+					<artifactId>aperture-spi</artifactId>
+					<classifier>javadoc</classifier>
+					<type>jar</type>
+					<targetPath>api/spi/javadoc</targetPath>
+				</overlay>
+				-->
 						<!-- Overlay examples -->
 						<overlay>
 							<groupId>${project.parent.groupId}</groupId>
