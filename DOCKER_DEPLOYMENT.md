@@ -230,7 +230,7 @@ ls -lh walker/target/*.war
 
 ## Additional Resources
 
-- [Dockerfile](../Dockerfile)
+- [Dockerfile](./Dockerfile)
 - [Deployment Documentation](docs/src/community/developer-docs/how-to/deployment/readme.md)
 - [Build Status](BUILD_STATUS.md)
 - [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry)
