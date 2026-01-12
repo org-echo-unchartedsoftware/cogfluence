@@ -3,7 +3,7 @@
 .gitignore
 .gitattributes
 
-# Documentation
+# Documentation (excluded from image, available in repository)
 docs/
 README*.md
 RELEASE_NOTES.md
