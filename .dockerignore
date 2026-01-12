@@ -1,0 +1,72 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+docs/
+*.md
+RELEASE_NOTES.md
+LICENSE*
+README*
+
+# Build files
+build.log
+build*.log
+*.log
+
+# IDE files
+.vscode/
+.idx/
+.idea/
+
+# Python files
+*.py
+*.pyc
+__pycache__/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Test files
+**/test/
+**/tests/
+influent-selenium-test/
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Maven build artifacts (except the WAR files we need)
+**/target/*
+!bitcoin/target/*.war
+!influent-app/target/*.war
+!kiva/target/*.war
+!walker/target/*.war
+
+# Other artifacts
+dependency-*.json
+dependency-*.xml
+dependency-*.txt
+external_deps_analysis.txt
+
+# Scripts
+scripts/
+*.sh
+
+# Configuration files not needed in container
+.editorconfig
+.jshintrc
+gradle/
+gradlew*
+build.gradle
+settings.gradle
+gradle.properties
+
+# Ant files
+webdeploy.xml
+
+# GitHub files
+.github/
