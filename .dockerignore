@@ -5,10 +5,20 @@
 
 # Documentation
 docs/
-*.md
+README*.md
 RELEASE_NOTES.md
 LICENSE*
-README*
+CHANGES.txt
+BUILD*.md
+COMPLETION*.md
+COMPREHENSIVE*.md
+CLUSTERING*.md
+DEPENDENCY*.md
+FIXES*.md
+INTERNAL*.md
+MAVEN*.md
+PHASE*.md
+SECURITY.md
 
 # Build files
 build.log
