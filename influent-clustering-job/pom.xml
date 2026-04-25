@@ -14,7 +14,7 @@
   <description>Spark-based entity clustering job for Influent</description>
   
   <properties>
-    <spark.version>3.5.1</spark.version>
+    <spark.version>3.5.7</spark.version>
     <scala.binary.version>2.12</scala.binary.version>
   </properties>
   
